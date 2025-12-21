@@ -1,39 +1,89 @@
+<nav
+  class="backdrop-blur-md bg-white/10 border-b border-white/20 fixed w-full top-0 z-50 shadow-lg"
+>
+  <div class="max-w-6x2 mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a routerLink="/" class="text-xl font-bold text-white tracking-wide">
+      Arnaud Claire
+      <span class="text-blue-400">/ Fullstack</span>
+    </a>
 
-<nav class="hidden lg:block bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... opacity-80">
-    <div class="w-full h-20 items-center justify-around flex text-center rounded-lg flex-row space-x-8 mt-0 font-medium border-0 text-xl">
-        <div>
-            <a routerLink="/" routerLinkActive="animate-bounce" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700   text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">ACCUEIL</a>
-        </div>
-        <!-- <div>
-            <a routerLink="/real" routerLinkActive="animate-bounce" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700   text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">Réalisations</a>
-        </div> -->
-        <div>
-            <a routerLink="/formation" routerLinkActive="animate-bounce" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700 text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">Formations</a>
-        </div>
-        <div>
-            <a routerLink="/comp" routerLinkActive="animate-bounce" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700 text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">Compétences</a>
-        </div>
+    <!-- Burger (mobile) -->
+    <button
+      (click)="isOpen = !isOpen"
+      class="lg:hidden text-white text-3xl focus:outline-none"
+    >
+      ☰
+    </button>
+
+    <!-- Menu desktop -->
+    <div class="hidden lg:flex space-x-10 text-white text-lg font-medium">
+      <a
+        routerLink="/"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="hover:text-blue-300 transition"
+      >
+        Accueil
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="hover:text-blue-300 transition"
+      >
+        A propos
+      </a>
+
+      <a
+        routerLink="/formation"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="hover:text-blue-300 transition"
+      >
+        Formations
+      </a>
+
+      <a
+        routerLink="/comp"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="hover:text-blue-300 transition"
+      >
+        Compétences
+      </a>
     </div>
-</nav>
+  </div>
 
+  <!-- Menu mobile -->
+  <div
+    *ngIf="isOpen"
+    class="lg:hidden bg-black/70 backdrop-blur-md text-white text-center pb-4 space-y-4"
+  >
+    <a
+      routerLink="/"
+      routerLinkActive="text-blue-400"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="isOpen = false"
+      class="block py-2 text-lg font-medium"
+    >
+      Accueil
+    </a>
 
-<nav class="pb-2 pt-2 block lg:hidden bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ... opacity-80">
-    <div class="w-full h-20 items-center justify-around flex flex-col text-center rounded-lg  mt-0 font-medium border-0 text-xl">
-        <div>
-            <a routerLink="/" routerLinkActive="animate-wiggle text-blue-700" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700   text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">ACCUEIL</a>
-        </div>
-        <div>
-            <a routerLink="/formation" routerLinkActive="animate-wiggle text-blue-700" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700 text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">Formations</a>
-        </div>
-        <div>
-            <a routerLink="/comp" routerLinkActive="animate-wiggle text-blue-700" [routerLinkActiveOptions]="{ exact: true }"
-            class="block rounded hover:bg-transparent border-0 hover:text-blue-700 text-white  dark:hover:bg-gray-700  dark:hover:bg-transparent uppercase">Compétences</a>
-        </div>
-    </div>
+    <a
+      routerLink="/formation"
+      routerLinkActive="text-blue-400"
+      (click)="isOpen = false"
+      class="block py-2 text-lg font-medium"
+    >
+      Formations
+    </a>
+
+    <a
+      routerLink="/comp"
+      routerLinkActive="text-blue-400"
+      (click)="isOpen = false"
+      class="block py-2 text-lg font-medium"
+    >
+      Compétences
+    </a>
+  </div>
 </nav>

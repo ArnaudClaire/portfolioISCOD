@@ -1,54 +1,83 @@
-<div class="h-screen flex flex-col justify-center items-center bg-[url('/assets/compOnde.gif')] bg-cover">
-  <div class="w-4/5 md:w-3/5 p-5 bg-white rounded-lg flex flex-col items-center">
-    <h3 class="text-xl font-semibold mb-2 uppercase">HTML</h3>
-    <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-11/12" value="75" max="100"><p class="pr-5">90%</p></div>
-    </div>
-
-    <h3 class="text-xl font-semibold mb-2 uppercase">CSS</h3>
-    <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-11/12" value="75" max="100"><p class="pr-5">90%</p></div>
-    </div>
-    <h3 class="text-xl font-semibold mb-2 uppercase">typescript</h3>
-        <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-10/12" value="75" max="100"><p class="pr-5">80%</p></div>
-    </div>
-      <h3 class="text-xl font-semibold mb-2 uppercase">C#</h3>
-      <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-10/12" value="75" max="100"><p class="pr-5">80%</p></div>
-    </div>
-    <h3 class="text-xl font-semibold mb-2 uppercase">PHP</h3>
-    <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-7/12" value="75" max="100"><p class="pr-5">60%</p></div>
-    </div>
-    <h3 class="text-xl font-semibold mb-2 uppercase">javascript</h3>
-    <div class="bg-green-200 w-11/12">
-      <div class="bg-blue-400 rounded-lg text-end w-6/12" value="75" max="100"><p class="pr-5">50%</p></div>
-    </div>
-    <div class="items-center text-left">
-      <p class="text-lg font-bold">
-        Bonjour, je suis autonome et capable d'une grande adaptabilité au niveau du langage ou de la stack. 
-      </p>
-      <p class="text-lg font-bold">
-        Si vous êtes intéressé je suis disponible pour tout échange de préférence par téléphone 
-      </p>
-      <p class="text-center uppercase md:text-3xl">
-        <a href="tel:+337 85 57 92 18">07 85 57 92 18</a>
-      </p>
-      <p class="text-lg text-center font-bold">
-        ou par mail vers
-      </p>
-      <p class="text-center md:text-3xl"><a href="mailto:arnaudclaire20@yahoo.fr"><u><i>arnaudclaire20@yahoo.fr</i></u></a></p>
-
-    </div>
-
+<div class="min-h-screen bg-gray-900 text-white py-20 px-6">
+  <!-- TITRE & INTRO -->
+  <div class="max-w-5xl mx-auto mb-10 text-center">
+    <h1 class="text-4xl font-bold mb-4">Mes compétences</h1>
+    <p class="text-gray-300">
+      Les compétences ci-dessous sont organisées en deux domaines (techniques et
+      non techniques) et présentées sur une même échelle afin de visualiser leur
+      niveau relatif.
+    </p>
+    <p class="text-sm text-gray-400 mt-2">
+      Échelle de 0 à 100&nbsp;: plus la barre est remplie, plus la compétence
+      est maîtrisée par rapport aux autres.
+    </p>
   </div>
-  
+
+  <!-- GRID 2 COLONNES -->
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- COLONNE TECHNIQUE -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-blue-400">
+        Compétences techniques (5)
+      </h2>
+
+      <div *ngFor="let skill of technicalSkills" class="mb-5">
+        <div class="flex items-center justify-between mb-1">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">{{ skill.icon }}</span>
+            <span class="font-semibold text-sm md:text-base uppercase">
+              {{ skill.name }}
+            </span>
+          </div>
+          <span class="text-sm text-gray-300"> {{ skill.level }}% </span>
+        </div>
+
+        <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+          <div
+            class="bg-blue-500 h-3 rounded-full transition-all duration-700 ease-out"
+            [style.width.%]="skill.displayLevel"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLONNE NON TECHNIQUE -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-purple-400">
+        Compétences humaines (5)
+      </h2>
+
+      <div *ngFor="let skill of softSkills" class="mb-5">
+        <div class="flex items-center justify-between mb-1">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">{{ skill.icon }}</span>
+            <span class="font-semibold text-sm md:text-base uppercase">
+              {{ skill.name }}
+            </span>
+          </div>
+          <span class="text-sm text-gray-300"> {{ skill.level }}% </span>
+        </div>
+
+        <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+          <div
+            class="bg-purple-500 h-3 rounded-full transition-all duration-700 ease-out"
+            [style.width.%]="skill.displayLevel"
+          ></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PETIT RÉSUMÉ SYNTHÉTIQUE -->
+  <div class="max-w-5xl mx-auto mt-10 text-center text-gray-300 text-sm">
+    <p>
+      Total&nbsp;: 10 compétences présentées (5 techniques, 5 humaines), sur une
+      échelle commune pour faciliter la comparaison et la lecture globale de mon
+      profil.
+    </p>
+    <p>
+      Ceci est basé sur une auto-évaluation réfléchie de mes compétences
+      actuelles.
+    </p>
+  </div>
 </div>
-<!-- <div class="h-screen flex flex-col items-center justify-center bg-[url('/assets/compOnde.gif')] bg-cover">
-  <div class="w-3/5 flex items-center text-center text-4xl  rounded-lg">
-    <p class="-mt-10 p-5 absolute w-3/5 z-10"><span class="hidden lg:flex">Bonjour si vous voyez ce message c'est que vous êtes intéressé par mon profil et mon CV</span>
-      <a href="mailto:arnaudclaire20@yahoo.fr"><u><i><strong>Contactez moi</strong></i></u></a></p>
-    <img class="absolute w-3/5" src="/assets/messBox.png" alt="messageBox">
-  </div>
-</div> -->
