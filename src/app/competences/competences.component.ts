@@ -1,39 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core'
 
-interface Skill {
-  name: string;
-  level: number; // 0 à 100
-  displayLevel?: number; // pour l’animation
-  icon: string;
-}
+import { SKILLS } from './data/skills.data'
+import { Skill } from './models/skill.model'
+import { CommonModule } from '@angular/common'
+import { RouterLink } from '@angular/router'
 
 @Component({
   selector: 'app-competences',
+  standalone:true,
+   imports: [
+    CommonModule,
+    RouterLink,
+  ],
   templateUrl: './competences.component.html',
-  styleUrls: ['./competences.component.css']
+  styleUrls: ['./competences.component.css'],
 })
-export class CompetencesComponent {
-  technicalSkills: Skill[] = [
-    { name: 'Angular / Front-end', level: 90, displayLevel: 0, icon: '🅰️' },
-    { name: 'TypeScript / JavaScript', level: 90, displayLevel: 0, icon: '📘' },
-    { name: 'Java / Spring Boot', level: 90, displayLevel: 0, icon: '☕' },
-    { name: 'Docker & DevOps', level: 75, displayLevel: 0, icon: '🐳' },
-    { name: 'Tests (Vitest, Jest, Playwright)', level: 95, displayLevel: 0, icon: '🧪' },
-  ];
+export class CompetencesComponent implements AfterViewInit {
+  technicalSkills: Skill[] = []
+  softSkills: Skill[] = []
 
-  softSkills: Skill[] = [
-    { name: 'Communication en mode projet', level: 95, displayLevel: 0, icon: '💬' },
-    { name: 'Gestion de la relation client', level: 85, displayLevel: 0, icon: '🤝' },
-    { name: 'Travail en équipe & collaboration', level: 95, displayLevel: 0, icon: '👥' },
-    { name: 'Adaptabilité & autonomie', level: 100, displayLevel: 0, icon: '🧭' },
-    { name: 'Esprit d’analyse & rigueur', level: 90, displayLevel: 0, icon: '🧠' },
-  ];
+  constructor() {
+    this.technicalSkills = SKILLS.filter(s => s.type === 'technical')
+    this.softSkills = SKILLS.filter(s => s.type === 'soft')
+  }
 
   ngAfterViewInit() {
-    // Utilisation de requestAnimationFrame = animation garantie fluide
     requestAnimationFrame(() => {
-      this.technicalSkills.forEach(s => s.displayLevel = s.level);
-      this.softSkills.forEach(s => s.displayLevel = s.level);
-    });
+      this.technicalSkills.forEach(s => (s.displayLevel = s.level))
+      this.softSkills.forEach(s => (s.displayLevel = s.level))
+    })
   }
 }

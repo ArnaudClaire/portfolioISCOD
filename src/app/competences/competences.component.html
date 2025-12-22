@@ -4,24 +4,28 @@
     <h1 class="text-4xl font-bold mb-4">Mes compétences</h1>
     <p class="text-gray-300">
       Les compétences ci-dessous sont organisées en deux domaines (techniques et
-      non techniques) et présentées sur une même échelle afin de visualiser leur
+      humaines) et présentées sur une même échelle afin de visualiser leur
       niveau relatif.
     </p>
     <p class="text-sm text-gray-400 mt-2">
       Échelle de 0 à 100&nbsp;: plus la barre est remplie, plus la compétence
-      est maîtrisée par rapport aux autres.
+      est maîtrisée.
     </p>
   </div>
 
-  <!-- GRID 2 COLONNES -->
+  <!-- GRID -->
   <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-    <!-- COLONNE TECHNIQUE -->
+    <!-- TECHNIQUES -->
     <section>
       <h2 class="text-2xl font-semibold mb-4 text-blue-400">
-        Compétences techniques (5)
+        Compétences techniques
       </h2>
 
-      <div *ngFor="let skill of technicalSkills" class="mb-5">
+      <a
+        *ngFor="let skill of technicalSkills"
+        class="block mb-5 cursor-pointer hover:opacity-90"
+        [routerLink]="['/comp', skill.slug]"
+      >
         <div class="flex items-center justify-between mb-1">
           <div class="flex items-center gap-2">
             <span class="text-2xl">{{ skill.icon }}</span>
@@ -29,7 +33,7 @@
               {{ skill.name }}
             </span>
           </div>
-          <span class="text-sm text-gray-300"> {{ skill.level }}% </span>
+          <span class="text-sm text-gray-300">{{ skill.level }}%</span>
         </div>
 
         <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
@@ -38,16 +42,20 @@
             [style.width.%]="skill.displayLevel"
           ></div>
         </div>
-      </div>
+      </a>
     </section>
 
-    <!-- COLONNE NON TECHNIQUE -->
+    <!-- HUMAINES -->
     <section>
       <h2 class="text-2xl font-semibold mb-4 text-purple-400">
-        Compétences humaines (5)
+        Compétences humaines
       </h2>
 
-      <div *ngFor="let skill of softSkills" class="mb-5">
+      <a
+        *ngFor="let skill of softSkills"
+        class="block mb-5 cursor-pointer hover:opacity-90"
+        [routerLink]="['/comp', skill.slug]"
+      >
         <div class="flex items-center justify-between mb-1">
           <div class="flex items-center gap-2">
             <span class="text-2xl">{{ skill.icon }}</span>
@@ -55,7 +63,7 @@
               {{ skill.name }}
             </span>
           </div>
-          <span class="text-sm text-gray-300"> {{ skill.level }}% </span>
+          <span class="text-sm text-gray-300">{{ skill.level }}%</span>
         </div>
 
         <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
@@ -64,20 +72,16 @@
             [style.width.%]="skill.displayLevel"
           ></div>
         </div>
-      </div>
+      </a>
     </section>
   </div>
 
-  <!-- PETIT RÉSUMÉ SYNTHÉTIQUE -->
+  <!-- RÉSUMÉ -->
   <div class="max-w-5xl mx-auto mt-10 text-center text-gray-300 text-sm">
     <p>
-      Total&nbsp;: 10 compétences présentées (5 techniques, 5 humaines), sur une
-      échelle commune pour faciliter la comparaison et la lecture globale de mon
-      profil.
+      Total : 10 compétences présentées (5 techniques, 5 humaines), sur une
+      échelle commune.
     </p>
-    <p>
-      Ceci est basé sur une auto-évaluation réfléchie de mes compétences
-      actuelles.
-    </p>
+    <p>Basé sur une auto-évaluation réfléchie de mes compétences actuelles.</p>
   </div>
 </div>

@@ -33,5 +33,10 @@
     ]
   },
   "nxCloudAccessToken": "ZDdlY2E1N2UtNzYyNi00MzRmLTg0ZmMtOTBjMWI4NDQ1ZDg2fHJlYWQtd3JpdGU=",
-  "nxCloudId": "6947b8e142854522eafa00cb"
+  "nxCloudId": "6947b8e142854522eafa00cb",
+  "generators": {
+    "@nx/angular:component": {
+      "style": "css"
+    }
+  }
 }

@@ -1,0 +1,125 @@
+<div class="min-h-screen bg-gray-900 text-white py-20 px-6">
+  <div class="max-w-3xl mx-auto">
+    <!-- Retour -->
+    <a
+      routerLink="/comp"
+      class="mb-6 inline-block text-sm text-gray-400 hover:text-white"
+    >
+      ← Retour aux compétences
+    </a>
+
+    <!-- Titre -->
+    <h1 class="text-4xl font-bold mb-8">{{ skill?.icon }} {{ skill?.name }}</h1>
+
+    <!-- ===================== -->
+    <!-- NIVEAU -->
+    <!-- ===================== -->
+    <section class="bg-gray-800 rounded-lg p-4 mb-12">
+      <p class="text-sm text-gray-400 mb-1">Niveau estimé</p>
+      <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+        <div
+          class="bg-blue-500 h-3 rounded-full"
+          [style.width.%]="skill?.level"
+        ></div>
+      </div>
+      <p class="text-sm text-gray-400 mt-2">{{ skill?.level }} %</p>
+    </section>
+
+    <!-- ===================== -->
+    <!-- 1. ACTUALITE -->
+    <!-- ===================== -->
+    <section class="mb-12">
+      <app-skill-news [skillSlug]="skill?.slug"></app-skill-news>
+    </section>
+
+    <!-- ===================== -->
+    <!-- 1. MA DÉFINITION -->
+    <!-- ===================== -->
+    <section class="mb-12">
+      <h2 class="text-4xl font-semibold mb-4 text-blue-400">Ma définition</h2>
+      <div class="text-gray-300 whitespace-pre-line">
+        {{ skill?.article?.definition }}
+      </div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- 2. MES ÉLÉMENTS DE PREUVE -->
+    <!-- ===================== -->
+    <section class="mb-12">
+      <h2 class="text-4xl font-semibold mb-6 text-blue-400">
+        Mes éléments de preuve
+      </h2>
+
+      <div *ngFor="let proof of skill?.article?.proofs" class="mb-8">
+        <h3 class="text-lg font-semibold mb-2">
+          {{ proof.title }}
+        </h3>
+
+        <p class="text-gray-300">
+          {{ proof.description }}
+        </p>
+
+        <p class="text-gray-300 mt-3 font-medium">
+          {{ proof.result }}
+        </p>
+
+        <!-- <a
+          *ngIf="proof.link"
+          [routerLink]="proof.link"
+          class="inline-block mt-2 text-blue-400 underline text-sm"
+        >
+          Voir la réalisation associée
+        </a> -->
+      </div>
+
+      <p
+        *ngIf="skill?.article?.proofs?.length === 0"
+        class="text-gray-500 italic"
+      >
+        Exemples à venir.
+      </p>
+    </section>
+
+    <!-- ===================== -->
+    <!-- 3. MON AUTOCRITIQUE -->
+    <!-- ===================== -->
+    <section class="mb-12">
+      <h2 class="text-4xl font-semibold mb-4 text-blue-400">
+        Mon autocritique
+      </h2>
+      <p class="text-gray-300 whitespace-pre-line">
+        {{ skill?.article?.selfCritique }}
+      </p>
+    </section>
+
+    <!-- ===================== -->
+    <!-- 4. MON ÉVOLUTION -->
+    <!-- ===================== -->
+    <section class="mb-12">
+      <h2 class="text-4xl font-semibold mb-4 text-blue-400">
+        Mon évolution dans cette compétence
+      </h2>
+      <p class="text-gray-300 whitespace-pre-line">
+        {{ skill?.article?.evolution }}
+      </p>
+    </section>
+
+    <!-- ===================== -->
+    <!-- RÉALISATIONS ASSOCIÉES -->
+    <!-- ===================== -->
+    <section class="mt-16">
+      <h2 class="text-xl font-semibold mb-4">Réalisations associées</h2>
+
+      <ul class="flex flex-wrap gap-3">
+        <li
+          *ngFor="let project of skill?.article?.relatedProjects"
+          class="bg-gray-800 px-4 py-2 rounded text-sm"
+        >
+          <a [routerLink]="project.link" class="text-blue-400 underline">
+            {{ project.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>

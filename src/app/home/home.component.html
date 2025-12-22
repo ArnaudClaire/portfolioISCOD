@@ -24,18 +24,18 @@
 
     <div class="flex gap-4">
       <a
-        routerLink="/projects"
+        routerLink="/real"
         class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
       >
         Voir mes projets
       </a>
 
-      <a
-        routerLink="/contact"
+      <button
+        (click)="contactModal.open()"
         class="border border-blue-500 text-blue-400 px-6 py-3 rounded-xl hover:bg-blue-500/10 transition"
       >
         Me contacter
-      </a>
+      </button>
     </div>
   </section>
 
@@ -115,11 +115,11 @@
   <!-- CTA -->
   <section class="relative z-10 py-20 bg-blue-600/20 backdrop-blur text-center">
     <h2 class="text-4xl mb-6 font-bold">Envie de travailler ensemble ?</h2>
-    <a
-      routerLink="/contact"
+    <button
+      (click)="contactModal.open()"
       class="bg-blue-500 text-white px-8 py-3 rounded-xl shadow font-medium hover:bg-blue-700 transition"
     >
       Me contacter
-    </a>
+    </button>
   </section>
 </div>

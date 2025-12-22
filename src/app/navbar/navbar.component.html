@@ -35,20 +35,34 @@
         A propos
       </a>
 
-      <a
-        routerLink="/formation"
-        routerLinkActive="text-blue-400 underline underline-offset-4"
-        class="hover:text-blue-300 transition"
-      >
-        Formations
-      </a>
+      <div class="relative group">
+        <a
+          routerLink="/comp"
+          class="hover:text-blue-300 transition cursor-pointer"
+        >
+          Compétences
+        </a>
+
+        <!-- Sous-menu -->
+        <div
+          class="absolute left-0 mt-3 w-64 bg-gray-900 border border-white/10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50"
+        >
+          <a
+            *ngFor="let skill of skills"
+            [routerLink]="['/comp', skill.slug]"
+            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+          >
+            {{ skill.icon }} {{ skill.name }}
+          </a>
+        </div>
+      </div>
 
       <a
-        routerLink="/comp"
+        routerLink="/real"
         routerLinkActive="text-blue-400 underline underline-offset-4"
         class="hover:text-blue-300 transition"
       >
-        Compétences
+        Réalisations
       </a>
     </div>
   </div>
@@ -78,12 +92,29 @@
     </a>
 
     <a
-      routerLink="/comp"
+      routerLink="/real"
       routerLinkActive="text-blue-400"
-      (click)="isOpen = false"
       class="block py-2 text-lg font-medium"
     >
-      Compétences
+      Réalisations
     </a>
+
+    <div class="border-t border-white/10 pt-2">
+      <a
+        [routerLink]="['/comp']"
+        (click)="isOpen = false"
+        class="block py-2 text-lg font-medium"
+      >
+        Compétences
+      </a>
+      <a
+        *ngFor="let skill of skills"
+        [routerLink]="['/comp', skill.slug]"
+        (click)="isOpen = false"
+        class="block py-1 text-sm hover:text-blue-300"
+      >
+        {{ skill.icon }} {{ skill.name }}
+      </a>
+    </div>
   </div>
 </nav>
