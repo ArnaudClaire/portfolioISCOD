@@ -1,1 +1,42 @@
 
+:host {
+  display: block;
+}
+
+.related-link-chip {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  border: 1px solid transparent;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.related-link-chip--skill {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(248, 113, 113, 0.22);
+}
+
+.related-link-chip--skill:hover,
+.related-link-chip--skill:focus-within {
+  transform: translateY(-2px);
+  border-color: rgba(248, 113, 113, 0.42);
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.18), 0 10px 24px rgba(220, 38, 38, 0.16);
+}
+
+.related-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.related-link--skill {
+  color: #fca5a5;
+}
+
+.related-link--skill:hover,
+.related-link--skill:focus-visible {
+  color: #fee2e2;
+}

@@ -1,52 +1,55 @@
 <div
   *ngIf="modalService.isOpen$ | async"
-  class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center"
+  class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-4"
 >
-  <div class="bg-gray-900 p-8 rounded-lg w-full max-w-lg relative">
+  <div
+    class="bg-gray-900 p-8 rounded-lg w-full max-w-2xl relative border border-white/10"
+  >
     <button
       class="absolute top-4 right-4 text-gray-400 hover:text-white"
       (click)="close()"
+      aria-label="Fermer la fenêtre de contact"
     >
-      ✕
+      ×
     </button>
 
-    <h2 class="text-2xl font-bold mb-6 text-white">Me contacter</h2>
-
-    <form [formGroup]="contactForm" (ngSubmit)="submit()" class="space-y-4">
-      <input
-        formControlName="name"
-        placeholder="Nom"
-        class="w-full p-2 bg-gray-800 rounded text-white"
+    <div class="flex flex-col md:flex-row md:items-center gap-6 mb-6">
+      <img
+        src="assets/Arnaud%20CLAIRE%202025.Tunisie.jpg"
+        alt="Photo d'Arnaud Claire"
+        class="h-28 w-28 rounded-3xl object-cover border border-white/10 shadow-xl shadow-cyan-950/30"
       />
 
-      <input
-        formControlName="email"
-        placeholder="Email"
-        class="w-full p-2 bg-gray-800 rounded text-white"
-      />
+      <div class="text-left">
+        <h2 class="text-2xl font-bold mb-2 text-white">Me contacter</h2>
+        <p class="text-gray-400">
+          Tu peux m’écrire directement par email ou me retrouver sur LinkedIn.
+        </p>
+      </div>
+    </div>
 
-      <textarea
-        formControlName="message"
-        rows="4"
-        placeholder="Message"
-        class="w-full p-2 bg-gray-800 rounded text-white"
-      ></textarea>
-
-      <button
-        type="submit"
-        class="w-full bg-blue-500 hover:bg-blue-600 py-2 rounded"
-        [disabled]="loading"
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a
+        [href]="'mailto:' + emailAddress"
+        class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-4 text-left transition hover:bg-blue-500/15"
       >
-        {{ loading ? "Envoi..." : "Envoyer" }}
-      </button>
+        <p class="text-sm uppercase tracking-[0.2em] text-blue-300 mb-2">
+          Email
+        </p>
+        <p class="text-white font-semibold break-all">{{ emailAddress }}</p>
+      </a>
 
-      <p *ngIf="success" class="text-green-400 text-sm mt-3">
-        Message envoyé avec succès ✅
-      </p>
-
-      <p *ngIf="error" class="text-red-400 text-sm mt-3">
-        Une erreur est survenue. Réessaie plus tard.
-      </p>
-    </form>
+      <a
+        [href]="linkedinUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-left transition hover:bg-cyan-500/15"
+      >
+        <p class="text-sm uppercase tracking-[0.2em] text-cyan-300 mb-2">
+          LinkedIn
+        </p>
+        <p class="text-white font-semibold">Voir mon profil</p>
+      </a>
+    </div>
   </div>
 </div>

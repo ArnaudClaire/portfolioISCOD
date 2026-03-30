@@ -1,20 +1,17 @@
 <div class="min-h-screen bg-gray-900 text-white py-20 px-6">
   <div class="max-w-3xl mx-auto">
-    <!-- Retour -->
     <a
       routerLink="/real"
       class="mb-6 inline-block text-sm text-gray-400 hover:text-white"
     >
-      ← Retour aux réalisations
+      Retour aux réalisations
     </a>
 
     <ng-container *ngIf="realisation; else notFound">
-      <!-- Titre -->
-      <h1 class="text-4xl font-bold mb-10">
+      <h1 class="text-4xl font-bold mb-6">
         {{ realisation.title }}
       </h1>
 
-      <!-- 1. Présentation -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Présentation du projet
@@ -24,7 +21,6 @@
         </p>
       </section>
 
-      <!-- 2. Objectifs / Contexte -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Objectifs, contexte et enjeux
@@ -34,7 +30,6 @@
         </p>
       </section>
 
-      <!-- 3. Étapes -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Les étapes du projet
@@ -44,7 +39,6 @@
         </p>
       </section>
 
-      <!-- 4. Acteurs -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Acteurs et interactions
@@ -54,15 +48,22 @@
         </p>
       </section>
 
-      <!-- 5. Résultats -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">Résultats</h2>
         <p class="text-gray-300 whitespace-pre-line">
           {{ realisation.article.results }}
         </p>
+        <a
+          *ngIf="realisation.externalLink"
+          [href]="realisation.externalLink.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex mt-4 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300 transition hover:border-blue-300 hover:bg-blue-500/20 hover:text-blue-100"
+        >
+          {{ realisation.externalLink.label }}
+        </a>
       </section>
 
-      <!-- 6. Lendemains -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Les lendemains du projet
@@ -72,7 +73,6 @@
         </p>
       </section>
 
-      <!-- 7. Regard critique -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-3 text-blue-400">
           Mon regard critique
@@ -82,18 +82,17 @@
         </p>
       </section>
 
-      <!-- Compétences associées -->
       <section class="mt-16">
         <h2 class="text-xl font-semibold mb-4">Compétences mobilisées</h2>
 
         <ul class="flex flex-wrap gap-3">
           <li
             *ngFor="let skill of realisation.relatedSkills"
-            class="bg-gray-800 px-4 py-2 rounded text-sm"
+            class="related-link-chip related-link-chip--skill"
           >
             <a
               [routerLink]="['/comp', skill.link]"
-              class="text-blue-400 hover:underline"
+              class="related-link related-link--skill"
             >
               {{ skill.label }}
             </a>
