@@ -1,0 +1,35 @@
+<section class="timeline-page">
+  <div class="timeline-shell">
+    <header class="timeline-header">
+      <a routerLink="/" class="back-link">Retour à l'accueil</a>
+      <p class="eyebrow">Parcours</p>
+      <h1>Ma fresque chronologique</h1>
+      <p class="intro">
+        Une vue verticale de mon évolution, de mes premières études jusqu'à mon
+        parcours actuel. Clique sur une carte texte pour ouvrir la page détail
+        de l'étape correspondante.
+      </p>
+    </header>
+
+    <div class="timeline">
+      <article
+        *ngFor="let step of timelineSteps"
+        class="timeline-item"
+        [ngStyle]="{
+          '--step-accent': step.accent,
+          '--step-accent-soft': step.accentSoft,
+          '--step-accent-glow': step.accentGlow
+        }"
+      >
+        <div class="step-index">{{ step.order | number: '2.0' }}</div>
+
+        <a class="step-card step-card-link" [routerLink]="['/parcours', step.slug]">
+          <p class="step-subtitle">{{ step.subtitle }}</p>
+          <h2>{{ step.title }}</h2>
+          <p class="step-description">{{ step.description }}</p>
+          <span class="step-cta">Voir cette étape</span>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

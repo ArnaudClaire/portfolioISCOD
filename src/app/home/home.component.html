@@ -1,7 +1,6 @@
 <div
   class="relative min-h-screen bg-gradient-to-br from-gray-900 to-black text-white"
 >
-  <!-- Bulles lumineuses -->
   <div
     class="absolute top-20 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"
   ></div>
@@ -9,110 +8,295 @@
     class="absolute bottom-20 right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]"
   ></div>
 
-  <!-- HERO -->
   <section
     class="relative z-10 flex flex-col justify-center items-center text-center px-6 min-h-screen"
   >
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">
-      Bonjour, je suis <span class="text-blue-400">Arnaud Claire</span>
+    <div class="mb-6">
+      <img
+        src="assets/Arnaud%20CLAIRE.jpg"
+        alt="Photo de profil d'Arnaud Claire"
+        class="h-36 w-36 md:h-44 md:w-44 rounded-[2rem] object-cover border border-white/10 shadow-2xl shadow-blue-950/40"
+      />
+    </div>
+
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 max-w-4xl">
+      <span class="text-blue-400"> Expert </span>architecte logicielle
     </h1>
 
-    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">
-      Développeur Fullstack passionné par l’IA et le secteur médical. Je conçois
-      des applications modernes, performantes et orientées utilisateurs.
+    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mb-8 leading-8">
+      Je construis des applications utiles, maintenables et pensées pour durer,
+      avec un intérêt fort pour le
+      <a
+        routerLink="/about"
+        class="text-blue-300 hover:text-blue-200 underline underline-offset-4"
+      >
+        secteur médical
+      </a>
+      et les environnements métier. Tu peux découvrir ici ma
+      <a
+        routerLink="/about"
+        class="text-blue-300 hover:text-blue-200 underline underline-offset-4"
+      >
+        présentation </a
+      >, mon
+      <a
+        routerLink="/parcours"
+        class="text-cyan-300 hover:text-cyan-200 underline underline-offset-4"
+      >
+        parcours </a
+      >, mes
+      <a
+        routerLink="/comp"
+        class="text-rose-300 hover:text-rose-200 underline underline-offset-4"
+      >
+        compétences
+      </a>
+      et mes
+      <a
+        routerLink="/real"
+        class="text-indigo-300 hover:text-indigo-200 underline underline-offset-4"
+      >
+        réalisations </a
+      >.
     </p>
 
-    <div class="flex gap-4">
+    <div class="flex flex-wrap gap-4 justify-center mb-8">
+      <a
+        routerLink="/parcours"
+        class="bg-cyan-500 text-slate-950 px-6 py-3 rounded-xl shadow hover:bg-cyan-400 transition font-semibold"
+      >
+        Voir mon parcours
+      </a>
+      <a
+        routerLink="/about"
+        class="bg-blue-500 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-600 transition"
+      >
+        Ma présentation
+      </a>
+
+      <a
+        routerLink="/comp"
+        class="bg-blue-500 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-600 transition"
+      >
+        Mes compétences
+      </a>
+
       <a
         routerLink="/real"
         class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
       >
-        Voir mes projets
+        Voir mes réalisations
       </a>
 
       <button
         (click)="contactModal.open()"
         class="border border-blue-500 text-blue-400 px-6 py-3 rounded-xl hover:bg-blue-500/10 transition"
       >
-        Me contacter
+        Ouvrir le contact
       </button>
     </div>
+
+    <div class="flex flex-wrap gap-3 justify-center max-w-4xl">
+      <a
+        *ngFor="let skill of featuredSkills"
+        [routerLink]="skill.route"
+        class="rounded-full border px-4 py-2 text-sm font-medium transition hover:-translate-y-0.5"
+        [ngClass]="skill.tone"
+      >
+        {{ skill.label }}
+      </a>
+    </div>
   </section>
 
-  <!-- SKILLS -->
   <section class="relative z-10 py-20 bg-white/5 backdrop-blur-sm">
-    <div class="max-w-5xl mx-auto px-6 text-white">
-      <h2 class="text-3xl font-bold text-center mb-12">Compétences</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="max-w-6xl mx-auto px-6 text-white">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div
-          class="p-6 bg-white/10 backdrop-blur rounded-xl text-center border border-white/10"
+          class="p-8 bg-white/10 backdrop-blur rounded-3xl border border-white/10"
         >
-          <h3 class="font-semibold text-xl mb-2 text-blue-300">Frontend</h3>
-          <p class="text-gray-300">Angular, Svelte, TypeScript, HTML/CSS</p>
+          <p class="text-sm uppercase tracking-[0.28em] text-blue-300 mb-3">
+            Présentation
+          </p>
+          <h2 class="text-3xl font-bold mb-4">Qui je suis</h2>
+          <p class="text-gray-300 leading-8 mb-6">
+            Je suis actuellement en master expert en architectures logicielles à
+            l’ISCOD. Mon profil combine backend, frontend et culture produit,
+            avec une appétence particulière pour
+            <a
+              routerLink="/comp/java-spring"
+              class="text-emerald-300 hover:text-emerald-200 underline underline-offset-4"
+            >
+              Java / Spring Boot </a
+            >,
+            <a
+              routerLink="/comp/angular-front"
+              class="text-blue-300 hover:text-blue-200 underline underline-offset-4"
+            >
+              Angular
+            </a>
+            et les approches
+            <a
+              routerLink="/comp/docker-devops"
+              class="text-cyan-300 hover:text-cyan-200 underline underline-offset-4"
+            >
+              DevOps </a
+            >.
+          </p>
+          <a
+            routerLink="/about"
+            class="inline-flex rounded-full border border-blue-400/20 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/10"
+          >
+            Lire ma présentation
+          </a>
         </div>
 
         <div
-          class="p-6 bg-white/10 backdrop-blur rounded-xl text-center border border-white/10"
+          class="p-8 bg-white/10 backdrop-blur rounded-3xl border border-white/10"
         >
-          <h3 class="font-semibold text-xl mb-2 text-blue-300">Backend</h3>
-          <p class="text-gray-300">Spring Boot, Java, Python, PHP</p>
-        </div>
-
-        <div
-          class="p-6 bg-white/10 backdrop-blur rounded-xl text-center border border-white/10"
-        >
-          <h3 class="font-semibold text-xl mb-2 text-blue-300">DevOps</h3>
-          <p class="text-gray-300">Docker, GitHub Actions, PostgreSQL</p>
+          <p class="text-sm uppercase tracking-[0.28em] text-cyan-300 mb-3">
+            Navigation rapide
+          </p>
+          <h2 class="text-3xl font-bold mb-6">
+            Tout retrouver en un coup d’œil
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a
+              routerLink="/parcours"
+              class="rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-left hover:bg-cyan-500/15 transition"
+            >
+              <p class="font-semibold text-cyan-200">Parcours</p>
+              <p class="text-sm text-gray-300 mt-2">
+                Découvrir mes 5 grandes étapes de formation et d’expérience.
+              </p>
+            </a>
+            <a
+              routerLink="/comp"
+              class="rounded-2xl border border-rose-400/20 bg-rose-500/10 p-4 text-left hover:bg-rose-500/15 transition"
+            >
+              <p class="font-semibold text-rose-200">Compétences</p>
+              <p class="text-sm text-gray-300 mt-2">
+                Voir mes compétences techniques et humaines en détail.
+              </p>
+            </a>
+            <a
+              routerLink="/real"
+              class="rounded-2xl border border-indigo-400/20 bg-indigo-500/10 p-4 text-left hover:bg-indigo-500/15 transition"
+            >
+              <p class="font-semibold text-indigo-200">Réalisations</p>
+              <p class="text-sm text-gray-300 mt-2">
+                Explorer mes projets, stages et réalisations concrètes.
+              </p>
+            </a>
+            <button
+              (click)="contactModal.open()"
+              class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-4 text-left hover:bg-blue-500/15 transition"
+            >
+              <p class="font-semibold text-blue-200">Contact</p>
+              <p class="text-sm text-gray-300 mt-2">
+                Ouvrir le formulaire pour me contacter directement.
+              </p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJETS -->
   <section class="relative z-10 py-20">
-    <div class="max-w-5xl mx-auto px-6 text-white">
-      <h2 class="text-3xl font-bold text-center mb-12">Projets récents</h2>
+    <div class="max-w-6xl mx-auto px-6 text-white">
+      <div
+        class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10"
+      >
+        <div>
+          <p class="text-sm uppercase tracking-[0.28em] text-cyan-300 mb-3">
+            Parcours
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold">Les étapes clés</h2>
+        </div>
+        <a
+          routerLink="/parcours"
+          class="text-cyan-300 font-medium hover:text-cyan-200"
+        >
+          Voir toute la frise →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+        <a
+          *ngFor="let step of featuredSteps"
+          [routerLink]="['/parcours', step.slug]"
+          class="rounded-3xl border p-5 transition hover:-translate-y-1"
+          [ngStyle]="{
+            'border-color': step.accentSoft,
+            background:
+              'linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72))',
+          }"
+        >
+          <p
+            class="text-xs uppercase tracking-[0.24em] mb-3"
+            [style.color]="step.accent"
+          >
+            Étape {{ step.order }}
+          </p>
+          <h3 class="font-semibold text-lg mb-2">{{ step.title }}</h3>
+          <p class="text-sm text-gray-400 mb-4">{{ step.subtitle }}</p>
+          <p class="text-sm text-gray-300 leading-6">{{ step.description }}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative z-10 py-20 bg-white/5 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 text-white">
+      <div
+        class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10"
+      >
+        <div>
+          <p class="text-sm uppercase tracking-[0.28em] text-indigo-300 mb-3">
+            Réalisations
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold">Projets mis en avant</h2>
+        </div>
+        <a
+          routerLink="/real"
+          class="text-indigo-300 font-medium hover:text-indigo-200"
+        >
+          Voir toutes mes réalisations →
+        </a>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div
-          class="p-6 bg-white/10 backdrop-blur rounded-xl border border-white/10"
+        <article
+          *ngFor="let project of featuredProjects"
+          class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur"
         >
-          <h3 class="font-semibold text-xl mb-3">
-            Projet Fullstack Angular / Spring
-          </h3>
-          <p class="text-gray-300 mb-4">
-            Application complète dockerisée avec CI/CD.
+          <h3 class="text-2xl font-semibold mb-3">{{ project.title }}</h3>
+          <p class="text-gray-300 leading-7 mb-6">
+            {{ project.shortDescription }}
           </p>
-          <a
-            routerLink="/projects"
-            class="text-blue-300 font-medium hover:underline"
-          >
-            Voir plus →
-          </a>
-        </div>
 
-        <div
-          class="p-6 bg-white/10 backdrop-blur rounded-xl border border-white/10"
-        >
-          <h3 class="font-semibold text-xl mb-3">
-            Assistant IA médical (open source)
-          </h3>
-          <p class="text-gray-300 mb-4">
-            IA au service des étudiants et professionnels de santé.
-          </p>
-          <a
-            routerLink="/projects"
-            class="text-blue-300 font-medium hover:underline"
-          >
-            Voir plus →
-          </a>
-        </div>
+          <div class="flex flex-wrap gap-3">
+            <a
+              [routerLink]="['/real', project.slug]"
+              class="rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white hover:bg-indigo-400 transition"
+            >
+              Ouvrir la fiche
+            </a>
+            <a
+              *ngIf="project.externalLink"
+              [href]="project.externalLink.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border border-indigo-300/30 px-4 py-2 text-sm font-semibold text-indigo-200 hover:bg-indigo-500/10 transition"
+            >
+              {{ project.externalLink.label }}
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="relative z-10 py-20 bg-blue-600/20 backdrop-blur text-center">
     <h2 class="text-4xl mb-6 font-bold">Envie de travailler ensemble ?</h2>
     <button

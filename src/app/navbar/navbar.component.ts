@@ -3,6 +3,7 @@ import { SKILLS } from '../competences/data/skills.data';
 import { Skill } from '../competences/models/skill.model';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { PARCOURS_STEPS } from '../parcours/parcours.data';
 
 @Component({
   selector: 'app-navbar',
@@ -15,4 +16,5 @@ export class NavbarComponent {
   isOpen = false
 
   skills: Skill[] = SKILLS
+  parcoursSteps = PARCOURS_STEPS
 }

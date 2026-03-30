@@ -1,0 +1,42 @@
+<section
+  class="detail-page"
+  *ngIf="step as currentStep"
+  [ngStyle]="{
+    '--step-accent': currentStep.accent,
+    '--step-accent-soft': currentStep.accentSoft,
+    '--step-accent-glow': currentStep.accentGlow
+  }"
+>
+  <div class="detail-shell">
+    <a routerLink="/parcours" class="back-link">Retour au parcours</a>
+
+    <header class="detail-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Étape {{ currentStep.order }}</p>
+        <h1>{{ currentStep.title }}</h1>
+        <p class="subtitle">{{ currentStep.subtitle }}</p>
+        <p class="summary">{{ currentStep.description }}</p>
+      </div>
+    </header>
+
+    <section class="detail-section">
+      <h2>Contexte</h2>
+      <p>{{ currentStep.article.context }}</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'y ai fait</h2>
+      <p>{{ currentStep.article.workDone }}</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'y ai découvert</h2>
+      <p>{{ currentStep.article.discoveries }}</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'en retiens</h2>
+      <p>{{ currentStep.article.takeaway }}</p>
+    </section>
+  </div>
+</section>
