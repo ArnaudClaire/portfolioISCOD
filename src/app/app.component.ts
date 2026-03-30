@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-   imports: [
+  imports: [
     CommonModule,
     RouterOutlet,
     NavbarComponent,
@@ -19,6 +19,8 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class AppComponent {
   constructor(private titleService: Title) {
-    this.titleService.setTitle('Arnaud CLAIRE - Développeur Web - Portfolio');
+    this.titleService.setTitle(
+      'Arnaud CLAIRE - Expert architecte logicielle - Portfolio'
+    );
   }
 }
