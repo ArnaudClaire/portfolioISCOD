@@ -4,16 +4,16 @@
   [ngStyle]="getToneStyle(currentSkill)"
 >
   <div class="detail-shell">
-    <a routerLink="/comp" class="back-link">Retour aux competences</a>
+    <a routerLink="/comp" class="back-link">Retour aux compétences</a>
 
     <header class="detail-hero">
       <div class="hero-copy">
-        <p class="eyebrow">Competence</p>
+        <p class="eyebrow">Compétence</p>
         <h1>{{ currentSkill.icon }} {{ currentSkill.name }}</h1>
       </div>
 
       <section class="level-panel">
-        <p class="level-label">Niveau estime</p>
+        <p class="level-label">Niveau estimé</p>
         <div class="level-meter">
           <div
             class="level-meter-fill"
@@ -24,19 +24,15 @@
       </section>
     </header>
 
-    <section class="detail-section detail-section--news">
-      <app-skill-news [skillSlug]="currentSkill.slug"></app-skill-news>
-    </section>
-
     <section class="detail-section">
-      <h2>Ma definition</h2>
+      <h2>Ma définition</h2>
       <div class="detail-copy whitespace-pre-line">
         {{ currentSkill.article.definition }}
       </div>
     </section>
 
     <section class="detail-section">
-      <h2>Mes elements de preuve</h2>
+      <h2>Mes éléments de preuve</h2>
 
       <div *ngFor="let proof of currentSkill.article.proofs" class="proof-block">
         <h3>{{ proof.title }}</h3>
@@ -54,7 +50,7 @@
         *ngIf="currentSkill.article.proofs.length === 0"
         class="detail-empty"
       >
-        Exemples a venir.
+        Exemples à venir.
       </p>
     </section>
 
@@ -66,14 +62,14 @@
     </section>
 
     <section class="detail-section">
-      <h2>Mon evolution dans cette competence</h2>
+      <h2>Mon évolution dans cette compétence</h2>
       <p class="detail-copy whitespace-pre-line">
         {{ currentSkill.article.evolution }}
       </p>
     </section>
 
     <section class="detail-section related-section">
-      <h2>Realisations associees</h2>
+      <h2>Réalisations associées</h2>
 
       <ul class="related-list">
         <li

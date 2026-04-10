@@ -18,7 +18,7 @@ export class NavbarComponent {
   isOpen = false
 
   skills: Skill[] = SKILLS
-  parcoursSteps = PARCOURS_STEPS
+  parcoursSteps = [...PARCOURS_STEPS].sort((a, b) => b.order - a.order)
   realisations: Realisation[] = REALISATIONS
   private readonly sharedTones: Record<string, { accent: string; soft: string }> = {
     blue: { accent: '#60a5fa', soft: 'rgba(96, 165, 250, 0.18)' },

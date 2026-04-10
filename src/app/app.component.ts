@@ -35,7 +35,7 @@ export class AppComponent {
   ) {
     this.isBrowser = isPlatformBrowser(platformId)
     this.titleService.setTitle(
-      'Arnaud CLAIRE - Expert en Ingenierie du Logiciel - Portfolio'
+      'Arnaud CLAIRE - Expert en Ingénierie du Logiciel - Portfolio'
     );
 
     if (this.isBrowser) {

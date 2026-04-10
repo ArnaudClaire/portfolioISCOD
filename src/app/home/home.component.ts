@@ -38,7 +38,7 @@ export class HomeComponent {
     },
   ];
 
-  readonly featuredSteps = PARCOURS_STEPS;
+  readonly featuredSteps = [...PARCOURS_STEPS].sort((a, b) => b.order - a.order);
   readonly featuredProjects = REALISATIONS.slice(0, 2);
 
   constructor(public contactModal: ContactService) {}

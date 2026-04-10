@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Skill } from '../models/skill.model';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { SkillsService } from '../services/skills.service';
-import { SkillNewsComponent } from 'src/app/skill-news/skill-news.component';
 
 
 @Component({
   selector: 'app-competence-detail',
   standalone: true,
-  imports: [CommonModule,SkillNewsComponent, RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './competence-detail.component.html',
   styleUrls: ['./competence-detail.component.css']
 })

@@ -4,18 +4,18 @@
   [ngStyle]="getToneStyle(currentRealisation)"
 >
   <div class="detail-shell">
-    <a routerLink="/real" class="back-link">Retour aux realisations</a>
+    <a routerLink="/real" class="back-link">Retour aux réalisations</a>
 
     <header class="detail-hero">
       <div class="hero-copy">
-        <p class="eyebrow">Realisation</p>
+        <p class="eyebrow">Réalisation</p>
         <h1>{{ currentRealisation.title }}</h1>
         <p class="summary">{{ currentRealisation.shortDescription }}</p>
       </div>
     </header>
 
     <section class="detail-section">
-      <h2>Presentation du projet</h2>
+      <h2>Présentation du projet</h2>
       <p>{{ currentRealisation.article.presentation }}</p>
     </section>
 
@@ -25,7 +25,7 @@
     </section>
 
     <section class="detail-section">
-      <h2>Les etapes du projet</h2>
+      <h2>Les étapes du projet</h2>
       <p>{{ currentRealisation.article.steps }}</p>
     </section>
 
@@ -35,7 +35,7 @@
     </section>
 
     <section class="detail-section">
-      <h2>Resultats</h2>
+      <h2>Résultats</h2>
       <p>{{ currentRealisation.article.results }}</p>
       <a
         *ngIf="currentRealisation.externalLink"
@@ -59,7 +59,7 @@
     </section>
 
     <section class="detail-section related-section">
-      <h2>Competences mobilisees</h2>
+      <h2>Compétences mobilisées</h2>
 
       <ul class="related-list">
         <li
@@ -81,7 +81,7 @@
 <ng-template #notFound>
   <section class="detail-page detail-page--fallback">
     <div class="detail-shell">
-      <p class="detail-fallback">Realisation introuvable.</p>
+      <p class="detail-fallback">Réalisation introuvable.</p>
     </div>
   </section>
 </ng-template>
