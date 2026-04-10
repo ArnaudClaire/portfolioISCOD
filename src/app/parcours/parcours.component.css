@@ -21,6 +21,70 @@
   margin-bottom: 3rem;
 }
 
+.timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.legend-chip--all {
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.28);
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.legend-chip--school {
+  color: #dbeafe;
+  border-color: rgba(96, 165, 250, 0.34);
+  background: rgba(96, 165, 250, 0.16);
+}
+
+.legend-chip--company {
+  color: #fde68a;
+  border-color: rgba(245, 158, 11, 0.34);
+  background: rgba(245, 158, 11, 0.16);
+}
+
+.legend-chip--mixed {
+  color: #ede9fe;
+  border-color: rgba(167, 139, 250, 0.34);
+  background: rgba(167, 139, 250, 0.16);
+}
+
+.legend-chip.is-active {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(248, 250, 252, 0.12), 0 10px 24px rgba(2, 6, 23, 0.2);
+}
+
+.legend-chip.is-inactive {
+  opacity: 0.62;
+}
+
+.legend-chip:hover,
+.legend-chip:focus-visible {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -60,6 +124,11 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.timeline-empty {
+  margin-top: 1.5rem;
+  color: #cbd5e1;
 }
 
 .timeline::before {
@@ -136,6 +205,21 @@
   letter-spacing: 0.14rem;
   text-transform: uppercase;
   color: var(--step-accent);
+}
+
+.step-category {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--step-accent) 36%, transparent);
+  background: color-mix(in srgb, var(--step-accent) 14%, transparent);
+  color: color-mix(in srgb, var(--step-accent) 78%, white 22%);
 }
 
 .step-card h2 {

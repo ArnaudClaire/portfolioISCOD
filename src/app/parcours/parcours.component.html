@@ -9,11 +9,27 @@
         parcours actuel. Clique sur une <strong>carte</strong> pour ouvrir la <strong>page détail</strong>
         de l'étape correspondante.
       </p>
+
+      <div class="timeline-legend" aria-label="Filtres du parcours">
+        <button
+          *ngFor="let filter of filterOptions"
+          type="button"
+          class="legend-chip"
+          [ngClass]="[
+            filter.chipClass,
+            activeFilter === filter.key ? 'is-active' : 'is-inactive'
+          ]"
+          [attr.aria-pressed]="activeFilter === filter.key"
+          (click)="setFilter(filter.key)"
+        >
+          {{ filter.label }}
+        </button>
+      </div>
     </header>
 
     <div class="timeline">
       <article
-        *ngFor="let step of timelineSteps"
+        *ngFor="let step of filteredTimelineSteps"
         class="timeline-item"
         [ngStyle]="{
           '--step-accent': step.accent,
@@ -24,6 +40,7 @@
         <div class="step-index">{{ step.order | number: '2.0' }}</div>
 
         <a class="step-card step-card-link" [routerLink]="['/parcours', step.slug]">
+          <span class="step-category">{{ step.categoryLabel }}</span>
           <p class="step-subtitle">{{ step.subtitle }}</p>
           <h2>{{ step.title }}</h2>
           <p class="step-description">{{ step.description }}</p>
@@ -31,5 +48,9 @@
         </a>
       </article>
     </div>
+
+    <p *ngIf="filteredTimelineSteps.length === 0" class="timeline-empty">
+      Aucun élément ne correspond à ce filtre.
+    </p>
   </div>
 </section>

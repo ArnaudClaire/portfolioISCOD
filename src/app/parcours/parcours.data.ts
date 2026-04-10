@@ -11,10 +11,30 @@ export interface ParcoursStep {
   title: string;
   subtitle: string;
   description: string;
+  category: 'school' | 'company' | 'mixed';
+  categoryLabel: string;
   accent: string;
   accentSoft: string;
   accentGlow: string;
   article: ParcoursArticle;
+}
+
+const SCHOOL_TONE = {
+  accent: '#60a5fa',
+  accentSoft: 'rgba(96, 165, 250, 0.18)',
+  accentGlow: 'rgba(96, 165, 250, 0.16)',
+}
+
+const COMPANY_TONE = {
+  accent: '#f59e0b',
+  accentSoft: 'rgba(245, 158, 11, 0.18)',
+  accentGlow: 'rgba(245, 158, 11, 0.16)',
+}
+
+const MIXED_TONE = {
+  accent: '#a78bfa',
+  accentSoft: 'rgba(167, 139, 250, 0.18)',
+  accentGlow: 'rgba(167, 139, 250, 0.16)',
 }
 
 export const PARCOURS_STEPS: ParcoursStep[] = [
@@ -22,12 +42,12 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 1,
     slug: 'lycee-georges-clemenceau',
     title: 'Lycée Georges Clemenceau',
-    subtitle: 'Première étape',
+    subtitle: 'Bac Scientifique - option ISN (Informatiques et Sciences du Numérique)',
     description:
       'Le début de mon parcours scolaire, avec les premières bases qui ont préparé mon orientation.',
-    accent: '#60a5fa',
-    accentSoft: 'rgba(96, 165, 250, 0.18)',
-    accentGlow: 'rgba(96, 165, 250, 0.16)',
+    category: 'school',
+    categoryLabel: 'École',
+    ...SCHOOL_TONE,
     article: {
       context:
         'Cette étape correspond à mes années au Lycée Georges Clemenceau. Elle représente le point de départ de mon parcours avant mon orientation plus claire vers l’informatique.',
@@ -46,9 +66,9 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     subtitle: 'BTS SIO - option SLAM',
     description:
       'Une formation plus technique où j’ai commencé à me spécialiser dans le développement applicatif.',
-    accent: '#34d399',
-    accentSoft: 'rgba(52, 211, 153, 0.18)',
-    accentGlow: 'rgba(52, 211, 153, 0.16)',
+    category: 'school',
+    categoryLabel: 'École',
+    ...SCHOOL_TONE,
     article: {
       context:
         'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Metiers (SLAM). Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
@@ -67,9 +87,9 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     subtitle: 'Expérience professionnelle',
     description:
       'Une première immersion en entreprise pour confronter la théorie à la réalité du terrain.',
-    accent: '#f59e0b',
-    accentSoft: 'rgba(245, 158, 11, 0.18)',
-    accentGlow: 'rgba(245, 158, 11, 0.16)',
+    category: 'company',
+    categoryLabel: 'Entreprise',
+    ...COMPANY_TONE,
     article: {
       context:
         'Computacenter représente une étape importante de mise en situation professionnelle. J’ai pu y observer un environnement structuré, des contraintes réelles et une organisation d’équipe.',
@@ -85,12 +105,12 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 4,
     slug: 'ynov-aplus-energies',
     title: 'YNOV / A+ Énergies',
-    subtitle: 'Alternance et progression',
+    subtitle: 'Licence informatique',
     description:
       'Une phase de montée en compétences entre poursuite d’études et responsabilités en alternance.',
-    accent: '#2dd4bf',
-    accentSoft: 'rgba(45, 212, 191, 0.18)',
-    accentGlow: 'rgba(45, 212, 191, 0.16)',
+    category: 'mixed',
+    categoryLabel: 'École & entreprise',
+    ...MIXED_TONE,
     article: {
       context:
         'Cette étape rassemble mon parcours à YNOV et mon expérience chez A+ Énergies. Elle correspond à une période de progression plus mature, avec davantage d’autonomie et de responsabilités.',
@@ -106,12 +126,12 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 5,
     slug: 'iscod-weekera',
     title: 'ISCOD / Weekera',
-    subtitle: 'Étape actuelle',
+    subtitle: 'Master Expert en architectures logicielles',
     description:
       'Le parcours actuel, entre formation continue, projet professionnel et mise en pratique.',
-    accent: '#fb7185',
-    accentSoft: 'rgba(251, 113, 133, 0.16)',
-    accentGlow: 'rgba(251, 113, 133, 0.14)',
+    category: 'mixed',
+    categoryLabel: 'École & entreprise',
+    ...MIXED_TONE,
     article: {
       context:
         'ISCOD et Weekera représentent mon étape actuelle. C’est la phase où je consolide mon parcours, avec une vision plus claire de mon évolution et de ce que je veux construire.',
