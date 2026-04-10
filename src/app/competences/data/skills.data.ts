@@ -10,8 +10,9 @@ const EMPTY_ARTICLE = {
 
 export const SKILLS: Skill[] = [
   {
-    name: 'Angular / Front-end',
+    name: 'Angular',
     slug: 'angular-front',
+    summary: "Framework front-end pour créer la partie visible d'une application web de façon structurée et maintenable.",
     icon: '🅰️',
     level: 90,
     displayLevel: 0,
@@ -20,7 +21,7 @@ export const SKILLS: Skill[] = [
       definition: `
       Angular est un framework front-end basé sur TypeScript, principalement utilisé dans un contexte professionnel pour concevoir des applications web structurées, robustes et maintenables. Il est particulièrement adapté aux projets métier où les interfaces doivent afficher des volumes de données importants tout en restant claires, fiables et évolutives.
 
-      J’ai utilisé Angular dans un environnement professionnel où le front-end était découplé d’un back-end en .NET. Mon rôle consistait notamment à développer des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues de notre CRM Dynamics 365. Angular servait à structurer l’affichage, gérer la navigation et rendre les informations exploitables pour différents métiers de l’entreprise A+ Énergies.
+      J’ai utilisé Angular dans un environnement professionnel où le front-end était découplé d’un back-end en .NET. Mon rôle consistait notamment à développer des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues de notre CRM Dynamics 365, un outil de gestion de la relation client. Angular servait à structurer l’affichage, gérer la navigation et rendre les informations exploitables pour différents métiers de l’entreprise A+ Énergies.
 
       Concrètement, le front-end Angular, écrit en TypeScript, était compilé puis intégré sous forme de fichiers de distribution ("dist") directement dans le projet .NET. Cette approche permettait de déployer l’application comme un tout, avant publication sur Azure, tout en conservant une séparation claire entre la logique front-end et les services back-end.
 
@@ -30,7 +31,7 @@ export const SKILLS: Skill[] = [
         {
           title: 'Développement d’interfaces de consultation métier',
           description:
-            'J’ai développé avec Angular des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues du CRM Dynamics 365 via un back-end en .NET, en structurant les écrans et les composants afin de rendre lisibles et exploitables des informations métier parfois complexes.',
+            'J’ai développé avec Angular des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues du CRM Dynamics 365, un outil de gestion de la relation client, via un back-end en .NET, en structurant les écrans et les composants afin de rendre lisibles et exploitables des informations métier parfois complexes.',
           result:
             'Résultat : les utilisateurs disposaient d’interfaces claires et cohérentes facilitant la consultation quotidienne des données, ce qui a amélioré leur autonomie et réduit les besoins de support.',
           link: '/real/plateforme-consultation-metier',
@@ -69,6 +70,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Svelte',
     slug: 'svelte',
+    summary: 'Framework front-end pour créer des interfaces web modernes, fluides et rapides à charger.',
     icon: '📘',
     level: 95,
     displayLevel: 0,
@@ -78,6 +80,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Java / Spring Boot',
     slug: 'java-spring',
+    summary: "Framework back-end pour gérer les données, les traitements et les règles de fonctionnement d'une application.",
     icon: '☕',
     level: 90,
     displayLevel: 0,
@@ -87,6 +90,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Docker & DevOps',
     slug: 'docker-devops',
+    summary: "Outils de déploiement et d'exploitation pour lancer, partager et maintenir une application dans un environnement stable.",
     icon: '🐳',
     level: 75,
     displayLevel: 0,
@@ -96,6 +100,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Tests (Vitest, Jest, Playwright)',
     slug: 'tests',
+    summary: "Outils et méthodes de qualité pour vérifier automatiquement qu'une application fonctionne comme prévu.",
     icon: '🧪',
     level: 95,
     displayLevel: 0,
@@ -105,6 +110,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Communication en mode projet',
     slug: 'communication-projet',
+    summary: "Compétence humaine pour expliquer clairement les besoins, partager l'avancement et coordonner le travail.",
     icon: '💬',
     level: 95,
     displayLevel: 0,
@@ -114,6 +120,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Gestion de la relation client',
     slug: 'relation-client',
+    summary: "Compétence humaine pour comprendre les attentes d'un client ou d'un utilisateur et y répondre de façon adaptée.",
     icon: '🤝',
     level: 85,
     displayLevel: 0,
@@ -123,6 +130,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Travail en équipe & collaboration',
     slug: 'travail-equipe',
+    summary: 'Compétence humaine pour collaborer, partager les informations utiles et faire avancer un travail commun.',
     icon: '👥',
     level: 95,
     displayLevel: 0,
@@ -132,6 +140,7 @@ export const SKILLS: Skill[] = [
   {
     name: 'Adaptabilité & autonomie',
     slug: 'adaptabilite-autonomie',
+    summary: "Compétence humaine pour s'adapter rapidement, apprendre vite et avancer avec autonomie quand c'est nécessaire.",
     icon: '🧭',
     level: 100,
     displayLevel: 0,
@@ -139,8 +148,9 @@ export const SKILLS: Skill[] = [
     article: { ...EMPTY_ARTICLE },
   },
   {
-    name: 'Esprit d’analyse & rigueur',
+    name: "Esprit d'analyse & rigueur",
     slug: 'analyse-rigueur',
+    summary: 'Compétence humaine pour comprendre un problème, structurer la réflexion et proposer des solutions fiables.',
     icon: '🧠',
     level: 90,
     displayLevel: 0,

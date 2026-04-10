@@ -51,7 +51,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     accentGlow: 'rgba(52, 211, 153, 0.16)',
     article: {
       context:
-        'Au Lycée Jean Mermoz, j’ai suivi un BTS SIO avec l’option SLAM. Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
+        'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Metiers (SLAM). Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
       workDone:
         'J’y ai travaillé sur les bases du développement, de la conception applicative, des bases de données et des projets plus structurés. J’ai aussi commencé à manipuler des outils et méthodes proches du terrain.',
       discoveries:

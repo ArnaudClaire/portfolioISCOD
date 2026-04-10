@@ -19,11 +19,13 @@ export class ParcoursDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug');
-    this.step = getParcoursStepBySlug(slug);
+    this.route.paramMap.subscribe((params) => {
+      const slug = params.get('slug');
+      this.step = getParcoursStepBySlug(slug);
 
-    if (!this.step) {
-      this.router.navigate(['/parcours']);
-    }
+      if (!this.step) {
+        this.router.navigate(['/parcours']);
+      }
+    });
   }
 }

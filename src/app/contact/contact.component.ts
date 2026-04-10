@@ -10,8 +10,10 @@ import { ContactService } from './services/contact.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  readonly profilePhotoUrl = 'assets/Arnaud%20CLAIRE.jpg';
   readonly emailAddress = 'arnaud.claire@iscod.fr'
   readonly linkedinUrl = 'https://www.linkedin.com/in/arnaud-claire-871741194/'
+  readonly githubUrl = 'https://github.com/ArnaudClaire'
 
   constructor(public modalService: ContactService) {}
 

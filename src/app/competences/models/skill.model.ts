@@ -6,6 +6,7 @@ export interface Skill {
   name: string
   slug: string
   icon: string
+  summary: string
   level: number
   displayLevel?: number
   type: SkillType

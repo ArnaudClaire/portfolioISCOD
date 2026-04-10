@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Realisation } from '../models/realisation.model';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { REALISATIONS } from '../data/realisations.data';
 
 @Component({
@@ -13,11 +13,46 @@ import { REALISATIONS } from '../data/realisations.data';
 })
 export class RealisationDetailComponent implements OnInit {
   realisation?: Realisation
+  private readonly realisationTones: Record<string, { accent: string; soft: string; glow: string }> = {
+    'refonte-site-upc-jean-mermoz': {
+      accent: '#34d399',
+      soft: 'rgba(52, 211, 153, 0.18)',
+      glow: 'rgba(52, 211, 153, 0.16)',
+    },
+    'plateforme-consultation-metier': {
+      accent: '#60a5fa',
+      soft: 'rgba(96, 165, 250, 0.18)',
+      glow: 'rgba(96, 165, 250, 0.16)',
+    },
+  }
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    const slug = this.route.snapshot.paramMap.get('slug')
-    this.realisation = REALISATIONS.find(r => r.slug === slug)
+    this.route.paramMap.subscribe((params) => {
+      const slug = params.get('slug')
+      this.realisation = REALISATIONS.find((r) => r.slug === slug)
+
+      if (!this.realisation) {
+        this.router.navigate(['/real'])
+      }
+    })
+  }
+
+  getToneStyle(realisation: Realisation | undefined): Record<string, string> {
+    if (!realisation) {
+      return {}
+    }
+
+    const tone = this.realisationTones[realisation.slug] ?? this.realisationTones['plateforme-consultation-metier']
+
+    return {
+      '--real-accent': tone.accent,
+      '--real-accent-soft': tone.soft,
+      '--real-accent-glow': tone.glow,
+    }
   }
 }

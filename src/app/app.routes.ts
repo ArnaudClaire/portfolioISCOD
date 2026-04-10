@@ -21,7 +21,6 @@ export const routes: Routes = [
   { path: 'comp', component: CompetencesComponent },
   { path: 'comp/:slug', component: CompetenceDetailComponent },
 
-  { path: 'real', component: RealisationsComponent },
   { path: 'real/:slug', component: RealisationDetailComponent },
 
 ]

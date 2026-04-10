@@ -12,4 +12,26 @@ import { REALISATIONS } from './data/realisations.data';
 })
 export class RealisationsComponent {
   realisations = REALISATIONS
+  private readonly realisationTones: Record<string, { accent: string; soft: string; glow: string }> = {
+    'refonte-site-upc-jean-mermoz': {
+      accent: '#34d399',
+      soft: 'rgba(52, 211, 153, 0.18)',
+      glow: 'rgba(52, 211, 153, 0.16)',
+    },
+    'plateforme-consultation-metier': {
+      accent: '#60a5fa',
+      soft: 'rgba(96, 165, 250, 0.18)',
+      glow: 'rgba(96, 165, 250, 0.16)',
+    },
+  }
+
+  getToneStyle(slug: string): Record<string, string> {
+    const tone = this.realisationTones[slug] ?? this.realisationTones['plateforme-consultation-metier']
+
+    return {
+      '--real-accent': tone.accent,
+      '--real-accent-soft': tone.soft,
+      '--real-accent-glow': tone.glow,
+    }
+  }
 }

@@ -13,6 +13,8 @@ import { REALISATIONS } from '../realisations/data/realisations.data';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  readonly profilePhotoUrl = 'assets/Arnaud%20CLAIRE.jpg';
+
   readonly featuredSkills = [
     {
       label: 'Angular / Front-end',

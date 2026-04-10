@@ -1,82 +1,80 @@
-<div class="min-h-screen bg-gray-900 text-white py-20 px-6">
-  <div class="max-w-5xl mx-auto mb-10 text-center">
-    <h1 class="text-4xl font-bold mb-4">Mes compétences</h1>
-    <p class="text-gray-300">
-      Les compétences ci-dessous sont organisées en deux domaines, techniques et
-      humaines, et présentées sur une même échelle afin de visualiser leur
-      niveau relatif.
-    </p>
-    <p class="text-sm text-gray-400 mt-2">
-      Échelle de 0 à 100&nbsp;: plus la barre est remplie, plus la compétence
-      est maîtrisée.
-    </p>
-  </div>
+<section class="skills-page">
+  <div class="skills-shell">
+    <header class="skills-header">
+      <p class="eyebrow">Compétences</p>
+      <h1>Mes compétences</h1>
+    </header>
 
-  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-    <section>
-      <h2 class="text-2xl font-semibold mb-4 text-blue-400">
-        Compétences techniques
-      </h2>
-
-      <a
-        *ngFor="let skill of technicalSkills"
-        class="block mb-5 cursor-pointer hover:opacity-90"
-        [routerLink]="['/comp', skill.slug]"
+    <div class="skills-grid">
+      <section
+        class="skills-domain"
+        [ngStyle]="{
+          '--domain-accent': technicalSectionTone.accent,
+          '--domain-accent-soft': technicalSectionTone.soft
+        }"
       >
-        <div class="flex items-center justify-between mb-1">
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">{{ skill.icon }}</span>
-            <span class="font-semibold text-sm md:text-base uppercase">
-              {{ skill.name }}
-            </span>
+        <h2>Compétences techniques</h2>
+
+        <a
+          *ngFor="let skill of technicalSkills"
+          class="skill-card"
+          [routerLink]="['/comp', skill.slug]"
+          [ngStyle]="getToneStyle(skill)"
+        >
+          <div class="skill-headline">
+            <div class="skill-copy">
+              <span class="skill-icon">{{ skill.icon }}</span>
+              <div class="skill-text">
+                <span class="skill-name">{{ skill.name }}</span>
+                <p class="skill-summary">{{ skill.summary }}</p>
+              </div>
+            </div>
+            <span class="skill-level">{{ skill.level }}%</span>
           </div>
-          <span class="text-sm text-gray-300">{{ skill.level }}%</span>
-        </div>
 
-        <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-          <div
-            class="bg-blue-500 h-3 rounded-full transition-all duration-700 ease-out"
-            [style.width.%]="skill.displayLevel"
-          ></div>
-        </div>
-      </a>
-    </section>
+          <div class="skill-meter">
+            <div
+              class="skill-meter-fill"
+              [style.width.%]="skill.displayLevel"
+            ></div>
+          </div>
+        </a>
+      </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4 text-purple-400">
-        Compétences humaines
-      </h2>
-
-      <a
-        *ngFor="let skill of softSkills"
-        class="block mb-5 cursor-pointer hover:opacity-90"
-        [routerLink]="['/comp', skill.slug]"
+      <section
+        class="skills-domain"
+        [ngStyle]="{
+          '--domain-accent': softSectionTone.accent,
+          '--domain-accent-soft': softSectionTone.soft
+        }"
       >
-        <div class="flex items-center justify-between mb-1">
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">{{ skill.icon }}</span>
-            <span class="font-semibold text-sm md:text-base uppercase">
-              {{ skill.name }}
-            </span>
+        <h2>Compétences humaines</h2>
+
+        <a
+          *ngFor="let skill of softSkills"
+          class="skill-card"
+          [routerLink]="['/comp', skill.slug]"
+          [ngStyle]="getToneStyle(skill)"
+        >
+          <div class="skill-headline">
+            <div class="skill-copy">
+              <span class="skill-icon">{{ skill.icon }}</span>
+              <div class="skill-text">
+                <span class="skill-name">{{ skill.name }}</span>
+                <p class="skill-summary">{{ skill.summary }}</p>
+              </div>
+            </div>
+            <span class="skill-level">{{ skill.level }}%</span>
           </div>
-          <span class="text-sm text-gray-300">{{ skill.level }}%</span>
-        </div>
 
-        <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-          <div
-            class="bg-purple-500 h-3 rounded-full transition-all duration-700 ease-out"
-            [style.width.%]="skill.displayLevel"
-          ></div>
-        </div>
-      </a>
-    </section>
+          <div class="skill-meter">
+            <div
+              class="skill-meter-fill"
+              [style.width.%]="skill.displayLevel"
+            ></div>
+          </div>
+        </a>
+      </section>
+    </div>
   </div>
-
-  <div class="max-w-5xl mx-auto mt-10 text-center text-gray-300 text-sm">
-    <p>
-      Total : 10 compétences présentées, 5 techniques et 5 humaines, sur une
-      échelle commune.
-    </p>
-    <p>Basé sur une auto-évaluation réfléchie de mes compétences actuelles.</p>
-  </div>
-</div>
+</section>

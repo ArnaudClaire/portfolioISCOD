@@ -1,25 +1,33 @@
 <nav
-  class="backdrop-blur-md bg-white/10 border-b border-white/20 fixed w-full top-0 z-50 shadow-lg"
+  class="fixed top-0 z-50 w-full border-b border-white/20 bg-white/10 shadow-lg backdrop-blur-md"
 >
-  <div class="max-w-6x2 mx-auto px-6 py-4 flex items-center justify-between">
-    <a routerLink="/" class="text-xl font-bold text-white tracking-wide">
-      Arnaud Claire
-      <span class="text-blue-400">/ Expert en Ingénierie du Logiciel</span>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
+  >
+    <a routerLink="/" class="min-w-0 flex-1 text-white">
+      <span class="block truncate text-lg font-bold tracking-wide sm:text-xl">
+        Arnaud Claire
+      </span>
+      <span class="hidden text-sm text-blue-300 md:block">
+        Expert en Ingenierie du Logiciel
+      </span>
     </a>
 
     <button
-      (click)="isOpen = !isOpen"
-      class="lg:hidden text-white text-3xl focus:outline-none"
+      (click)="toggleMenu()"
+      class="inline-flex h-11 shrink-0 items-center rounded-full border border-white/15 px-4 text-sm font-semibold text-white transition hover:bg-white/10 focus:outline-none lg:hidden"
+      [attr.aria-expanded]="isOpen"
+      aria-label="Ouvrir ou fermer le menu"
     >
-      Menu
+      {{ isOpen ? 'Fermer' : 'Menu' }}
     </button>
 
-    <div class="hidden lg:flex space-x-10 text-white text-lg font-medium">
+    <div class="hidden items-center gap-8 text-lg font-medium text-white lg:flex">
       <a
         routerLink="/"
         routerLinkActive="text-blue-400 underline underline-offset-4"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="hover:text-blue-300 transition"
+        class="transition hover:text-blue-300"
       >
         Accueil
       </a>
@@ -27,139 +35,176 @@
       <a
         routerLink="/about"
         routerLinkActive="text-blue-400 underline underline-offset-4"
-        class="hover:text-blue-300 transition"
+        class="transition"
+        [ngClass]="sectionTones.about"
       >
-        Présentation
+        Presentation
       </a>
 
-      <div class="relative group">
+      <div class="group relative">
         <a
           routerLink="/parcours"
           routerLinkActive="text-blue-400 underline underline-offset-4"
-          class="hover:text-blue-300 transition cursor-pointer"
+          class="transition"
+          [ngClass]="sectionTones.parcours"
         >
           Parcours
         </a>
 
         <div
-          class="absolute left-0 mt-3 w-72 bg-gray-900 border border-white/10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50"
+          class="invisible absolute left-0 z-50 mt-3 w-72 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
         >
           <a
             *ngFor="let step of parcoursSteps"
             [routerLink]="['/parcours', step.slug]"
-            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getParcoursMenuStyle(step)"
           >
-            Étape {{ step.order }} - {{ step.title }}
+            Etape {{ step.order }} - {{ step.title }}
           </a>
         </div>
       </div>
 
-      <div class="relative group">
+      <div class="group relative">
         <a
           routerLink="/comp"
-          class="hover:text-blue-300 transition cursor-pointer"
+          class="transition"
+          [ngClass]="sectionTones.competences"
         >
-          Compétences
+          Competences
         </a>
 
         <div
-          class="absolute left-0 mt-3 w-64 bg-gray-900 border border-white/10 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200 z-50"
+          class="invisible absolute left-0 z-50 mt-3 w-64 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
         >
           <a
             *ngFor="let skill of skills"
             [routerLink]="['/comp', skill.slug]"
-            class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getSkillMenuStyle(skill)"
           >
             {{ skill.icon }} {{ skill.name }}
           </a>
         </div>
       </div>
 
-      <a
-        routerLink="/real"
-        routerLinkActive="text-blue-400 underline underline-offset-4"
-        class="hover:text-blue-300 transition"
-      >
-        Réalisations
-      </a>
+      <div class="group relative">
+        <a
+          routerLink="/real"
+          routerLinkActive="text-blue-400 underline underline-offset-4"
+          class="transition"
+          [ngClass]="sectionTones.realisations"
+        >
+          Realisations
+        </a>
+
+        <div
+          class="invisible absolute left-0 z-50 mt-3 w-80 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
+        >
+          <a
+            *ngFor="let realisation of realisations"
+            [routerLink]="['/real', realisation.slug]"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getRealisationMenuStyle(realisation)"
+          >
+            {{ realisation.title }}
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div
-    *ngIf="isOpen"
-    class="lg:hidden bg-black/70 backdrop-blur-md text-white text-center pb-4 space-y-4"
-  >
-    <a
-      routerLink="/"
-      routerLinkActive="text-blue-400"
-      [routerLinkActiveOptions]="{ exact: true }"
-      (click)="isOpen = false"
-      class="block py-2 text-lg font-medium"
-    >
-      Accueil
-    </a>
-
-    <a
-      routerLink="/about"
-      routerLinkActive="text-blue-400"
-      (click)="isOpen = false"
-      class="block py-2 text-lg font-medium"
-    >
-      Présentation
-    </a>
-
-    <div class="border-t border-white/10 pt-2">
-      <a
-        [routerLink]="['/parcours']"
-        (click)="isOpen = false"
-        class="block py-2 text-lg font-medium"
+  <div *ngIf="isOpen" class="border-t border-white/10 lg:hidden">
+    <div class="mx-auto max-w-6xl px-4 pb-4 sm:px-6">
+      <div
+        class="max-h-[calc(100svh-5rem)] overflow-y-auto rounded-[2rem] border border-white/10 bg-slate-950/95 p-4 text-white shadow-2xl shadow-black/30"
       >
-        Parcours
-      </a>
-      <a
-        *ngFor="let step of parcoursSteps"
-        [routerLink]="['/parcours', step.slug]"
-        (click)="isOpen = false"
-        class="block py-1 text-sm hover:text-blue-300"
-      >
-        Étape {{ step.order }} - {{ step.title }}
-      </a>
-    </div>
+        <a
+          routerLink="/"
+          routerLinkActive="text-blue-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          class="block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/5"
+        >
+          Accueil
+        </a>
 
-    <a
-      routerLink="/formation"
-      routerLinkActive="text-blue-400"
-      (click)="isOpen = false"
-      class="block py-2 text-lg font-medium"
-    >
-      Formations
-    </a>
+        <a
+          routerLink="/about"
+          routerLinkActive="text-blue-400"
+          (click)="closeMenu()"
+          class="mt-2 block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/5"
+          [ngClass]="sectionTones.about"
+        >
+          Presentation
+        </a>
 
-    <a
-      routerLink="/real"
-      routerLinkActive="text-blue-400"
-      (click)="isOpen = false"
-      class="block py-2 text-lg font-medium"
-    >
-      Réalisations
-    </a>
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/parcours']"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.parcours"
+          >
+            Parcours
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let step of parcoursSteps"
+              [routerLink]="['/parcours', step.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getParcoursMenuStyle(step)"
+            >
+              Etape {{ step.order }} - {{ step.title }}
+            </a>
+          </div>
+        </div>
 
-    <div class="border-t border-white/10 pt-2">
-      <a
-        [routerLink]="['/comp']"
-        (click)="isOpen = false"
-        class="block py-2 text-lg font-medium"
-      >
-        Compétences
-      </a>
-      <a
-        *ngFor="let skill of skills"
-        [routerLink]="['/comp', skill.slug]"
-        (click)="isOpen = false"
-        class="block py-1 text-sm hover:text-blue-300"
-      >
-        {{ skill.icon }} {{ skill.name }}
-      </a>
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/real']"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.realisations"
+          >
+            Realisations
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let realisation of realisations; let i = index"
+              [routerLink]="['/real', realisation.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getRealisationMenuStyle(realisation)"
+            >
+              {{ realisation.title }}
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/comp']"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.competences"
+          >
+            Competences
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let skill of skills"
+              [routerLink]="['/comp', skill.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getSkillMenuStyle(skill)"
+            >
+              {{ skill.icon }} {{ skill.name }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

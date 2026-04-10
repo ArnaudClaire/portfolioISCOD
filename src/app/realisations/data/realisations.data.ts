@@ -2,21 +2,21 @@ import { Realisation } from '../models/realisation.model'
 
 export const REALISATIONS: Realisation[] = [
   {
-    title: 'Refonte du site de l’UPC du Lycée Jean Mermoz',
+    title: 'Refonte du site de l’Unite de production culinaire (UPC) du Lycée Jean Mermoz',
     slug: 'refonte-site-upc-jean-mermoz',
     shortDescription:
-      'Stage de 2 mois consacré à la refonte en PHP du site de l’UPC, avec suivi client hebdomadaire et mise en ligne sur OVH.',
+      'Stage de 2 mois consacré à la refonte en PHP du site de l’Unite de production culinaire (UPC), avec suivi client hebdomadaire et mise en ligne sur OVH.',
     externalLink: {
-      label: 'UPC - Lycée Jean Mermoz',
+      label: 'Unite de production culinaire (UPC) - Lycée Jean Mermoz',
       url: 'https://groupcom34.ovh',
     },
     article: {
       presentation:
-        'Cette réalisation correspond à un stage effectué sur une durée de 2 mois, du 01/02/2021 au 26/03/2021, dans une salle annexe du Lycée Jean Mermoz. J’ai mené ce projet avec Olivier Barrière, un autre stagiaire issu de la même classe que moi. Sous la responsabilité de notre maître de stage et client, Monsieur Didier Garnier, nous avions pour mission de concevoir la refonte du site de l’UPC.',
+        'Cette réalisation correspond à un stage effectué sur une durée de 2 mois, du 01/02/2021 au 26/03/2021, dans une salle annexe du Lycée Jean Mermoz. J’ai mené ce projet avec Olivier Barrière, un autre stagiaire issu de la même classe que moi. Sous la responsabilité de notre maître de stage et client, Monsieur Didier Garnier, nous avions pour mission de concevoir la refonte du site de l’Unite de production culinaire (UPC).',
       objectives:
         'L’objectif était de proposer une nouvelle version du site de l’UPC, plus claire et plus adaptée aux besoins réels du client. Le point de départ était particulier, car le cahier des charges initial était erroné et suivait la progression d’une ancienne équipe composée de deux stagiaires. Nous avons donc utilisé l’arborescence du site comme base de travail pour reconstruire un cadre de projet cohérent.',
       steps:
-        'Pour répondre aux attentes, nous avons organisé avec Monsieur Didier Garnier des réunions tous les jeudis afin de montrer l’avancée du projet, ajuster ce qui avait été produit et faire émerger de nouvelles idées. J’ai consigné les conclusions de chaque réunion dans un cahier de notes pour garder une trace claire des décisions. Au fil du stage, nous avons aussi eu l’opportunité de visiter le bâtiment de l’UPC pour mieux comprendre le travail des employés et le contexte métier. Le site a été codé en PHP, avec Wamp pour le développement en local, MySQL pour la base de données et OVH pour l’hébergement. L’arborescence couvrait notamment les documents de commande, les menus d’affichage avec logos, les menus de commande des repas, les bons de commande, les fiches techniques des recettes et ingrédients par catégories, les pages d’affichage nutrition, produits locaux et circuit court, environnement, les commissions de menus, les archives, les photos et le courrier.',
+        'Pour répondre aux attentes, nous avons organisé avec Monsieur Didier Garnier des réunions tous les jeudis afin de montrer l’avancée du projet, ajuster ce qui avait été produit et faire émerger de nouvelles idées. J’ai consigné les conclusions de chaque réunion dans un cahier de notes pour garder une trace claire des décisions. Au fil du stage, nous avons aussi eu l’opportunité de visiter le bâtiment de l’UPC pour mieux comprendre le travail des employés et le contexte métier. Le site a été codé en PHP, avec Wamp pour le développement en local, MySQL pour la base de donnees et OVH pour l’hebergement. L’arborescence couvrait notamment les documents de commande, les menus d’affichage avec logos, les menus de commande des repas, les bons de commande, les fiches techniques des recettes et ingrédients par catégories, les pages d’affichage nutrition, produits locaux et circuit court, environnement, les commissions de menus, les archives, les photos et le courrier.',
       actors:
         'Les acteurs principaux étaient Monsieur Didier Garnier en tant que client et maître de stage, Olivier Barrière comme co-stagiaire, et moi-même dans la conception et la réalisation du site. Le projet reposait sur un travail en binôme et sur des échanges réguliers avec le client pour faire évoluer le besoin au fil du stage.',
       results:
@@ -49,7 +49,7 @@ export const REALISATIONS: Realisation[] = [
     title: 'Plateforme de consultation métier',
     slug: 'plateforme-consultation-metier',
     shortDescription:
-      'Développement d’interfaces Angular permettant la consultation de données métier issues d’un CRM.',
+      'Développement d’interfaces Angular permettant la consultation de données métier issues d’un CRM (outil de gestion de la relation client).',
     article: {
       presentation:
         'Projet de développement d’une application de consultation métier destinée à faciliter l’accès à des données internes.',

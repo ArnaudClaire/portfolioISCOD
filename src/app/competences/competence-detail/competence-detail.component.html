@@ -1,87 +1,83 @@
-<div class="min-h-screen bg-gray-900 text-white py-20 px-6">
-  <div class="max-w-3xl mx-auto">
-    <a
-      routerLink="/comp"
-      class="mb-6 inline-block text-sm text-gray-400 hover:text-white"
-    >
-      ← Retour aux compétences
-    </a>
+<section
+  class="detail-page"
+  *ngIf="skill as currentSkill"
+  [ngStyle]="getToneStyle(currentSkill)"
+>
+  <div class="detail-shell">
+    <a routerLink="/comp" class="back-link">Retour aux competences</a>
 
-    <h1 class="text-4xl font-bold mb-8">{{ skill?.icon }} {{ skill?.name }}</h1>
-
-    <section class="bg-gray-800 rounded-lg p-4 mb-12">
-      <p class="text-sm text-gray-400 mb-1">Niveau estimé</p>
-      <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-        <div
-          class="bg-blue-500 h-3 rounded-full"
-          [style.width.%]="skill?.level"
-        ></div>
+    <header class="detail-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Competence</p>
+        <h1>{{ currentSkill.icon }} {{ currentSkill.name }}</h1>
       </div>
-      <p class="text-sm text-gray-400 mt-2">{{ skill?.level }} %</p>
+
+      <section class="level-panel">
+        <p class="level-label">Niveau estime</p>
+        <div class="level-meter">
+          <div
+            class="level-meter-fill"
+            [style.width.%]="currentSkill.level"
+          ></div>
+        </div>
+        <p class="level-value">{{ currentSkill.level }} %</p>
+      </section>
+    </header>
+
+    <section class="detail-section detail-section--news">
+      <app-skill-news [skillSlug]="currentSkill.slug"></app-skill-news>
     </section>
 
-    <section class="mb-12">
-      <app-skill-news [skillSlug]="skill?.slug"></app-skill-news>
-    </section>
-
-    <section class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4 text-blue-400">Ma définition</h2>
-      <div class="text-gray-300 whitespace-pre-line">
-        {{ skill?.article?.definition }}
+    <section class="detail-section">
+      <h2>Ma definition</h2>
+      <div class="detail-copy whitespace-pre-line">
+        {{ currentSkill.article.definition }}
       </div>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-4xl font-semibold mb-6 text-blue-400">
-        Mes éléments de preuve
-      </h2>
+    <section class="detail-section">
+      <h2>Mes elements de preuve</h2>
 
-      <div *ngFor="let proof of skill?.article?.proofs" class="mb-8">
-        <h3 class="text-lg font-semibold mb-2">
-          {{ proof.title }}
-        </h3>
+      <div *ngFor="let proof of currentSkill.article.proofs" class="proof-block">
+        <h3>{{ proof.title }}</h3>
 
-        <p class="text-gray-300">
+        <p class="detail-copy">
           {{ proof.description }}
         </p>
 
-        <p class="text-gray-300 mt-3 font-medium">
+        <p class="detail-copy detail-copy--strong">
           {{ proof.result }}
         </p>
       </div>
 
       <p
-        *ngIf="skill?.article?.proofs?.length === 0"
-        class="text-gray-500 italic"
+        *ngIf="currentSkill.article.proofs.length === 0"
+        class="detail-empty"
       >
-        Exemples à venir.
+        Exemples a venir.
       </p>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4 text-blue-400">
-        Mon autocritique
-      </h2>
-      <p class="text-gray-300 whitespace-pre-line">
-        {{ skill?.article?.selfCritique }}
+    <section class="detail-section">
+      <h2>Mon autocritique</h2>
+      <p class="detail-copy whitespace-pre-line">
+        {{ currentSkill.article.selfCritique }}
       </p>
     </section>
 
-    <section class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4 text-blue-400">
-        Mon évolution dans cette compétence
-      </h2>
-      <p class="text-gray-300 whitespace-pre-line">
-        {{ skill?.article?.evolution }}
+    <section class="detail-section">
+      <h2>Mon evolution dans cette competence</h2>
+      <p class="detail-copy whitespace-pre-line">
+        {{ currentSkill.article.evolution }}
       </p>
     </section>
 
-    <section class="mt-16">
-      <h2 class="text-xl font-semibold mb-4">Réalisations associées</h2>
+    <section class="detail-section related-section">
+      <h2>Realisations associees</h2>
 
-      <ul class="flex flex-wrap gap-3">
+      <ul class="related-list">
         <li
-          *ngFor="let project of skill?.article?.relatedProjects"
+          *ngFor="let project of currentSkill.article.relatedProjects"
           class="related-link-chip related-link-chip--project"
         >
           <a
@@ -94,4 +90,4 @@
       </ul>
     </section>
   </div>
-</div>
+</section>
