@@ -1,0 +1,83 @@
+:host {
+  display: block;
+}
+
+.app-cursor-layer {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.app-cursor-dot,
+.app-cursor-ring {
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  will-change: transform, width, height, opacity, background, border-color;
+  transition:
+    opacity 180ms ease,
+    width 180ms ease,
+    height 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.app-cursor-dot {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #f8fafc, #93c5fd);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.18),
+    0 0 18px rgba(96, 165, 250, 0.42);
+}
+
+.app-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid rgba(191, 219, 254, 0.75);
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.14) 0%, rgba(96, 165, 250, 0.03) 62%, transparent 72%);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.08),
+    0 0 28px rgba(96, 165, 250, 0.18);
+}
+
+.app-cursor-layer.is-visible .app-cursor-dot,
+.app-cursor-layer.is-visible .app-cursor-ring {
+  opacity: 1;
+}
+
+.app-cursor-layer.is-interactive .app-cursor-dot {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #2dd4bf, #60a5fa);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.2),
+    0 0 24px rgba(45, 212, 191, 0.45);
+}
+
+.app-cursor-layer.is-interactive .app-cursor-ring {
+  width: 52px;
+  height: 52px;
+  border-color: rgba(45, 212, 191, 0.9);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.16) 0%, rgba(96, 165, 250, 0.06) 56%, transparent 72%);
+  box-shadow:
+    0 0 0 1px rgba(45, 212, 191, 0.16),
+    0 0 34px rgba(45, 212, 191, 0.24);
+}
+
+.app-cursor-layer.is-pressed .app-cursor-dot,
+.app-cursor-layer.is-pressed .app-cursor-ring {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .app-cursor-layer {
+    display: none;
+  }
+}
