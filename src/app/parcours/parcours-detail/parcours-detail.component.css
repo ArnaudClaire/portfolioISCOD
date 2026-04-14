@@ -49,6 +49,40 @@
   line-height: 1.02;
 }
 
+:host ::ng-deep .hero-copy h1 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition:
+    color 180ms ease,
+    text-decoration-color 180ms ease,
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+:host ::ng-deep .hero-copy h1 a:hover {
+  color: white;
+  text-decoration-color: currentColor;
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+:host ::ng-deep .hero-copy h1 .parcours-link--company {
+  color: #f59e0b;
+}
+
+:host ::ng-deep .hero-copy h1 .parcours-link--school {
+  color: #60a5fa;
+}
+
+:host ::ng-deep .hero-copy h1 .parcours-title-separator {
+  color: #f8fafc;
+}
+
 .subtitle {
   margin: 0.8rem 0 0;
   font-size: 1.1rem;

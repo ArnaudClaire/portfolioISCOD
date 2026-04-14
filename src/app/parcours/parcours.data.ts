@@ -9,6 +9,7 @@ export interface ParcoursStep {
   order: number;
   slug: string;
   title: string;
+  detailTitleHtml?: string;
   subtitle: string;
   description: string;
   category: 'school' | 'company' | 'mixed';
@@ -42,7 +43,9 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 1,
     slug: 'lycee-georges-clemenceau',
     title: 'Lycée Georges Clemenceau',
-    subtitle: 'Bac Scientifique - option ISN (Informatiques et Sciences du Numérique)',
+    detailTitleHtml:
+      '<a class="parcours-link parcours-link--school" href="https://georges-clemenceau.mon-ent-occitanie.fr" target="_blank" rel="noopener noreferrer">Lycée Georges Clemenceau</a>',
+    subtitle: 'Bac Scientifique - option ISN (Informatique et Sciences du Numérique)',
     description:
       'Le début de mon parcours scolaire, avec les premières bases qui ont préparé mon orientation.',
     category: 'school',
@@ -63,6 +66,8 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 2,
     slug: 'lycee-jean-mermoz-bts-sio-slam',
     title: 'Lycée Jean Mermoz',
+    detailTitleHtml:
+      '<a class="parcours-link parcours-link--school" href="https://jean-mermoz-montpellier.mon-ent-occitanie.fr" target="_blank" rel="noopener noreferrer">Lycée Jean Mermoz</a>',
     subtitle: 'BTS SIO - option SLAM',
     description:
       'Une formation plus technique où j’ai commencé à me spécialiser dans le développement applicatif.',
@@ -84,6 +89,8 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 3,
     slug: 'computacenter',
     title: 'Computacenter',
+    detailTitleHtml:
+      '<a class="parcours-link parcours-link--company" href="https://www.computacenter.com/fr-fr" target="_blank" rel="noopener noreferrer">Computacenter</a>',
     subtitle: 'Expérience professionnelle',
     description:
       'Une première immersion en entreprise pour confronter la théorie à la réalité du terrain.',
@@ -105,6 +112,8 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 4,
     slug: 'ynov-aplus-energies',
     title: 'YNOV / A+ Énergies',
+    detailTitleHtml:
+      '<a class="parcours-link parcours-link--school" href="https://www.ynov.com" target="_blank" rel="noopener noreferrer">YNOV</a><span class="parcours-title-separator"> / </span><a class="parcours-link parcours-link--company" href="https://www.aplusenergies.fr" target="_blank" rel="noopener noreferrer">A+ Énergies</a>',
     subtitle: 'Licence informatique',
     description:
       'Une phase de montée en compétences entre poursuite d’études et responsabilités en alternance.',
@@ -126,6 +135,8 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     order: 5,
     slug: 'iscod-weekera',
     title: 'ISCOD / Weekera',
+    detailTitleHtml:
+      '<a class="parcours-link parcours-link--school" href="https://www.iscod.fr/?utm_source=google-branding&utm_medium=cpc&utm_campaign=ISCOD&utm_term=%2Biscod&gad_source=1&gad_campaignid=9492102615&gclid=Cj0KCQjwy_fOBhC6ARIsAHKFB79uivLwgaSXcra1QkGfrGp1-lBWWdXUSceKhQG0FYC1wfA3V4V1AOcaAtd4EALw_wcB" target="_blank" rel="noopener noreferrer">ISCOD</a><span class="parcours-title-separator"> / </span><a class="parcours-link parcours-link--company" href="https://weekera.fr" target="_blank" rel="noopener noreferrer">Weekera</a>',
     subtitle: 'Master Expert en architectures logicielles',
     description:
       'Mon étape actuelle, entre montée en expertise logicielle, alternance et compréhension métier.',
@@ -134,7 +145,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     ...MIXED_TONE,
     article: {
       context:
-        'Actuellement en alternance chez Weekera, j’interviens en tant que développeur fullstack sur des applications liées à la gestion RH et à la paie, notamment autour de la Déclaration Sociale Nominative (DSN).\n\nDans ce cadre, j’occupe un premier rôle orienté développement applicatif, où je participe à la correction de bugs, à l’évolution de fonctionnalités existantes et à l’amélioration de la qualité du code. J’interviens à la fois sur le front-end et le backend, ce qui me permet d’avoir une vision globale des applications et de leurs interactions.\n\nEn parallèle, j’évolue également dans un second rôle plus transverse, lié à la qualité et à la compréhension fonctionnelle des besoins. Je suis amené à collaborer avec différentes équipes, notamment lors de rituels comme les “3 Amigos”, afin de clarifier les spécifications, anticiper les risques et garantir la cohérence entre les attentes métier, les contraintes techniques et les phases de test.\n\nCe double positionnement me permet de développer à la fois des compétences techniques et une compréhension approfondie des enjeux métier, tout en renforçant ma capacité à travailler dans un environnement collaboratif et exigeant.',
+        'Actuellement en alternance chez Weekera, j’interviens en tant que développeur fullstack sur des applications liées à la gestion RH et à la paie, notamment autour de la Déclaration Sociale Nominative (DSN).\n\nDans ce cadre, j’occupe un premier rôle orienté développement applicatif, où je participe à la correction de bugs, à l’évolution de fonctionnalités existantes et à l’amélioration de la qualité du code. J’interviens à la fois sur le frontend et le backend, ce qui me permet d’avoir une vision globale des applications et de leurs interactions.\n\nEn parallèle, j’évolue également dans un second rôle plus transverse, lié à la qualité et à la compréhension fonctionnelle des besoins. Je suis amené à collaborer avec différentes équipes, notamment lors de rituels comme les “3 Amigos”, afin de clarifier les spécifications, anticiper les risques et garantir la cohérence entre les attentes métier, les contraintes techniques et les phases de test.\n\nCe double positionnement me permet de développer à la fois des compétences techniques et une compréhension approfondie des enjeux métier, tout en renforçant ma capacité à travailler dans un environnement collaboratif et exigeant.',
       workDone:
         'Pour l’instant, cette étape se construit autour de missions de maintenance évolutive, de correction de bugs et de compréhension du fonctionnement global de l’application. J’interviens sur des sujets concrets qui demandent à la fois de produire du code fiable, de respecter un existant métier dense et de rester attentif aux impacts fonctionnels.\n\nJe participe aussi à l’amélioration continue du produit à travers des échanges réguliers avec les autres acteurs du projet. Cela me pousse à mieux documenter, mieux questionner les besoins et mieux prendre en compte la dimension qualité dans les développements du quotidien.',
       discoveries:
