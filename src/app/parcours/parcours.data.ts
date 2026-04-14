@@ -71,7 +71,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     ...SCHOOL_TONE,
     article: {
       context:
-        'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Metiers (SLAM). Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
+        'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Métiers (SLAM). Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
       workDone:
         'J’y ai travaillé sur les bases du développement, de la conception applicative, des bases de données et des projets plus structurés. J’ai aussi commencé à manipuler des outils et méthodes proches du terrain.',
       discoveries:
@@ -128,19 +128,19 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     title: 'ISCOD / Weekera',
     subtitle: 'Master Expert en architectures logicielles',
     description:
-      'Le parcours actuel, entre formation continue, projet professionnel et mise en pratique.',
+      'Mon étape actuelle, entre montée en expertise logicielle, alternance et compréhension métier.',
     category: 'mixed',
     categoryLabel: 'École & entreprise',
     ...MIXED_TONE,
     article: {
       context:
-        'ISCOD et Weekera représentent mon étape actuelle. C’est la phase où je consolide mon parcours, avec une vision plus claire de mon évolution et de ce que je veux construire.',
+        'Actuellement en alternance chez Weekera, j’interviens en tant que développeur fullstack sur des applications liées à la gestion RH et à la paie, notamment autour de la Déclaration Sociale Nominative (DSN).\n\nDans ce cadre, j’occupe un premier rôle orienté développement applicatif, où je participe à la correction de bugs, à l’évolution de fonctionnalités existantes et à l’amélioration de la qualité du code. J’interviens à la fois sur le front-end et le backend, ce qui me permet d’avoir une vision globale des applications et de leurs interactions.\n\nEn parallèle, j’évolue également dans un second rôle plus transverse, lié à la qualité et à la compréhension fonctionnelle des besoins. Je suis amené à collaborer avec différentes équipes, notamment lors de rituels comme les “3 Amigos”, afin de clarifier les spécifications, anticiper les risques et garantir la cohérence entre les attentes métier, les contraintes techniques et les phases de test.\n\nCe double positionnement me permet de développer à la fois des compétences techniques et une compréhension approfondie des enjeux métier, tout en renforçant ma capacité à travailler dans un environnement collaboratif et exigeant.',
       workDone:
-        'J’y poursuis ma progression technique tout en travaillant sur des sujets concrets, avec une logique de professionnalisation, de qualité et d’amélioration continue.',
+        'Pour l’instant, cette étape se construit autour de missions de maintenance évolutive, de correction de bugs et de compréhension du fonctionnement global de l’application. J’interviens sur des sujets concrets qui demandent à la fois de produire du code fiable, de respecter un existant métier dense et de rester attentif aux impacts fonctionnels.\n\nJe participe aussi à l’amélioration continue du produit à travers des échanges réguliers avec les autres acteurs du projet. Cela me pousse à mieux documenter, mieux questionner les besoins et mieux prendre en compte la dimension qualité dans les développements du quotidien.',
       discoveries:
-        'J’y découvre encore de nouvelles façons de travailler, de mieux structurer mon code, d’échanger avec les autres métiers et de produire quelque chose de plus solide.',
+        'Cette expérience me fait progresser sur plusieurs plans en même temps. Sur le plan technique, elle m’apprend à intervenir dans un contexte applicatif plus structuré, avec des contraintes réelles, des enjeux de fiabilité et un besoin de cohérence entre les différentes couches de l’application.\n\nSur le plan fonctionnel, je découvre à quel point la compréhension métier est indispensable pour développer correctement. Le code ne répond pas seulement à une logique technique : il doit aussi traduire fidèlement des besoins liés à la paie, à la DSN et aux processus RH. Cela m’aide à prendre du recul et à mieux relier développement, qualité et usage concret.',
       takeaway:
-        'Cette étape montre surtout la direction que je veux donner à mon profil. Je continue à me spécialiser tout en gardant une ouverture vers des projets utiles et évolutifs.',
+        'Pour l’instant, cette étape confirme la direction que je veux donner à mon profil : devenir un développeur capable de produire du code utile, maintenable et cohérent avec des enjeux métier forts. Elle renforce aussi mon intérêt pour les environnements où la qualité, la collaboration et la compréhension fonctionnelle ont une vraie importance.\n\nC’est une phase encore en cours, mais elle me permet déjà de consolider ma posture professionnelle, ma capacité d’adaptation et ma vision d’un développement plus complet, à la fois technique et métier.',
     },
   },
 ];

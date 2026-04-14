@@ -12,6 +12,7 @@ import { FormationComponent } from './formation/formation.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { Title } from '@angular/platform-browser';
 import { AboutComponent } from './about/about.component';
+import { SourceReferenceComponent } from './shared/source-reference/source-reference.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AboutComponent } from './about/about.component';
     GifTestComponent,
     FormationComponent,
     
-    AboutComponent
+    AboutComponent,
+    SourceReferenceComponent
   ],
   imports: [
     BrowserModule,

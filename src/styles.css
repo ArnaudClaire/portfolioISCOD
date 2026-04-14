@@ -45,6 +45,20 @@
     filter: brightness(1.03);
   }
 
+  a.skill-inline-link {
+    color: #93c5fd;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.08em;
+    text-decoration-color: rgba(147, 197, 253, 0.5);
+    text-underline-offset: 0.2em;
+  }
+
+  a.skill-inline-link:hover {
+    color: #bfdbfe;
+    text-decoration-color: currentColor;
+  }
+
   a:active {
     opacity: 0.88;
   }

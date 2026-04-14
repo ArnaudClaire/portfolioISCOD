@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Skill } from '../models/skill.model';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { SkillsService } from '../services/skills.service';
+import { linkSkillMentions } from '../../shared/skill-links.util';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { SkillsService } from '../services/skills.service';
 })
 export class CompetenceDetailComponent implements OnInit {
   skill?: Skill
+  readonly linkSkillMentions = linkSkillMentions
   private readonly skillTones: Record<string, { accent: string; soft: string; glow: string }> = {
     'angular-front': {
       accent: '#60a5fa',

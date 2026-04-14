@@ -1,4 +1,4 @@
-<div
+﻿<div
   class="relative min-h-screen overflow-x-hidden bg-gradient-to-br from-gray-900 to-black text-white"
 >
   <div
@@ -13,12 +13,14 @@
   >
     <div class="mb-8">
       <div
-        class="mx-auto w-[min(72vw,18rem)] rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-blue-950/40 sm:w-64 md:w-72"
+        class="mx-auto w-full max-w-[13rem] rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-blue-950/40 sm:max-w-[15rem] md:max-w-[17rem] lg:max-w-[18rem]"
       >
         <img
           [src]="profilePhotoUrl"
           alt="Photo de profil d'Arnaud Claire"
-          class="aspect-[4/5] w-full rounded-[1.5rem] bg-slate-950/70 object-contain object-top"
+          width="1378"
+          height="1496"
+          class="block h-auto w-full rounded-[1.5rem] bg-slate-950/70 object-cover object-center"
         />
       </div>
     </div>
@@ -32,15 +34,11 @@
     <p
       class="mb-8 max-w-3xl text-base leading-7 text-gray-300 sm:text-lg md:text-xl md:leading-8"
     >
-      Je construis des <strong>applications utiles, maintenables et pensees pour durer</strong>,
+      Je construis des
+      <strong>applications utiles, maintenables et pensees pour durer</strong>,
       avec un intérêt fort pour le
-      <a
-        routerLink="/about"
-        class="font-semibold text-blue-300 underline underline-offset-4 hover:text-blue-200"
-      >
-        secteur médical
-      </a>
-      et les environnements metier. Tu peux decouvrir ici ma
+      <strong> secteur médical </strong>
+      Vous pouvez decouvrir ici ma
       <a
         routerLink="/about"
         class="font-semibold text-blue-300 underline underline-offset-4 hover:text-blue-200"
@@ -129,9 +127,11 @@
           </p>
           <h2 class="mb-4 text-3xl font-bold">Qui je suis</h2>
           <p class="mb-6 leading-8 text-gray-300">
-            Je suis actuellement en <strong>master expert en architectures logicielles</strong>
-            à l'ISCOD. Mon profil combine <strong>backend, frontend et culture produit</strong>,
-            avec une appétence particulière pour
+            Je suis actuellement en
+            <strong>master expert en architectures logicielles</strong> à
+            l'ISCOD. Mon profil combine
+            <strong>backend, front-end et culture produit</strong>, avec une
+            appétence particulière pour
             <a
               routerLink="/comp/java-spring"
               class="font-semibold text-emerald-300 underline underline-offset-4 hover:text-emerald-200"
@@ -176,7 +176,8 @@
             >
               <p class="font-semibold text-cyan-200">Parcours</p>
               <p class="mt-2 text-sm text-gray-300">
-                Découvrir mes <strong>5 grandes étapes</strong> de formation et d'expérience.
+                Découvrir mes <strong>5 grandes étapes</strong> de formation et
+                d'expérience.
               </p>
             </a>
             <a
@@ -185,7 +186,8 @@
             >
               <p class="font-semibold text-rose-200">Compétences</p>
               <p class="mt-2 text-sm text-gray-300">
-                Voir mes <strong>compétences techniques et humaines</strong> en détail.
+                Voir mes <strong>compétences techniques et humaines</strong> en
+                détail.
               </p>
             </a>
             <a
@@ -194,7 +196,8 @@
             >
               <p class="font-semibold text-indigo-200">Réalisations</p>
               <p class="mt-2 text-sm text-gray-300">
-                Explorer mes <strong>projets, stages et réalisations concrètes</strong>.
+                Explorer mes
+                <strong>projets, stages et réalisations concrètes</strong>.
               </p>
             </a>
             <button
@@ -203,7 +206,8 @@
             >
               <p class="font-semibold text-blue-200">Contact</p>
               <p class="mt-2 text-sm text-gray-300">
-                Ouvrir le formulaire pour <strong>me contacter directement</strong>.
+                Ouvrir le formulaire pour
+                <strong>me contacter directement</strong>.
               </p>
             </button>
           </div>
@@ -281,9 +285,10 @@
           class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur"
         >
           <h3 class="mb-3 text-2xl font-semibold">{{ project.title }}</h3>
-          <p class="mb-6 leading-7 text-gray-300">
-            {{ project.shortDescription }}
-          </p>
+          <p
+            class="mb-6 leading-7 text-gray-300"
+            [innerHTML]="linkSkillMentions(project.shortDescription)"
+          ></p>
 
           <div class="flex flex-wrap gap-3">
             <a

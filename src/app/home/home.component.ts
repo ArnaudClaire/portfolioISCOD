@@ -4,6 +4,7 @@ import { ContactService } from '../contact/services/contact.service';
 import { RouterLink } from '@angular/router';
 import { PARCOURS_STEPS } from '../parcours/parcours.data';
 import { REALISATIONS } from '../realisations/data/realisations.data';
+import { linkSkillMentions } from '../shared/skill-links.util';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { REALISATIONS } from '../realisations/data/realisations.data';
 })
 export class HomeComponent {
   readonly profilePhotoUrl = 'assets/Arnaud%20CLAIRE.jpg';
+  readonly linkSkillMentions = linkSkillMentions;
 
   readonly featuredSkills = [
     {
