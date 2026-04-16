@@ -84,6 +84,25 @@
     <section class="detail-section related-section">
       <h2>Réalisations associées</h2>
 
+      <article
+        *ngIf="currentSkill.article.relatedProjects.length"
+        class="project-spotlight"
+        aria-label="Lien vers une réalisation associée"
+      >
+        <p class="project-spotlight__eyebrow">Projet lié</p>
+        <h3>{{ currentSkill.article.relatedProjects[0].label }}</h3>
+        <p>
+          Retrouver la réalisation associée pour voir cette compétence appliquée
+          dans un contexte concret.
+        </p>
+        <a
+          [routerLink]="currentSkill.article.relatedProjects[0].link"
+          class="external-link"
+        >
+          Voir le projet
+        </a>
+      </article>
+
       <ul class="related-list">
         <li
           *ngFor="let project of currentSkill.article.relatedProjects"

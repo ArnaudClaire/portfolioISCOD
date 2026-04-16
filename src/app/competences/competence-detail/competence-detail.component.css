@@ -144,6 +144,65 @@
   font-style: italic;
 }
 
+.project-spotlight {
+  margin-bottom: 1.25rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--skill-accent) 30%, transparent);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--skill-accent) 12%, rgba(15, 23, 42, 0.92)), rgba(15, 23, 42, 0.88)),
+    radial-gradient(circle at top right, var(--skill-accent-glow), transparent 55%);
+  box-shadow:
+    0 14px 32px rgba(2, 6, 23, 0.2),
+    inset 0 1px 0 color-mix(in srgb, var(--skill-accent) 16%, white 8%);
+}
+
+.project-spotlight__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--skill-accent) 78%, white 22%);
+}
+
+.project-spotlight h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.project-spotlight p + .external-link {
+  margin-top: 0.9rem;
+}
+
+.external-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--skill-accent) 32%, transparent);
+  background: var(--skill-accent-soft);
+  color: color-mix(in srgb, var(--skill-accent) 78%, white 22%);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.external-link:hover,
+.external-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--skill-accent) 52%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--skill-accent) 18%, transparent),
+    0 10px 24px var(--skill-accent-glow);
+  color: #f8fafc;
+}
+
 .related-list {
   display: flex;
   flex-wrap: wrap;

@@ -63,7 +63,7 @@ export const REALISATIONS: Realisation[] = [
       actors:
         'Collaboration avec les équipes métier et techniques pour valider les besoins et les usages.',
       results:
-        'Application utilisée en interne, amélioration de la lisibilité des données et réduction des sollicitations support.',
+        'Application utilisée en interne, amélioration de la lisibilité des données et réduction des sollicitations du support.',
       future:
         'La solution pourrait évoluer vers davantage de fonctionnalités et une extension à d’autres métiers.',
       criticalView:
@@ -95,14 +95,13 @@ export const REALISATIONS: Realisation[] = [
         "Pour mieux comprendre l'entreprise et l'univers du projet, vous pouvez consulter le site de Weekera.",
     },
     article: {
-      presentation: `
-      Weekera a commencé en 2022, mais le projet était dans les tuyaux depuis 2021, avec pour ambition de devenir un acteur majeur dans le domaine des ressources humaines et de la paie.
+      presentation: `Weekera a commencé en 2022, mais le projet était dans les tuyaux depuis 2021, avec pour ambition de devenir un acteur majeur dans le domaine des ressources humaines et de la paie.
 
       Il s'agit d'un projet de développement d'une application web destinée à faciliter la gestion des ressources humaines et de la paie pour les experts comptables.
 
       L'application vise à centraliser les données, automatiser les processus et offrir une interface simple à comprendre pour les utilisateurs finaux.
 
-      Aujourd'hui, c'est une entreprise en pleine croissance avec des équipes de développement, de support et de vente qui travaillent ensemble pour faire évoluer l'application.
+      Aujourd'hui, c'est une entreprise en pleine croissance avec des équipes de développement et de support qui travaillent ensemble pour faire évoluer l'application.
       `,
       objectives: `
       <h3>Objectif principal</h3>
@@ -125,10 +124,10 @@ export const REALISATIONS: Realisation[] = [
       steps: `
       <h3>Organisation du travail</h3>
       En ce qui concerne ma mission sur l’application, j’évoluais dans un environnement <strong>agile</strong>, avec des <strong>sprints de 2 à 3 semaines</strong> et des réunions régulières qui permettaient de structurer le travail de l’équipe de manière claire.
-      
-      Tout les matins nous faisions un DSM (<strong>Daily Stand-up Meeting</strong>), une réunion rapide de 15 minutes pour faire le point sur l’avancement, les difficultés rencontrées et les priorités du jour.
 
-      Le développement reposait sur des <strong>User Stories (US)</strong> préparées en amont, puis complétées lors des réunions les différents acteurs de l'US. L’objectif de ces échanges était de s’assurer que les besoins étaient bien compris, d’anticiper les cas plus complexes et d’adapter le sujet avant le développement.
+      Tous les matins, nous faisions un DSM (<strong>Daily Stand-up Meeting</strong>), une réunion rapide de 15 minutes pour faire le point sur l’avancement, les difficultés rencontrées et les priorités du jour.
+
+      Le développement reposait sur des <strong>User Stories (US)</strong> préparées en amont, puis complétées lors de réunions avec les différents acteurs de l’US. L’objectif de ces échanges était de s’assurer que les besoins étaient bien compris, d’anticiper les cas plus complexes et d’adapter le sujet avant le développement.
 
       Une fois le développement terminé, la fonctionnalité était ensuite présentée lors des <strong>sprint reviews</strong>.
 
@@ -187,33 +186,30 @@ export const REALISATIONS: Realisation[] = [
         </article>
       </div>
       `,
-      actors: `
-      Plusieurs acteurs interviennent autour du projet. D’abord, il y a les utilisateurs finaux, en particulier les experts-comptables et les gestionnaires de paie, puisque ce sont eux qui manipulent l’application au quotidien et qui expriment les besoins.
+      actors: `Plusieurs acteurs interviennent autour du projet. D’abord, il y a les utilisateurs finaux, en particulier les experts-comptables et les gestionnaires de paie, puisque ce sont eux qui manipulent l’application au quotidien et qui expriment les besoins.
 
-      Côté produit, le projet s’appuie aussi sur une collaboration des équipes de développement, qui font évoluer les fonctionnalités, corrigent les anomalies et veillent au bon fonctionnement de l'application. 
+      Côté produit, le projet s’appuie aussi sur la collaboration des équipes de développement, qui font évoluer les fonctionnalités, corrigent les anomalies et veillent au bon fonctionnement de l'application.
 
       Dans ce projet, mon rôle s’inscrit dans la réalisation technique de l’application. Cela m’amène à intervenir sur le code, mais aussi à participer à des échanges qui servent à clarifier les besoins, anticiper les impacts et sécuriser les évolutions du projet.
       `,
-      results: `Personellement ce projet m\'a permis de développer mes compétences techniques en développemnt web que ce soit sur le front ou le back sur les stacks Svelte, WQL, postgresSQL,  dans l'apprentissage des données sensibles à travers la formation OWASP, sur la mise en place de tests unitaire ou parcours utilisateur avec plawywright, l\'utilisation de docker en entreprise, la planification de taches, la vie en entreprise, 
-      le cycle d\'un projet divisé en plusieurs équipes métier, des compétences en gestion de projet, de mener des analyses de besoins à travers des échanges.
-      
-      Côté entreprise, mon apport a permis de faire évoluer l’application, d’améliorer la qualité du code et de contribuer à la mise en place de tests plus robustes avec une execution plus rapide. J’ai aussi pu participer à des échanges qui ont permis de clarifier certains besoins et d’anticiper les impacts de certaines évolutions, ce qui a contribué à sécuriser le projet dans son ensemble.`,
-      future: `Dans une perspective future, il faudrait continuer à faire évoluer l’application en fonction des besoins des utilisateurs et des évolutions du marché et des droits ce qui demande une veille constante.
-      Il serait intéressant d'utiliser de manière plus efficace les outils mis à disposition et potentiellement accorder plusieurs sprint à une refonte technique des composants car il y a par exemple des composant AgGrid qui sont repris et adaptés mais qui donne du mal à maintenir selon les nouveaux besoins(C'est un aspect vue plusieurs durant mon expérience chez Weekera). 
-      Enfin, il serait pertinent d’explorer de nouvelles fonctionnalités qui pourraient apporter une valeur ajoutée aux utilisateurs(Il y a eu des Mocks mis en place dans certaines équipes): notamment un tutoriel de l'application à la première connexion ou d'une version testable en amont ouverte tout public et disponible à travers le site marchand web, tout en veillant à maintenir une expérience utilisateur simple et fluide
-      
-      De mon côté cette expérience me permet de mieux comprendre les enjeux d'un projet comme celui-ci et je souhaite mettre à profit cette expérience pour continuer à évoluer dans mes prochains projets.
-      .`,
+      results: `Personnellement, ce projet m'a permis de développer mes compétences techniques en développement web, que ce soit sur le front ou le back, sur des stacks comme Svelte, WQL et PostgreSQL, mais aussi sur l’apprentissage des données sensibles à travers la formation OWASP, la mise en place de tests unitaires et de parcours utilisateur avec Playwright, l’utilisation de Docker en entreprise, la planification de tâches et la vie en entreprise.
+
+      J’ai également mieux compris le cycle d’un projet impliquant plusieurs équipes métier, développé des compétences en gestion de projet et appris à mener des analyses de besoins à travers différents échanges.
+
+      Côté entreprise, mon apport a permis de faire évoluer l’application, d’améliorer la qualité du code et de contribuer à la mise en place de tests plus robustes avec une exécution plus rapide. J’ai aussi pu participer à des échanges qui ont permis de clarifier certains besoins et d’anticiper les impacts de certaines évolutions, ce qui a contribué à sécuriser le projet dans son ensemble.`,
+      future: `Dans une perspective future, il faudrait continuer à faire évoluer l’application en fonction des besoins des utilisateurs et des évolutions du marché et de la réglementation, ce qui demande une veille constante.
+
+      Il serait intéressant d’utiliser de manière plus efficace les outils mis à disposition et, potentiellement, d’accorder plusieurs sprints à une refonte technique des composants, car il y a par exemple des composants AgGrid qui sont repris et adaptés, mais qui deviennent difficiles à maintenir selon les nouveaux besoins. C’est un aspect que j’ai constaté plusieurs fois durant mon expérience chez Weekera.
+
+      Enfin, il serait pertinent d’explorer de nouvelles fonctionnalités pouvant apporter une vraie valeur ajoutée aux utilisateurs. Il y a eu des mocks mis en place dans certaines équipes, notamment autour d’un tutoriel de l’application à la première connexion ou d’une version testable en amont, ouverte au public et disponible à travers le site marchand, tout en veillant à maintenir une expérience utilisateur simple et fluide.
+
+      De mon côté, cette expérience me permet de mieux comprendre les enjeux d'un projet comme celui-ci et je souhaite mettre à profit cette expérience pour continuer à évoluer dans mes prochains projets.`,
       criticalView: 'Contenu à compléter.',
     },
     relatedSkills: [
       {
-        label: 'Angular / Front-end',
-        link: 'angular-front',
-      },
-      {
-        label: 'Java / Spring Boot',
-        link: 'java-spring',
+        label: 'Svelte / Front-end',
+        link: 'svelte',
       },
     ],
     relatedParcours: [

@@ -38,16 +38,9 @@ export const SKILLS: Skill[] = [
           link: '/real/plateforme-consultation-metier',
         },
         {
-          title: 'Interventions fullstack sur des applications RH et paie',
-          description:
-            'Je contribue actuellement à des <strong>applications liées à la gestion RH et à la paie</strong> chez <strong>Weekera</strong>, avec des interventions à la fois sur le <strong>front-end</strong> et le <strong>back-end</strong> dans un <strong>contexte métier exigeant</strong>.',
-          result:
-            'Résultat : cette expérience me permet de <strong>consolider mes compétences techniques</strong> dans un <strong>environnement réel</strong> tout en approfondissant ma <strong>compréhension fonctionnelle du produit</strong>.',
-          link: '/real/applications-rh-paie-weekera',
-        },
-        {
           title: 'Utilisation d’Angular pour le portfolio personnel',
-          description: 'Ce <strong>portfolio</strong> a été développé avec <strong>Angular</strong>.',
+          description:
+            'Ce <strong>portfolio</strong> a été développé avec <strong>Angular</strong>.',
           result: '',
         },
       ],
@@ -63,8 +56,8 @@ export const SKILLS: Skill[] = [
       Avec le recul, je considère qu’Angular demande un <strong>investissement initial</strong> sûrement plus important qu’avec d’autres frameworks front-end, mais il offre en contrepartie une <strong>excellente stabilité</strong> et une <strong>forte maintenabilité</strong> par sa conception et son architecture, ce qui correspond à ma vision d’un <strong>développement front-end de qualité</strong>.
       `,
       evolution: `
-      Aujourd'hui je souhaite continuer à <strong>approfondir ma maîtrise d'Angular</strong> en m'intéressant à des sujets plus avancés comme la <strong>gestion de la performance</strong>, la <strong>mise en place de tests automatisés</strong> (avec des agents IA intégrés pour générer les <strong>tests unitaires</strong> et d'<strong>intégration</strong>), ou encore au <strong>développement d'applications mobiles</strong> avec <strong>Angular et Ionic</strong>.
-      Dans mes futurs projets personnels, je pense continuer à utiliser Angular mais je reste ouvert à d'autres <strong>frameworks front-end</strong> comme <strong>Svelte</strong> pour du développement plus rapide et plus léger ou encore <strong>React</strong> pour sa communauté et son fonctionnement avec lequel je ne suis pas encore à l'aise.
+      Aujourd'hui, je souhaite continuer à <strong>approfondir ma maîtrise d'Angular</strong> en m'intéressant à des sujets plus avancés comme la <strong>gestion de la performance</strong>, la <strong>mise en place de tests automatisés</strong> (avec des agents IA intégrés pour générer les <strong>tests unitaires</strong> et d'<strong>intégration</strong>), ou encore au <strong>développement d'applications mobiles</strong> avec <strong>Angular et Ionic</strong>.
+      Dans mes futurs projets personnels, je pense continuer à utiliser Angular, mais je reste ouvert à d'autres <strong>frameworks front-end</strong> comme <strong>Svelte</strong> pour du développement plus rapide et plus léger, ou encore <strong>React</strong> pour sa communauté et son fonctionnement, avec lequel je ne suis pas encore totalement à l'aise.
       `,
       relatedProjects: [
         {
@@ -99,9 +92,29 @@ export const SKILLS: Skill[] = [
 
       Avec <strong>Svelte 5</strong>, il y a un nouveau <strong>système de runes</strong>, permettant une <strong>gestion plus fine de la réactivité</strong>, notamment pour les <strong>états</strong> et les <strong>effets de bord</strong> au sein des composants.
       `,
-      proofs: [],
-      selfCritique: 'Contenu à venir.',
-      evolution: 'Contenu à venir.',
+      proofs: [
+        {
+          title: 'Applications experts-comptables chez Weekera',
+          description:
+            "J'ai contribué, de février 2024 à mars 2026, à la réalisation d'<strong>applications liées à la gestion RH et à la paie</strong> chez <strong>Weekera</strong>, avec des interventions à la fois sur le <strong>front-end</strong> et le <strong>back-end</strong>.",
+          result:
+            "Résultat : cette expérience m'a permis d'apprendre ou d'approfondir mes connaissances sur plusieurs stacks comme <strong>Svelte</strong>, le <strong>WQL</strong> ou encore les <strong>tests</strong>.",
+          link: '/real/applications-rh-paie-weekera',
+        },
+      ],
+      selfCritique: `
+      Je considère avoir un <strong>niveau intermédiaire</strong> sur <strong>Svelte</strong>, en tenant compte du fait que je n’ai pas encore pratiqué en profondeur les dernières nouveautés du framework, comme <strong>Svelte 5</strong> et les <strong>runes</strong>.
+
+      Je ne suis pas non plus allé beaucoup plus loin que ce que j’ai appris chez Weekera à travers des projets personnels, car j’ai aujourd’hui une affinité plus forte avec <strong>Angular</strong>, liée à mon vécu professionnel et personnel, ce qui me permet de maintenir plus facilement mes projets personnels.
+
+      Malgré cela, je souhaite quand même continuer à progresser sur Svelte, car c’est un framework intéressant, moderne, et qui me permet d’élargir l’éventail de compétences que je peux proposer à mes futurs employeurs.
+      `,
+      evolution: `
+      Je souhaite continuer à approfondir ma maîtrise de <strong>Svelte</strong>, en particulier sur les nouveautés introduites avec <strong>Svelte 5</strong> et le fonctionnement des <strong>runes</strong>, qui changent la manière de gérer la réactivité dans le framework.
+
+      Pour accompagner cette progression, je m'appuie aussi sur des ressources ciblées comme cet <strong>article de formation sur Svelte 5 et les runes</strong> :
+      <a href="https://grafikart.fr/tutoriels/svelte-5-runes-2253" target="_blank" rel="noopener noreferrer">Formation Grafikart - Svelte 5 et les runes</a>.
+      `,
       relatedProjects: [],
     },
   },
