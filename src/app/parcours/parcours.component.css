@@ -207,6 +207,15 @@
   color: var(--step-accent);
 }
 
+.step-period {
+  margin: 0 0 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--step-accent) 68%, white 32%);
+}
+
 .step-category {
   display: inline-flex;
   align-items: center;

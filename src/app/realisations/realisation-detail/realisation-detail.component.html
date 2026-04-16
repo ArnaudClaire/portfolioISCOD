@@ -16,46 +16,65 @@
 
     <section class="detail-section">
       <h2>Présentation du projet</h2>
-      <p>{{ currentRealisation.article.presentation }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.presentation"></div>
+
+      <article
+        *ngIf="currentRealisation.externalLink"
+        class="project-spotlight"
+        aria-label="Lien externe vers le projet"
+      >
+        <p class="project-spotlight__eyebrow">Pour aller plus loin</p>
+        <h3>
+          {{
+            currentRealisation.externalLink.spotlightTitle ||
+              'Consulter le site officiel du projet'
+          }}
+        </h3>
+        <p>
+          {{
+            currentRealisation.externalLink.spotlightDescription ||
+              'Pour plus de détails sur ce projet, vous pouvez consulter le site associé.'
+          }}
+        </p>
+        <a
+          [href]="currentRealisation.externalLink.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="external-link"
+        >
+          {{ currentRealisation.externalLink.label }}
+        </a>
+      </article>
     </section>
 
     <section class="detail-section">
       <h2>Objectifs, contexte et enjeux</h2>
-      <p>{{ currentRealisation.article.objectives }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.objectives"></div>
     </section>
 
     <section class="detail-section">
       <h2>Les étapes du projet</h2>
-      <p>{{ currentRealisation.article.steps }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.steps"></div>
     </section>
 
     <section class="detail-section">
       <h2>Acteurs et interactions</h2>
-      <p>{{ currentRealisation.article.actors }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.actors"></div>
     </section>
 
     <section class="detail-section">
       <h2>Résultats</h2>
-      <p>{{ currentRealisation.article.results }}</p>
-      <a
-        *ngIf="currentRealisation.externalLink"
-        [href]="currentRealisation.externalLink.url"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="external-link"
-      >
-        {{ currentRealisation.externalLink.label }}
-      </a>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.results"></div>
     </section>
 
     <section class="detail-section">
       <h2>Les lendemains du projet</h2>
-      <p>{{ currentRealisation.article.future }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.future"></div>
     </section>
 
     <section class="detail-section">
       <h2>Mon regard critique</h2>
-      <p>{{ currentRealisation.article.criticalView }}</p>
+      <div class="detail-copy" [innerHTML]="currentRealisation.article.criticalView"></div>
     </section>
 
     <section class="detail-section related-section">
@@ -71,6 +90,27 @@
             class="related-link related-link--skill"
           >
             {{ skill.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      *ngIf="currentRealisation.relatedParcours?.length"
+      class="detail-section related-section"
+    >
+      <h2>Étape du parcours liée</h2>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let step of currentRealisation.relatedParcours"
+          class="related-link-chip related-link-chip--skill"
+        >
+          <a
+            [routerLink]="['/parcours', step.link]"
+            class="related-link related-link--skill"
+          >
+            {{ step.label }}
           </a>
         </li>
       </ul>

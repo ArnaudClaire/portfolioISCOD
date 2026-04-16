@@ -39,5 +39,26 @@
       <h2>Ce que j'en retiens</h2>
       <p>{{ currentStep.article.takeaway }}</p>
     </section>
+
+    <section
+      *ngIf="currentStep.relatedRealisations?.length"
+      class="detail-section related-section"
+    >
+      <h2>Réalisation associée</h2>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let realisation of currentStep.relatedRealisations"
+          class="related-link-chip"
+        >
+          <a
+            [routerLink]="['/real', realisation.link]"
+            class="related-link"
+          >
+            {{ realisation.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
   </div>
 </section>

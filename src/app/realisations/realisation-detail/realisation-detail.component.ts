@@ -24,6 +24,11 @@ export class RealisationDetailComponent implements OnInit {
       soft: 'rgba(96, 165, 250, 0.18)',
       glow: 'rgba(96, 165, 250, 0.16)',
     },
+    'applications-rh-paie-weekera': {
+      accent: '#f59e0b',
+      soft: 'rgba(245, 158, 11, 0.18)',
+      glow: 'rgba(245, 158, 11, 0.16)',
+    },
   }
 
   constructor(

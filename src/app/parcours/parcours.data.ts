@@ -7,9 +7,14 @@ export interface ParcoursArticle {
 
 export interface ParcoursStep {
   order: number;
+  period: string;
   slug: string;
   title: string;
   detailTitleHtml?: string;
+  relatedRealisations?: {
+    label: string;
+    link: string;
+  }[];
   subtitle: string;
   description: string;
   category: 'school' | 'company' | 'mixed';
@@ -41,6 +46,7 @@ const MIXED_TONE = {
 export const PARCOURS_STEPS: ParcoursStep[] = [
   {
     order: 1,
+    period: '2018-2019',
     slug: 'lycee-georges-clemenceau',
     title: 'Lycée Georges Clemenceau',
     detailTitleHtml:
@@ -64,6 +70,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
   },
   {
     order: 2,
+    period: '2019-2021',
     slug: 'lycee-jean-mermoz-bts-sio-slam',
     title: 'Lycée Jean Mermoz',
     detailTitleHtml:
@@ -87,6 +94,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
   },
   {
     order: 3,
+    period: '2021-2022',
     slug: 'computacenter',
     title: 'Computacenter',
     detailTitleHtml:
@@ -110,6 +118,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
   },
   {
     order: 4,
+    period: '2022-2023',
     slug: 'ynov-aplus-energies',
     title: 'YNOV / A+ Énergies',
     detailTitleHtml:
@@ -133,10 +142,17 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
   },
   {
     order: 5,
+    period: '2024-2026',
     slug: 'iscod-weekera',
     title: 'ISCOD / Weekera',
     detailTitleHtml:
       '<a class="parcours-link parcours-link--school" href="https://www.iscod.fr/?utm_source=google-branding&utm_medium=cpc&utm_campaign=ISCOD&utm_term=%2Biscod&gad_source=1&gad_campaignid=9492102615&gclid=Cj0KCQjwy_fOBhC6ARIsAHKFB79uivLwgaSXcra1QkGfrGp1-lBWWdXUSceKhQG0FYC1wfA3V4V1AOcaAtd4EALw_wcB" target="_blank" rel="noopener noreferrer">ISCOD</a><span class="parcours-title-separator"> / </span><a class="parcours-link parcours-link--company" href="https://weekera.fr" target="_blank" rel="noopener noreferrer">Weekera</a>',
+    relatedRealisations: [
+      {
+        label: 'Applications RH et paie chez Weekera',
+        link: 'applications-rh-paie-weekera',
+      },
+    ],
     subtitle: 'Master Expert en architectures logicielles',
     description:
       'Mon étape actuelle, entre montée en expertise logicielle, alternance et compréhension métier.',

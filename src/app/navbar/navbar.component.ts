@@ -42,6 +42,7 @@ export class NavbarComponent {
   private readonly realisationToneBySlug: Record<string, keyof NavbarComponent['sharedTones']> = {
     'refonte-site-upc-jean-mermoz': 'green',
     'plateforme-consultation-metier': 'blue',
+    'applications-rh-paie-weekera': 'orange',
   };
 
   readonly sectionTones = {

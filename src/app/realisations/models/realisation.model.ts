@@ -5,6 +5,8 @@ export interface Realisation {
   externalLink?: {
     label: string
     url: string
+    spotlightTitle?: string
+    spotlightDescription?: string
   }
   article: {
     presentation: string
@@ -16,6 +18,10 @@ export interface Realisation {
     criticalView: string
   }
   relatedSkills: {
+    label: string
+    link: string
+  }[]
+  relatedParcours?: {
     label: string
     link: string
   }[]
