@@ -123,6 +123,21 @@
   color: #f8fafc;
 }
 
+.proof-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: color-mix(in srgb, var(--skill-accent) 82%, white 18%);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.18em;
+}
+
+.proof-link:hover,
+.proof-link:focus-visible {
+  color: #f8fafc;
+}
+
 .detail-empty {
   margin: 0;
   color: #94a3b8;

@@ -26,7 +26,7 @@
               <span class="skill-icon">{{ skill.icon }}</span>
               <div class="skill-text">
                 <span class="skill-name">{{ skill.name }}</span>
-                <p class="skill-summary">{{ skill.summary }}</p>
+                <p class="skill-summary" [innerHTML]="skill.summary"></p>
               </div>
             </div>
             <span class="skill-level">{{ skill.level }}%</span>
@@ -61,7 +61,7 @@
               <span class="skill-icon">{{ skill.icon }}</span>
               <div class="skill-text">
                 <span class="skill-name">{{ skill.name }}</span>
-                <p class="skill-summary">{{ skill.summary }}</p>
+                <p class="skill-summary" [innerHTML]="skill.summary"></p>
               </div>
             </div>
             <span class="skill-level">{{ skill.level }}%</span>

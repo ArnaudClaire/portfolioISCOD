@@ -12,57 +12,68 @@ export const SKILLS: Skill[] = [
   {
     name: 'Angular',
     slug: 'angular-front',
-    summary: "Framework front-end pour créer la partie visible d'une application web de façon structurée et maintenable.",
+    summary:
+      "Framework <strong>front-end</strong> pour créer la partie visible d'une application web de façon <strong>structurée</strong> et <strong>maintenable</strong>.",
     icon: '🅰️',
     level: 90,
     displayLevel: 0,
     type: 'technical',
     article: {
       definition: `
-      Angular est un framework front-end basé sur TypeScript, principalement utilisé dans un contexte professionnel pour concevoir des applications web structurées, robustes et maintenables. Il est particulièrement adapté aux projets métier où les interfaces doivent afficher des volumes de données importants tout en restant claires, fiables et évolutives.
+      <strong>Angular</strong> est un <strong>framework front-end</strong> adapté aux <strong>projets SPA</strong>, au <strong>SSR</strong> (Server-Side Rendering) avec <strong>Angular Universal</strong> et aux <strong>sites statiques</strong>.
 
-      J’ai utilisé Angular dans un environnement professionnel où le front-end était découplé d’un back-end en .NET. Mon rôle consistait notamment à développer des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues de notre CRM Dynamics 365, un outil de gestion de la relation client. Angular servait à structurer l’affichage, gérer la navigation et rendre les informations exploitables pour différents métiers de l’entreprise A+ Énergies.
+      Il repose sur une <strong>architecture modulaire</strong> (fonctionnement par modules) et sur les <strong>composants</strong>, qui constituent un élément central de ce framework. On peut les générer, comme les <strong>pipes</strong>, les <strong>directives</strong>, les <strong>fichiers de test</strong> ou les <strong>services</strong>, et ils constituent la base du fonctionnement de ce framework SPA, puisque chaque composant fonctionne de manière isolée tout en pouvant communiquer avec d’autres. Cela rend les <strong>pages dynamiques</strong> et la <strong>navigation fluide</strong>, car le <strong>DOM</strong> est mis à jour dynamiquement.
 
-      Concrètement, le front-end Angular, écrit en TypeScript, était compilé puis intégré sous forme de fichiers de distribution ("dist") directement dans le projet .NET. Cette approche permettait de déployer l’application comme un tout, avant publication sur Azure, tout en conservant une séparation claire entre la logique front-end et les services back-end.
+      Contrairement à <strong>Svelte</strong>, Angular est un framework <strong>lourd et structuré</strong> car il impose une <strong>organisation claire du code</strong> et un <strong>bon découpage</strong>.
 
-      Aujourd’hui, Angular reste un framework très utilisé dans les applications métier d’entreprise, notamment pour les back-offices et les outils internes. Les évolutions récentes du framework, comme l’introduction des composants standalone et l’amélioration de l’architecture globale, renforcent sa pertinence dans des projets professionnels nécessitant stabilité et maintenabilité.
+      Angular utilise <strong>TypeScript</strong>, un langage basé sur <strong>JavaScript</strong> qui ajoute du <strong>typage</strong>. Lors du build, ce code est ensuite compilé en <strong>JavaScript</strong>, le langage interprété par les navigateurs.
       `,
       proofs: [
         {
           title: 'Développement d’interfaces de consultation métier',
           description:
-            'J’ai développé avec Angular des interfaces de consultation permettant aux utilisateurs d’accéder à des données issues du CRM Dynamics 365, un outil de gestion de la relation client, via un back-end en .NET, en structurant les écrans et les composants afin de rendre lisibles et exploitables des informations métier parfois complexes.',
+            'J’ai développé avec <strong>Angular</strong> des <strong>interfaces de consultation</strong> permettant aux utilisateurs d’accéder à des données issues du <strong>CRM Dynamics 365</strong>, via un <strong>back-end en .NET</strong>, en structurant les <strong>écrans</strong> et les <strong>composants</strong> afin de rendre lisibles et exploitables des <strong>informations métier complexes</strong>.',
           result:
-            'Résultat : les utilisateurs disposaient d’interfaces claires et cohérentes facilitant la consultation quotidienne des données, ce qui a amélioré leur autonomie et réduit les besoins de support.',
+            'Résultat : les utilisateurs disposaient d’<strong>interfaces claires et cohérentes</strong> facilitant la <strong>consultation quotidienne des données</strong>, ce qui a amélioré leur <strong>autonomie</strong> et réduit les <strong>besoins de support</strong>.',
           link: '/real/plateforme-consultation-metier',
         },
         {
-          title: 'Intégration du front-end Angular dans une application .NET',
+          title: 'Interventions fullstack sur des applications RH et paie',
           description:
-            'J’ai participé à la mise en place d’une architecture où le front-end Angular, développé en TypeScript, était compilé puis intégré sous forme de fichiers de distribution dans une application .NET avant déploiement.',
+            'Je contribue actuellement à des <strong>applications liées à la gestion RH et à la paie</strong> chez <strong>Weekera</strong>, avec des interventions à la fois sur le <strong>front-end</strong> et le <strong>back-end</strong> dans un <strong>contexte métier exigeant</strong>.',
           result:
-            'Résultat : une application cohérente et facilement déployable, avec une séparation claire entre le front-end et les services back-end, tout en respectant les contraintes techniques de l’entreprise.',
-          link: '/real/plateforme-consultation-metier',
+            'Résultat : cette expérience me permet de <strong>consolider mes compétences techniques</strong> dans un <strong>environnement réel</strong> tout en approfondissant ma <strong>compréhension fonctionnelle du produit</strong>.',
+          link: '/real/applications-rh-paie-weekera',
+        },
+        {
+          title: 'Utilisation d’Angular pour le portfolio personnel',
+          description: 'Ce <strong>portfolio</strong> a été développé avec <strong>Angular</strong>.',
+          result: '',
         },
       ],
       selfCritique: `
-      Aujourd’hui, j’estime avoir un niveau intermédiaire à avancé sur Angular, avec une utilisation déjà réalisée en contexte professionnel par le passé, complétée par des projets personnels plus récents. Je maîtrise les concepts fondamentaux du framework, la structuration des projets, le fonctionnement des composants, des pipes et l’organisation globale du code.
+      Aujourd’hui, j’estime avoir un <strong>niveau intermédiaire</strong> sur <strong>Angular</strong>. Ayant déjà utilisé ce framework dans des <strong>contextes professionnels et personnels</strong>, je maîtrise les <strong>concepts fondamentaux du framework</strong>, la <strong>structuration des projets</strong>, le <strong>fonctionnement des composants</strong> et l’organisation globale du code avec les <strong>bonnes pratiques</strong>.
 
-      Cette compétence occupe une place importante dans mon profil de développeur fullstack, car Angular correspond à ma vision d’un front-end structuré, rigoureux et maintenable, particulièrement adapté aux applications métier. Elle reste cohérente avec mon métier actuel et mon projet professionnel, même si elle n’est pas aujourd’hui ma technologie principale dans le cadre de l’alternance.
+      Cette compétence occupe une <strong>place importante dans mon profil</strong>, car Angular correspond à ma vision d’un <strong>front-end structuré et maintenable</strong>. Cette compétence reste cohérente avec mon <strong>métier actuel</strong> et mon <strong>projet professionnel</strong>, même si ce n’est pas aujourd’hui le framework principal que j’utilise en entreprise dans le cadre de mon alternance.
 
-      L’acquisition de cette compétence a été relativement rapide une fois les bases assimilées, notamment grâce aux conventions claires du framework et à son outillage intégré. Les projets professionnels passés et les projets personnels menés ensuite m’ont permis de consolider ces acquis et de gagner en autonomie.
+      L’acquisition de cette compétence a été relativement rapide une fois les <strong>bases assimilées</strong> et grâce à un accompagnement par la <strong>documentation</strong> et l’application de ce framework dans <strong>plusieurs projets</strong>. J’aime réaliser mes projets avec <strong>Tailwind</strong> pour le CSS et j’utilise <strong>Firebase</strong> pour gérer le back et les <strong>connexions sécurisées</strong>.
+      C’est encore aujourd’hui le <strong>framework que je prends par défaut</strong> pour mes projets front-end.
+      Je considère aujourd’hui être à l’aise avec Angular, même si je continue à apprendre et à me perfectionner au fil de mes projets.
 
-      Avec le recul, je considère qu’Angular demande un investissement initial plus important que d’autres frameworks front-end, mais qu’il offre en contrepartie une excellente stabilité et une forte maintenabilité.
+      Avec le recul, je considère qu’Angular demande un <strong>investissement initial</strong> sûrement plus important qu’avec d’autres frameworks front-end, mais il offre en contrepartie une <strong>excellente stabilité</strong> et une <strong>forte maintenabilité</strong> par sa conception et son architecture, ce qui correspond à ma vision d’un <strong>développement front-end de qualité</strong>.
       `,
       evolution: `
-      Cette compétence s’inscrit pleinement dans mon projet personnel et professionnel de développeur fullstack, car elle me permet de concevoir des applications front-end structurées et maintenables en complément de mes compétences back-end. À moyen terme, mon objectif est d’atteindre un niveau confirmé sur Angular afin de pouvoir l’utiliser sereinement dans un contexte professionnel sur des projets métier de taille moyenne à importante.
-
-      Pour faire évoluer cette compétence, je poursuis une démarche d’autoformation continue à travers des projets personnels, comme le développement de mon portfolio Angular, ainsi que par la consultation régulière de la documentation officielle et de ressources techniques spécialisées. Je prévois également de me former aux évolutions récentes du framework, notamment les composants standalone, afin de rester aligné avec les bonnes pratiques actuelles.
+      Aujourd'hui je souhaite continuer à <strong>approfondir ma maîtrise d'Angular</strong> en m'intéressant à des sujets plus avancés comme la <strong>gestion de la performance</strong>, la <strong>mise en place de tests automatisés</strong> (avec des agents IA intégrés pour générer les <strong>tests unitaires</strong> et d'<strong>intégration</strong>), ou encore au <strong>développement d'applications mobiles</strong> avec <strong>Angular et Ionic</strong>.
+      Dans mes futurs projets personnels, je pense continuer à utiliser Angular mais je reste ouvert à d'autres <strong>frameworks front-end</strong> comme <strong>Svelte</strong> pour du développement plus rapide et plus léger ou encore <strong>React</strong> pour sa communauté et son fonctionnement avec lequel je ne suis pas encore à l'aise.
       `,
       relatedProjects: [
         {
           label: 'Plateforme de consultation métier',
           link: '/real/plateforme-consultation-metier',
+        },
+        {
+          label: 'Applications RH et paie chez Weekera',
+          link: '/real/applications-rh-paie-weekera',
         },
       ],
     },
@@ -70,17 +81,35 @@ export const SKILLS: Skill[] = [
   {
     name: 'Svelte',
     slug: 'svelte',
-    summary: 'Framework front-end pour créer des interfaces web modernes, fluides et rapides à charger.',
+    summary:
+      'Framework <strong>front-end</strong> pour créer des interfaces web <strong>modernes</strong>, <strong>fluides</strong> et <strong>rapides à charger</strong>.',
     icon: '📘',
     level: 95,
     displayLevel: 0,
     type: 'technical',
-    article: { ...EMPTY_ARTICLE },
+    article: {
+      definition: `
+      <strong>Svelte</strong> est un <strong>framework front-end</strong> adapté aux <strong>projets SPA</strong>, mais aussi aux projets de type <strong>SSR</strong> (Server-Side Rendering, rendu côté serveur) avec <strong>SvelteKit</strong>, ainsi qu’aux <strong>sites statiques</strong>.
+
+      Il repose sur une approche basée sur les <strong>composants</strong>, comme <strong>Angular</strong>, qui constituent la base de la structure de l’application.
+
+      <strong>Svelte</strong> utilise <strong>JavaScript</strong> et peut également être utilisé avec <strong>TypeScript</strong>. Lors du build, le code est compilé en <strong>JavaScript optimisé</strong>, directement interprété par les navigateurs.
+
+      C’est un framework conçu pour être <strong>simple à prendre en main</strong> et à utiliser. Il connaît une <strong>popularité croissante</strong> grâce à ses <strong>performances</strong> et à sa <strong>légèreté</strong> (il ne nécessite pas de surcouche comme le <strong>Virtual DOM</strong>).
+
+      Avec <strong>Svelte 5</strong>, il y a un nouveau <strong>système de runes</strong>, permettant une <strong>gestion plus fine de la réactivité</strong>, notamment pour les <strong>états</strong> et les <strong>effets de bord</strong> au sein des composants.
+      `,
+      proofs: [],
+      selfCritique: 'Contenu à venir.',
+      evolution: 'Contenu à venir.',
+      relatedProjects: [],
+    },
   },
   {
     name: 'Java / Spring Boot',
     slug: 'java-spring',
-    summary: "Framework back-end pour gérer les données, les traitements et les règles de fonctionnement d'une application.",
+    summary:
+      "Framework back-end pour gérer les données, les traitements et les règles de fonctionnement d'une application.",
     icon: '☕',
     level: 90,
     displayLevel: 0,
@@ -90,7 +119,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Docker & DevOps',
     slug: 'docker-devops',
-    summary: "Outils de déploiement et d'exploitation pour lancer, partager et maintenir une application dans un environnement stable.",
+    summary:
+      "Outils de déploiement et d'exploitation pour lancer, partager et maintenir une application dans un environnement stable.",
     icon: '🐳',
     level: 75,
     displayLevel: 0,
@@ -100,7 +130,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Tests (Vitest, Jest, Playwright)',
     slug: 'tests',
-    summary: "Outils et méthodes de qualité pour vérifier automatiquement qu'une application fonctionne comme prévu.",
+    summary:
+      "Outils et méthodes de qualité pour vérifier automatiquement qu'une application fonctionne comme prévu.",
     icon: '🧪',
     level: 95,
     displayLevel: 0,
@@ -110,7 +141,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Communication en mode projet',
     slug: 'communication-projet',
-    summary: "Compétence humaine pour expliquer clairement les besoins, partager l'avancement et coordonner le travail.",
+    summary:
+      "Compétence humaine pour expliquer clairement les besoins, partager l'avancement et coordonner le travail.",
     icon: '💬',
     level: 95,
     displayLevel: 0,
@@ -120,7 +152,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Gestion de la relation client',
     slug: 'relation-client',
-    summary: "Compétence humaine pour comprendre les attentes d'un client ou d'un utilisateur et y répondre de façon adaptée.",
+    summary:
+      "Compétence humaine pour comprendre les attentes d'un client ou d'un utilisateur et y répondre de façon adaptée.",
     icon: '🤝',
     level: 85,
     displayLevel: 0,
@@ -130,7 +163,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Travail en équipe & collaboration',
     slug: 'travail-equipe',
-    summary: 'Compétence humaine pour collaborer, partager les informations utiles et faire avancer un travail commun.',
+    summary:
+      'Compétence humaine pour collaborer, partager les informations utiles et faire avancer un travail commun.',
     icon: '👥',
     level: 95,
     displayLevel: 0,
@@ -140,7 +174,8 @@ export const SKILLS: Skill[] = [
   {
     name: 'Adaptabilité & autonomie',
     slug: 'adaptabilite-autonomie',
-    summary: "Compétence humaine pour s'adapter rapidement, apprendre vite et avancer avec autonomie quand c'est nécessaire.",
+    summary:
+      "Compétence humaine pour s'adapter rapidement, apprendre vite et avancer avec autonomie quand c'est nécessaire.",
     icon: '🧭',
     level: 100,
     displayLevel: 0,
@@ -150,7 +185,8 @@ export const SKILLS: Skill[] = [
   {
     name: "Esprit d'analyse & rigueur",
     slug: 'analyse-rigueur',
-    summary: 'Compétence humaine pour comprendre un problème, structurer la réflexion et proposer des solutions fiables.',
+    summary:
+      'Compétence humaine pour comprendre un problème, structurer la réflexion et proposer des solutions fiables.',
     icon: '🧠',
     level: 90,
     displayLevel: 0,

@@ -26,9 +26,10 @@
 
     <section class="detail-section">
       <h2>Ma définition</h2>
-      <div class="detail-copy whitespace-pre-line">
-        {{ currentSkill.article.definition }}
-      </div>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="currentSkill.article.definition"
+      ></div>
     </section>
 
     <section class="detail-section">
@@ -37,13 +38,23 @@
       <div *ngFor="let proof of currentSkill.article.proofs" class="proof-block">
         <h3>{{ proof.title }}</h3>
 
-        <p class="detail-copy">
-          {{ proof.description }}
-        </p>
+        <div
+          class="detail-copy whitespace-pre-line"
+          [innerHTML]="proof.description"
+        ></div>
 
-        <p class="detail-copy detail-copy--strong">
-          {{ proof.result }}
-        </p>
+        <div
+          class="detail-copy detail-copy--strong whitespace-pre-line"
+          [innerHTML]="proof.result"
+        ></div>
+
+        <a
+          *ngIf="proof.link"
+          [routerLink]="proof.link"
+          class="proof-link"
+        >
+          Voir la réalisation associée
+        </a>
       </div>
 
       <p
@@ -56,16 +67,18 @@
 
     <section class="detail-section">
       <h2>Mon autocritique</h2>
-      <p class="detail-copy whitespace-pre-line">
-        {{ currentSkill.article.selfCritique }}
-      </p>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="currentSkill.article.selfCritique"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Mon évolution dans cette compétence</h2>
-      <p class="detail-copy whitespace-pre-line">
-        {{ currentSkill.article.evolution }}
-      </p>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="currentSkill.article.evolution"
+      ></div>
     </section>
 
     <section class="detail-section related-section">
