@@ -13,7 +13,10 @@
           '--domain-accent-soft': technicalSectionTone.soft
         }"
       >
-        <h2>Compétences techniques</h2>
+        <div class="skills-domain-header">
+          <h2>Compétences techniques</h2>
+          <span>Niveau estimé</span>
+        </div>
 
         <a
           *ngFor="let skill of technicalSkills"
@@ -29,14 +32,7 @@
                 <p class="skill-summary" [innerHTML]="skill.summary"></p>
               </div>
             </div>
-            <span class="skill-level">{{ skill.level }}%</span>
-          </div>
-
-          <div class="skill-meter">
-            <div
-              class="skill-meter-fill"
-              [style.width.%]="skill.displayLevel"
-            ></div>
+            <span class="skill-level">{{ getSkillLevelLabel(skill) }}</span>
           </div>
         </a>
       </section>
@@ -48,7 +44,10 @@
           '--domain-accent-soft': softSectionTone.soft
         }"
       >
-        <h2>Compétences humaines</h2>
+        <div class="skills-domain-header">
+          <h2>Compétences humaines</h2>
+          <span>Niveau estimé</span>
+        </div>
 
         <a
           *ngFor="let skill of softSkills"
@@ -64,14 +63,7 @@
                 <p class="skill-summary" [innerHTML]="skill.summary"></p>
               </div>
             </div>
-            <span class="skill-level">{{ skill.level }}%</span>
-          </div>
-
-          <div class="skill-meter">
-            <div
-              class="skill-meter-fill"
-              [style.width.%]="skill.displayLevel"
-            ></div>
+            <span class="skill-level">{{ getSkillLevelLabel(skill) }}</span>
           </div>
         </a>
       </section>

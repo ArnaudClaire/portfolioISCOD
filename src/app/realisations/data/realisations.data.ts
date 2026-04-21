@@ -17,7 +17,11 @@ export const REALISATIONS: Realisation[] = [
       presentation:
         "Cette réalisation correspond à un stage effectué sur une durée de 2 mois, du 01/02/2021 au 26/03/2021, dans une salle annexe du Lycée Jean Mermoz. J’ai mené ce projet avec Olivier Barrière, un autre stagiaire issu de la même classe que moi. Sous la responsabilité de notre maître de stage et client, Monsieur Didier Garnier, nous avions pour mission de concevoir la refonte du site de l’Unité de production culinaire (UPC).",
       objectives:
-        "L’objectif était de proposer une nouvelle version du site de l’UPC, plus claire et plus adaptée aux besoins réels du client. Le point de départ était particulier, car le cahier des charges initial était erroné et suivait la progression d’une ancienne équipe composée de deux stagiaires. Nous avons donc utilisé l’arborescence du site comme base de travail pour reconstruire un cadre de projet cohérent.",
+        `<h3>Objectif principal</h3>L’objectif était de proposer une nouvelle version du site de l’UPC, plus claire et plus adaptée aux besoins réels du client. 
+        <h3>Contexte </h3>Le point de départ était particulier, car le cahier des charges initial était erroné et suivait la progression d’une ancienne équipe composée de deux stagiaires. 
+        <h3>Enjeux</h3>Nous avons donc utilisé l’arborescence du site comme base de travail pour reconstruire un cadre de projet cohérent.
+        <h3>Risques</h3>Nous n'avions que 2 mois pour réaliser le site et les principaux risques était de repartir sur un mauvais besoin, ce qui pouvait entraîner des incompréhensions avec le client, des erreurs dans les fonctionnalités développées ou une perte de temps liée à la réinterprétation du besoin.
+        `,
       steps:
         "Pour répondre aux attentes, nous avons organisé avec Monsieur Didier Garnier des réunions tous les jeudis afin de montrer l’avancée du projet, ajuster ce qui avait été produit et faire émerger de nouvelles idées. J’ai consigné les conclusions de chaque réunion dans un cahier de notes pour garder une trace claire des décisions. Au fil du stage, nous avons aussi eu l’opportunité de visiter le bâtiment de l’UPC pour mieux comprendre le travail des employés et le contexte métier. Le site a été codé en PHP, avec Wamp pour le développement en local, MySQL pour la base de données et OVH pour l’hébergement. L’arborescence couvrait notamment les documents de commande, les menus d’affichage avec logos, les menus de commande des repas, les bons de commande, les fiches techniques des recettes et ingrédients par catégories, les pages d’affichage nutrition, produits locaux et circuit court, environnement, les commissions de menus, les archives, les photos et le courrier.",
       actors:
@@ -47,6 +51,12 @@ export const REALISATIONS: Realisation[] = [
         link: 'analyse-rigueur',
       },
     ],
+    relatedParcours: [
+      {
+        label: 'Étape 2 - Lycée Jean Mermoz',
+        link: 'lycee-jean-mermoz-bts-sio-slam',
+      },
+    ]
   },
   {
     title: 'Plateforme de consultation métier',
@@ -55,30 +65,164 @@ export const REALISATIONS: Realisation[] = [
       'Développement d’interfaces Angular permettant la consultation de données métier issues d’un CRM (outil de gestion de la relation client).',
     article: {
       presentation:
-        'Projet de développement d’une application de consultation métier destinée à faciliter l’accès à des données internes.',
+        `Le projet consistait à développer des applications web internes permettant de faciliter l’accès aux données du CRM et d’améliorer leur lisibilité pour les différents services de l’entreprise. L’objectif était de proposer des outils simples, accessibles et utiles au quotidien pour les différents pôles de l'entreprise, souvent confrontés à des données complexes ou difficiles à exploiter.`,
       objectives:
-        'Permettre aux utilisateurs de consulter des données complexes de manière claire, fiable et autonome.',
+        `<h3>Objectif principal</h3>L’objectif principal était de permettre aux utilisateurs de consulter des données complexes de manière plus claire et plus autonome.
+        <h3>Contexte </h3>L'entreprise avait des problèmes de visibilité des données car les rôles étaient mal faits : On avait un problème d'accès à certaines données pour les responsables des différents pôle. Il fallait donc refaire les rôles utilisateur du CRM, améliorer la compréhension des données, réduire les erreurs et faire gagner du temps aux équipes. 
+        <h3>Enjeux</h3>Les données étant sensibles, notamment car elles concernent des informations internes liées aux ressources humaines ou aux dossiers des clients, la sécurité était donc un enjeu important.
+        <h3>Risques</h3>L'un des principaux risques pour les projets était de donner trop d'accès à certains commerciaux qui pouvaient par exemple essayer de prendre des clients à d'autres ou bien de laisser fuiter certaines données hors de l'entreprise comme des données personnelles d'employés ou de clients.
+        `,
       steps:
-        'Analyse des besoins, conception des écrans, développement Angular, intégration avec un back-end .NET, tests et déploiement.',
+        `Les projets ont commencé par une phase d’analyse des besoins, avec des échanges réguliers avec les différents pôles impactés afin de bien comprendre leurs attentes et leurs contraintes. Cette étape était importante pour s’assurer que les outils développés seraient réellement utilisés.
+
+        La conception des interfaces a ensuite été pensée pour rester simple et lisible en utilisant notamment Tailwind ou Bootstrap pour rendre l’outil plus agréable, en gardant toujours en tête l’utilisateur final. Le développement s’est fait principalement avec Angular pour le front-end, et avec du C# côté back-end pour interagir avec le <strong> CRM Dynamics 365 </strong>.
+
+        On a mis en place une authentification via JWT(JSON Web Token). Des tests ont ensuite été réalisés pour garantir le bon fonctionnement des outils, avant leur mise en production et leur utilisation en interne.
+        Les tests nous ont aussi permis d'assurer un suivi de la réalisation des fonctionnalités et on a mis en place plus tard un système de retour client via dynamics 365 afin de maintenir l'outil.`,
       actors:
-        'Collaboration avec les équipes métier et techniques pour valider les besoins et les usages.',
+        `Tout au long du projet, j’ai travaillé en collaboration avec les différents pôles de l'entreprise du commercial au RH.`,
       results:
-        'Application utilisée en interne, amélioration de la lisibilité des données et réduction des sollicitations du support.',
+        `Les outils développés ont permis d’améliorer la lisibilité des données issues du CRM et de rendre certains processus plus fluides. Les différents utilisateurs ont gagné en autonomie et ont moins sollicité le support pour accéder à certaines informations.
+
+        Cependant, certains outils ont eu une utilisation plus limitée dans le temps. Cela m’a permis de comprendre que la réussite d’un projet ne dépend pas uniquement de sa qualité technique, mais aussi de son adoption par les utilisateurs. C'est pour cela qu'on a mis en place à un moment des réunions chaque semaine avec un responsable de chaque pôle pour mener à bien les projets.`,
       future:
-        'La solution pourrait évoluer vers davantage de fonctionnalités et une extension à d’autres métiers.',
+        `Avec du recul, ces outils pourraient être améliorés en prenant davantage en compte les usages réels et en renforçant la communication avec les équipes métier en amont. Il serait aussi intéressant de faire évoluer ces solutions vers d’autres services et d’analyser plus précisément leur utilisation pour mieux orienter les futures évolutions.`,
       criticalView:
-        'Ce projet m’a permis de renforcer ma capacité à concevoir des interfaces adaptées aux besoins réels des utilisateurs.',
+        `Ce projet m’a permis de mieux comprendre l’importance de concevoir des outils réellement adaptés aux besoins des utilisateurs. J’ai aussi compris que développer une solution ne suffit pas, il faut aussi fidéliser l'utilisateur selon le projet.
+
+        Cela m’a également appris à prendre du recul sur mes réalisations, afin de m'adapter aux utilisateurs et à leurs besoins réels.`,
     },
     relatedSkills: [
       {
-        label: 'Angular / Front-end',
+        label: 'Angular',
         link: 'angular-front',
       },
+      {
+        label: 'Docker & DevOps',
+        link: 'docker-devops',
+      },
+      {
+        label: 'Tests',
+        link: 'tests',
+      },{
+        label: 'Communication en mode projet',
+        link: 'communication-projet',
+      },
+      {
+        label: 'Gestion de la relation client',
+        link: 'relation-client',
+      },
+      {
+        label: 'Travail en équipe & collaboration',
+        link: 'travail-equipe',
+      },
+      {
+        label: "Esprit d'analyse & rigueur",
+        link: 'analyse-rigueur',
+      },
+      {
+        label: 'Adaptabilité & autonomie ',
+        link: 'adaptabilite-autonomie',
+      }
     ],
     relatedParcours: [
       {
         label: 'Étape 4 - YNOV / A+ Énergies',
         link: 'ynov-aplus-energies',
+      },
+    ],
+  },
+    {
+    title: 'Intégration, industrialisation et déploiement de logiciel',
+    slug: 'ci-cd-deploy',
+    shortDescription:
+      'Étude de cas ISCOD visant à créer une plateforme de gestion de projet collaboratif destinée aux équipes de développement logiciel.',
+          externalLink: {
+      label: 'Lien github du projet',
+      url: 'https://github.com/ArnaudClaire/BLOC-DEV-PMT',
+      spotlightTitle: 'Étude de cas ISCOD - PMT',
+      spotlightDescription:
+        'Pour plus de détails sur ce projet, vous pouvez consulter le repos git du projet.',
+    },
+    article: {
+      presentation:
+        `Dans le cadre d'une étude de cas faite durant ma formation chez ISCOD, j’ai travaillé sur PMT (Project Management Tool), une plateforme collaborative de gestion de projet. Le projet avait pour but de concevoir une application capable d’aider une équipe à planifier ses projets et à suivre l’avancement des tâches.
+
+C'est une application que j'ai réalisée en TypeScript avec Angular pour la partie front-end et Java Spring Boot pour la partie back-end. Elle ne se limitait pas au développement fonctionnel de l’application, puisqu’elle intégrait aussi des enjeux de tests automatisés, de dockerisation et de pipeline CI/CD (Intégration continue / Déploiement continu).`,
+      objectives:
+        `<h3>Objectif principal</h3>L’objectif principal du projet était de créer une application permettant à une équipe de planifier, suivre et faire évoluer un projet de manière collaborative.
+
+Il fallait aussi intégrer les tests, la dockerisation front et back, mettre en place une chaîne d'intégration continue et que tout soit documenté.
+<h3>Contexte </h3>Ce projet s'inscrit dans une démarche de preuve des compétences acquises durant l'apprentissage de mon bloc de formation Intégration, industrialisation et déploiement de logiciels au cours de mon Master Expert en architectures logicielles.
+<h3>Enjeux</h3>Ce projet m'a permis de valider les compétences attendues :
+
+ -Développer les fonctionnalités du logiciel en modélisant un domaine métier, et en intégrant des composants externes afin d’améliorer la qualité du code et faciliter les développements futurs.
+
+ -Automatiser la construction de la solution logicielle en configurant les chaînes de build et l’exécution des tests unitaires, fonctionnels et d’intégration afin de préparer le déploiement continu du logiciel.
+
+ -Industrialiser le développement du logiciel à l’aide d’outils d’automatisation et le documenter en décrivant le processus de déploiement de manière à faire évoluer les logiciels développés et minimiser les erreurs de manipulation par les tiers.
+ <h3>Risques</h3>Une mauvaise couverture pouvait entraîner des régressions ou des anomalies non détectées lors des évolutions du projet et une mauvaise configuration de la pipeline CI/CD ou des images Docker pouvait bloquer la mise en production ou générer des erreurs difficiles à diagnostiquer.
+ `,
+      steps:
+        `Le projet a commencé par une phase de conception, durant laquelle j’ai identifié les entités principales du système. J’ai travaillé sur les objets clés du domaine, comme les utilisateurs, les projets, les membres, les invitations, les tâches, les historiques de modification et les notifications. Cette étape m’a amené à structurer à la fois un diagramme de classes et un schéma relationnel, en prenant en compte les règles métier, la nullabilité et les contraintes d’unicité.
+
+Une fois la structure définie, j’ai travaillé sur le backend en Java avec Spring Boot qui expose une API REST permettant de gérer les utilisateurs, les projets, les membres de projet, les invitations, les tâches, l’historique et les notifications. Le backend repose sur Spring Web, Spring Data JPA, PostgreSQL, ainsi que sur une base H2 pour les tests.
+
+En parallèle, j’ai développé le frontend avec Angular 19, dans un environnement Nx (outil de gestion de workspace en monorepo), avec TypeScript et Tailwind CSS. L’interface permet aujourd’hui de gérer l’inscription, la connexion simple par email, la persistance de session en localStorage, l’affichage d’un dashboard, la création de projets et la création de tâches.
+
+J'ai mis en place des tests côté front et back :
+
+Côté frontend, j’ai mis en place des tests unitaires ainsi que des tests end-to-end avec Playwright, capables de couvrir les parcours les plus importants, comme l’inscription, la connexion, la création d’un projet, l’invitation d’un membre, l’attribution d’un rôle, la création et l’assignation d’une tâche, ou encore la consultation de l’historique. 
+
+Côté backend, des tests Java ont été prévus avec JUnit, Spring Boot Test et H2, avec génération d’un rapport de couverture JaCoCo.
+
+Le projet est organisé de manière claire, avec une séparation entre le backend, le frontend, la base de données, la documentation et les workflows GitHub Actions. Le frontend et le backend ont chacun leur Dockerfile, le projet dispose d’un docker-compose.yml, et une pipeline GitHub Actions permet de lancer les tests, de construire les images Docker et de les pousser sur Docker Hub lors d’un push sur la branche principale. Un README détaillé documente également l’installation, le lancement, les variables d’environnement, les tests et le déploiement.`,
+      actors:
+        `Les acteurs du projet sont Nicolas, le Product Owner qui a défini les fonctionnalités attendues à travers les user stories, Mariana, la tech lead qui a fixé les règles techniques à respecter et moi-même le développeur full stack.`,
+      results:
+        `Ce projet est fonctionnel et m'a permis de réaliser un outil testé, maintenable et facilement déployable.
+        
+        Ce projet me permet de mettre en avant mes compétences en Angular, Java/Spring Boot, Docker & DevOps, Tests et de la CI/CD, mais aussi au niveau des soft skills de mettre en avant mon autonomie et mon esprit d'analyse et de rigueur.`,
+      future:
+        `Ce projet pourrait encore évoluer. Il serait possible d’aller plus loin dans la gestion des droits, dans la sécurité du backend, dans la supervision du déploiement en intégrant des outils de monitoring, de logs et d’alertes.
+
+Avec des fonds, de la patience et une bonne équipe, il serait possible de faire un outil aussi poussé que Jira en intégrant aussi une IA comme Rovo à partir de ce projet.`,
+      criticalView:
+        `Cette étude de cas m’a permis de prouver mes compétences dans le domaine et je considère qu'il faut penser à la structure du projet, à la qualité des tests, à la reproductibilité de l’environnement, à la clarté de la documentation et à la facilité de déploiement afin de réaliser des projets facilement maintenables et scalables.
+
+C’est aussi un projet qui m’a permis de relier plusieurs dimensions de mon profil. J’y ai mobilisé mes compétences en Angular, en Spring Boot, en tests automatisés, en Docker et en CI/CD, mais aussi grâce à ce projet je pense prouver ma capacité à structurer une réflexion technique et à produire un ensemble cohérent de livrables, ce qui prouve aussi mon autonomie ainsi que mon esprit d’analyse et de rigueur.`,
+    },
+    relatedSkills: [
+      {
+        label: 'Angular',
+        link: 'angular-front',
+      },
+      {
+        label: 'Java / Spring Boot',
+        link: 'java-spring',
+      },
+      {
+        label: 'Docker & DevOps',
+        link: 'docker-devops',
+      },
+      {
+        label: 'Tests',
+        link: 'tests',
+      }
+      ,
+      {
+        label: 'Adaptabilité & autonomie ',
+        link: 'adaptabilite-autonomie',
+      },
+      {
+        label: `Esprit d'analyse & rigueur`,
+        link: 'analyse-rigueur',
+      }
+    ],
+    relatedParcours: [
+      {
+        label: 'Étape 5 - ISCOD / Weekera',
+        link: 'iscod-weekera',
       },
     ],
   },
@@ -104,35 +248,27 @@ export const REALISATIONS: Realisation[] = [
       Aujourd'hui, c'est une entreprise en pleine croissance avec des équipes de développement et de support qui travaillent ensemble pour faire évoluer l'application.
       `,
       objectives: `
-      <h3>Objectif principal</h3>
-      Le projet a pour objectif principal de <strong>simplifier</strong> et d’<strong>optimiser</strong> la gestion des <strong>ressources humaines</strong> et de la <strong>paie</strong> pour les <strong>experts-comptables</strong>.
+      <h3>Objectif principal</h3>Le projet a pour objectif principal de <strong>simplifier</strong> et d’<strong>optimiser</strong> la gestion des <strong>ressources humaines</strong> et de la <strong>paie</strong> pour les <strong>experts-comptables</strong>.
 
       Pour répondre à cet objectif, plusieurs <strong>axes structurants</strong> ont été définis. Le premier consiste à <strong>centraliser les données</strong>, afin de regrouper les informations <strong>RH</strong> et <strong>paie</strong> dans un seul outil et d’éviter la dispersion entre plusieurs supports. Le second repose sur l’<strong>automatisation des processus</strong>, avec l’idée de réduire les <strong>tâches manuelles</strong>, de limiter les <strong>erreurs</strong> et de faire gagner du temps sur des opérations récurrentes.
-
-      <h3>Contexte métier</h3>
-      Ce besoin prend encore plus de sens quand on regarde le <strong>contexte métier</strong> dans lequel s’inscrit Weekera. Le projet évolue dans l’univers des <strong>ressources humaines</strong> et de la <strong>paie</strong>, un domaine central pour les entreprises comme pour les cabinets d’<strong>expertise comptable</strong>. Les <strong>experts-comptables</strong> y occupent une place importante, car ils accompagnent leurs clients sur toute la partie administrative et sociale, notamment autour de la production des <strong>bulletins de paie</strong>, des déclarations sociales comme la <strong>DSN</strong> (<strong>Déclaration Sociale Nominative</strong>, c’est-à-dire la transmission mensuelle des données sociales aux organismes concernés), et du suivi des <strong>obligations légales</strong>.
+      <h3>Contexte </h3>Ce besoin prend encore plus de sens quand on regarde le <strong>contexte métier</strong> dans lequel s’inscrit Weekera. Le projet évolue dans l’univers des <strong>ressources humaines</strong> et de la <strong>paie</strong>, un domaine central pour les entreprises comme pour les cabinets d’<strong>expertise comptable</strong>. Les <strong>experts-comptables</strong> y occupent une place importante, car ils accompagnent leurs clients sur toute la partie administrative et sociale, notamment autour de la production des <strong>bulletins de paie</strong>, des déclarations sociales comme la <strong>DSN</strong> (<strong>Déclaration Sociale Nominative</strong>, c’est-à-dire la transmission mensuelle des données sociales aux organismes concernés), et du suivi des <strong>obligations légales</strong>.
 
       C’est aussi un environnement particulièrement exigeant. Les <strong>règles</strong> changent régulièrement, entre <strong>droit du travail</strong>, <strong>cotisations</strong> et <strong>conventions collectives</strong>, ce qui oblige les professionnels à rester en veille en permanence. Dans ce type d’environnement, une <strong>erreur</strong> peut vite avoir des conséquences importantes, aussi bien sur le plan <strong>financier</strong> que <strong>juridique</strong>.
 
       À cela s’ajoute une réalité très concrète du terrain : les <strong>outils historiquement utilisés</strong> dans ce secteur sont souvent <strong>anciens</strong>, <strong>fragmentés</strong> ou <strong>peu intuitifs</strong>. Les utilisateurs doivent parfois jongler entre plusieurs logiciels, ce qui ralentit le travail, rend certaines actions plus lourdes et augmente les risques d’erreurs.
-
-      <h3>Enjeux du projet</h3>
-      Une attention particulière est aussi portée à l’<strong>expérience utilisateur</strong>. L’application doit rester <strong>simple à comprendre</strong>, <strong>fluide à utiliser</strong> et suffisamment <strong>intuitive</strong> pour accompagner des utilisateurs qui ont avant tout un <strong>besoin métier</strong>. Dans un domaine aussi sensible que la paie, la <strong>fiabilité</strong> et la <strong>sécurité des données</strong> sont également des enjeux majeurs, tout comme la capacité de l’outil à améliorer concrètement la <strong>productivité</strong> dans la gestion quotidienne des dossiers.
+      <h3>Enjeux</h3>Une attention particulière est aussi portée à l’<strong>expérience utilisateur</strong>. L’application doit rester <strong>simple à comprendre</strong>, <strong>fluide à utiliser</strong> et suffisamment <strong>intuitive</strong> pour accompagner des utilisateurs qui ont avant tout un <strong>besoin métier</strong>. Dans un domaine aussi sensible que la paie, la <strong>fiabilité</strong> et la <strong>sécurité des données</strong> sont également des enjeux majeurs, tout comme la capacité de l’outil à améliorer concrètement la <strong>productivité</strong> dans la gestion quotidienne des dossiers.
 
       C’est précisément dans ce contexte que <strong>Weekera</strong> cherche à apporter une réponse plus moderne. L’idée est de proposer une solution <strong>centralisée</strong>, plus <strong>automatisée</strong> et réellement <strong>pensée pour l’utilisateur</strong>, afin de simplifier la gestion quotidienne des dossiers tout en garantissant la fiabilité des données. L’objectif n’est pas seulement de numériser l’existant, mais de fournir un outil capable d’accompagner les professionnels dans leurs <strong>contraintes réelles</strong>, avec plus de <strong>clarté</strong>, plus d’<strong>efficacité</strong> et une meilleure <strong>expérience utilisateur</strong>.
-      `,
+      <h3>Risques</h3><strong>L’évolution régulière des règles légales et des obligations</strong> comme la <strong>DSN</strong> pouvait entraîner des erreurs dans les traitements ou dans les déclarations. La <strong>maintenabilité</strong> du code représentait un risque, notamment avec l’accumulation de composants réutilisés et adaptés dans le temps, ce qui pouvait rendre certaines parties de l’application plus difficiles à faire évoluer.`,
       steps: `
-      <h3>Organisation du travail</h3>
-      En ce qui concerne ma mission sur l’application, j’évoluais dans un environnement <strong>agile</strong>, avec des <strong>sprints de 2 à 3 semaines</strong> et des réunions régulières qui permettaient de structurer le travail de l’équipe de manière claire.
+      <h3>Organisation du travail</h3>En ce qui concerne ma mission sur l’application, j’évoluais dans un environnement <strong>agile</strong>, avec des <strong>sprints de 2 à 3 semaines</strong> et des réunions régulières qui permettaient de structurer le travail de l’équipe de manière claire.
 
       Tous les matins, nous faisions un DSM (<strong>Daily Stand-up Meeting</strong>), une réunion rapide de 15 minutes pour faire le point sur l’avancement, les difficultés rencontrées et les priorités du jour.
 
       Le développement reposait sur des <strong>User Stories (US)</strong> préparées en amont, puis complétées lors de réunions avec les différents acteurs de l’US. L’objectif de ces échanges était de s’assurer que les besoins étaient bien compris, d’anticiper les cas plus complexes et d’adapter le sujet avant le développement.
 
       Une fois le développement terminé, la fonctionnalité était ensuite présentée lors des <strong>sprint reviews</strong>.
-
-      <h3>Chronologie de mon parcours sur le projet</h3>
-      <div class="real-timeline">
+      <h3>Chronologie de mon parcours sur le projet</h3><div class="real-timeline">
         <article class="real-timeline-item">
           <h4>Intégration - 2 semaines</h4>
           <p>Ma prise de poste a commencé par une phase d’intégration pour comprendre l’environnement du projet, les outils utilisés et les règles de travail de l’équipe.</p>
@@ -204,13 +340,39 @@ export const REALISATIONS: Realisation[] = [
       Enfin, il serait pertinent d’explorer de nouvelles fonctionnalités pouvant apporter une vraie valeur ajoutée aux utilisateurs. Il y a eu des mocks mis en place dans certaines équipes, notamment autour d’un tutoriel de l’application à la première connexion ou d’une version testable en amont, ouverte au public et disponible à travers le site marchand, tout en veillant à maintenir une expérience utilisateur simple et fluide.
 
       De mon côté, cette expérience me permet de mieux comprendre les enjeux d'un projet comme celui-ci et je souhaite mettre à profit cette expérience pour continuer à évoluer dans mes prochains projets.`,
-      criticalView: 'Contenu à compléter.',
+      criticalView: `Weekera m’a amené à découvrir de nouveaux rituels de travail entre développeurs que je ne connaissais pas auparavant, autour d’une application basée sur des technologies que je n’avais encore jamais utilisées. Cette expérience m’a permis de progresser en tant que développeur et d’acquérir des connaissances sur des sujets métier comme les DSN, ainsi que sur l’utilisation de l’IA dans le développement.
+
+      Il fallait intervenir sur du code existant que je n’avais pas développé. Cela m’a appris à m’adapter rapidement, à comprendre des bases de code parfois complexes et à travailler dans un contexte où la maintenabilité et la clarté du code pouvaient être améliorées.
+      Cette expérience m’a permis de prendre du recul sur les bonnes pratiques, la documentation et de la structuration du code dans un projet collaboratif.`,
     },
     relatedSkills: [
       {
         label: 'Svelte / Front-end',
         link: 'svelte',
       },
+      {
+        label: 'Docker & DevOps',
+        link: 'docker-devops',
+      },
+      {
+        label: 'Tests',
+        link: 'tests',
+      },{
+        label: 'Communication en mode projet',
+        link: 'communication-projet',
+      },
+      {
+        label: 'Travail en équipe & collaboration',
+        link: 'travail-equipe',
+      },
+      {
+        label: "Esprit d'analyse & rigueur",
+        link: 'analyse-rigueur',
+      },
+      {
+        label: 'Adaptabilité & autonomie ',
+        link: 'adaptabilite-autonomie',
+      }
     ],
     relatedParcours: [
       {

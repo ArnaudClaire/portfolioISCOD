@@ -112,6 +112,15 @@
           </a>
         </div>
       </div>
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="transition"
+        [ngClass]="sectionTones.contact"
+      >
+        Contact
+      </a>
     </div>
   </div>
 
@@ -206,6 +215,16 @@
             </a>
           </div>
         </div>
+
+        <a
+          routerLink="/contact"
+          routerLinkActive="text-blue-400"
+          (click)="closeMenu()"
+          class="mt-4 block rounded-2xl border-t border-white/10 px-4 py-3 pt-6 text-base font-semibold transition hover:bg-white/5"
+          [ngClass]="sectionTones.contact"
+        >
+          Contact
+        </a>
       </div>
     </div>
   </div>

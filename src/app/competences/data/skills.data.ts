@@ -16,7 +16,6 @@ export const SKILLS: Skill[] = [
       "Framework <strong>front-end</strong> pour créer la partie visible d'une application web de façon <strong>structurée</strong> et <strong>maintenable</strong>.",
     icon: '🅰️',
     level: 90,
-    displayLevel: 0,
     type: 'technical',
     article: {
       definition: `
@@ -63,11 +62,8 @@ export const SKILLS: Skill[] = [
         {
           label: 'Plateforme de consultation métier',
           link: '/real/plateforme-consultation-metier',
-        },
-        {
-          label: 'Applications RH et paie chez Weekera',
-          link: '/real/applications-rh-paie-weekera',
-        },
+        }
+        ,
       ],
     },
   },
@@ -78,7 +74,6 @@ export const SKILLS: Skill[] = [
       'Framework <strong>front-end</strong> pour créer des interfaces web <strong>modernes</strong>, <strong>fluides</strong> et <strong>rapides à charger</strong>.',
     icon: '📘',
     level: 95,
-    displayLevel: 0,
     type: 'technical',
     article: {
       definition: `
@@ -115,7 +110,10 @@ export const SKILLS: Skill[] = [
       Pour accompagner cette progression, je m'appuie aussi sur des ressources ciblées comme cet <strong>article de formation sur Svelte 5 et les runes</strong> :
       <a href="https://grafikart.fr/tutoriels/svelte-5-runes-2253" target="_blank" rel="noopener noreferrer">Formation Grafikart - Svelte 5 et les runes</a>.
       `,
-      relatedProjects: [],
+      relatedProjects: [{
+          label: 'Applications RH et paie chez Weekera',
+          link: '/real/applications-rh-paie-weekera',
+        }],
     },
   },
   {
@@ -125,9 +123,47 @@ export const SKILLS: Skill[] = [
       "Framework back-end pour gérer les données, les traitements et les règles de fonctionnement d'une application.",
     icon: '☕',
     level: 90,
-    displayLevel: 0,
     type: 'technical',
-    article: { ...EMPTY_ARTICLE },
+    article: {
+      definition: `
+      <strong>Svelte</strong> est un <strong>framework front-end</strong> adapté aux <strong>projets SPA</strong>, mais aussi aux projets de type <strong>SSR</strong> (Server-Side Rendering, rendu côté serveur) avec <strong>SvelteKit</strong>, ainsi qu’aux <strong>sites statiques</strong>.
+
+      Il repose sur une approche basée sur les <strong>composants</strong>, comme <strong>Angular</strong>, qui constituent la base de la structure de l’application.
+
+      <strong>Svelte</strong> utilise <strong>JavaScript</strong> et peut également être utilisé avec <strong>TypeScript</strong>. Lors du build, le code est compilé en <strong>JavaScript optimisé</strong>, directement interprété par les navigateurs.
+
+      C’est un framework conçu pour être <strong>simple à prendre en main</strong> et à utiliser. Il connaît une <strong>popularité croissante</strong> grâce à ses <strong>performances</strong> et à sa <strong>légèreté</strong> (il ne nécessite pas de surcouche comme le <strong>Virtual DOM</strong>).
+
+      Avec <strong>Svelte 5</strong>, il y a un nouveau <strong>système de runes</strong>, permettant une <strong>gestion plus fine de la réactivité</strong>, notamment pour les <strong>états</strong> et les <strong>effets de bord</strong> au sein des composants.
+      `,
+      proofs: [
+        {
+          title: 'Applications experts-comptables chez Weekera',
+          description:
+            "J'ai contribué, de février 2024 à mars 2026, à la réalisation d'<strong>applications liées à la gestion RH et à la paie</strong> chez <strong>Weekera</strong>, avec des interventions à la fois sur le <strong>front-end</strong> et le <strong>back-end</strong>.",
+          result:
+            "Résultat : cette expérience m'a permis d'apprendre ou d'approfondir mes connaissances sur plusieurs stacks comme <strong>Svelte</strong>, le <strong>WQL</strong> ou encore les <strong>tests</strong>.",
+          link: '/real/applications-rh-paie-weekera',
+        },
+      ],
+      selfCritique: `
+      Je considère avoir un <strong>niveau intermédiaire</strong> sur <strong>Svelte</strong>, en tenant compte du fait que je n’ai pas encore pratiqué en profondeur les dernières nouveautés du framework, comme <strong>Svelte 5</strong> et les <strong>runes</strong>.
+
+      Je ne suis pas non plus allé beaucoup plus loin que ce que j’ai appris chez Weekera à travers des projets personnels, car j’ai aujourd’hui une affinité plus forte avec <strong>Angular</strong>, liée à mon vécu professionnel et personnel, ce qui me permet de maintenir plus facilement mes projets personnels.
+
+      Malgré cela, je souhaite quand même continuer à progresser sur Svelte, car c’est un framework intéressant, moderne, et qui me permet d’élargir l’éventail de compétences que je peux proposer à mes futurs employeurs.
+      `,
+      evolution: `
+      Je souhaite continuer à approfondir ma maîtrise de <strong>Svelte</strong>, en particulier sur les nouveautés introduites avec <strong>Svelte 5</strong> et le fonctionnement des <strong>runes</strong>, qui changent la manière de gérer la réactivité dans le framework.
+
+      Pour accompagner cette progression, je m'appuie aussi sur des ressources ciblées comme cet <strong>article de formation sur Svelte 5 et les runes</strong> :
+      <a href="https://grafikart.fr/tutoriels/svelte-5-runes-2253" target="_blank" rel="noopener noreferrer">Formation Grafikart - Svelte 5 et les runes</a>.
+      `,
+      relatedProjects: [{
+          label: 'Intégration, industrialisation et déploiement de logiciel',
+          link: '/real/ci-cd-deploy',
+        }],
+    },
   },
   {
     name: 'Docker & DevOps',
@@ -136,9 +172,16 @@ export const SKILLS: Skill[] = [
       "Outils de déploiement et d'exploitation pour lancer, partager et maintenir une application dans un environnement stable.",
     icon: '🐳',
     level: 75,
-    displayLevel: 0,
     type: 'technical',
-    article: { ...EMPTY_ARTICLE },
+    article: {
+      ...EMPTY_ARTICLE,
+      relatedProjects: [
+        {
+          label: 'Plateforme de consultation métier',
+          link: '/real/plateforme-consultation-metier',
+        },
+      ],
+    },
   },
   {
     name: 'Tests (Vitest, Jest, Playwright)',
@@ -147,9 +190,16 @@ export const SKILLS: Skill[] = [
       "Outils et méthodes de qualité pour vérifier automatiquement qu'une application fonctionne comme prévu.",
     icon: '🧪',
     level: 95,
-    displayLevel: 0,
     type: 'technical',
-    article: { ...EMPTY_ARTICLE },
+    article: {
+      ...EMPTY_ARTICLE,
+      relatedProjects: [
+        {
+          label: 'Plateforme de consultation métier',
+          link: '/real/plateforme-consultation-metier',
+        },
+      ],
+    },
   },
   {
     name: 'Communication en mode projet',
@@ -158,7 +208,6 @@ export const SKILLS: Skill[] = [
       "Compétence humaine pour expliquer clairement les besoins, partager l'avancement et coordonner le travail.",
     icon: '💬',
     level: 95,
-    displayLevel: 0,
     type: 'soft',
     article: { ...EMPTY_ARTICLE },
   },
@@ -169,7 +218,6 @@ export const SKILLS: Skill[] = [
       "Compétence humaine pour comprendre les attentes d'un client ou d'un utilisateur et y répondre de façon adaptée.",
     icon: '🤝',
     level: 85,
-    displayLevel: 0,
     type: 'soft',
     article: { ...EMPTY_ARTICLE },
   },
@@ -180,7 +228,6 @@ export const SKILLS: Skill[] = [
       'Compétence humaine pour collaborer, partager les informations utiles et faire avancer un travail commun.',
     icon: '👥',
     level: 95,
-    displayLevel: 0,
     type: 'soft',
     article: { ...EMPTY_ARTICLE },
   },
@@ -191,7 +238,6 @@ export const SKILLS: Skill[] = [
       "Compétence humaine pour s'adapter rapidement, apprendre vite et avancer avec autonomie quand c'est nécessaire.",
     icon: '🧭',
     level: 100,
-    displayLevel: 0,
     type: 'soft',
     article: { ...EMPTY_ARTICLE },
   },
@@ -202,7 +248,6 @@ export const SKILLS: Skill[] = [
       'Compétence humaine pour comprendre un problème, structurer la réflexion et proposer des solutions fiables.',
     icon: '🧠',
     level: 90,
-    displayLevel: 0,
     type: 'soft',
     article: { ...EMPTY_ARTICLE },
   },

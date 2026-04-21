@@ -53,19 +53,19 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
       '<a class="parcours-link parcours-link--school" href="https://georges-clemenceau.mon-ent-occitanie.fr" target="_blank" rel="noopener noreferrer">Lycée Georges Clemenceau</a>',
     subtitle: 'Bac Scientifique - option ISN (Informatique et Sciences du Numérique)',
     description:
-      'Le début de mon parcours scolaire, avec les premières bases qui ont préparé mon orientation.',
+      `Cette étape représente mes débuts dans l'informatique.`,
     category: 'school',
     categoryLabel: 'École',
     ...SCHOOL_TONE,
     article: {
       context:
-        'Cette étape correspond à mes années au Lycée Georges Clemenceau. Elle représente le point de départ de mon parcours avant mon orientation plus claire vers l’informatique.',
+        `Cette étape correspond à mes années au Lycée Georges Clemenceau. C'est durant cette étape que j'ai appris les bases de l'algorithmie en Python. J'ai pu réaliser un jeu tetris en groupe de 3 pour la fin d'année qui m'a valu un 20/20 au bac en ISN ce qui m'a donné envie de continuer dans ce milieu.`,
       workDone:
-        'J’y ai construit mes bases scolaires, ma méthode de travail et ma capacité à avancer de façon régulière. C’est aussi une période où j’ai commencé à mieux cerner les domaines qui m’attiraient.',
+        `J’y ai construit mes bases scolaires, ma méthode de travail et ma capacité à réfléchir à des problèmes donnés. C’est aussi une période où j’ai commencé à mieux cerner les domaines qui m’attiraient. Le projet de fin d'année et son résultat m'ont donné envie de poursuivre dans ce milieu.`,
       discoveries:
-        'J’y ai découvert l’importance de la rigueur, de l’autonomie et de la progression dans la durée. Cette période a posé le cadre de travail qui m’a servi ensuite.',
+        `J'ai découvert une passion qui ne se tarie pas, une curiosité sur le développement web et une mise en place de gestion de projet imparfaite`,
       takeaway:
-        'Avec le recul, cette étape me sert surtout de fondation. Elle m’a aidé à comprendre que j’avais besoin d’un parcours concret, évolutif et tourné vers la pratique.',
+        `Avec le recul, cette étape me sert surtout de fondation. Le projet ISN m'a permis de découvrir que j'étais bon en informatique.`,
     },
   },
   {
@@ -75,6 +75,11 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     title: 'Lycée Jean Mermoz',
     detailTitleHtml:
       '<a class="parcours-link parcours-link--school" href="https://jean-mermoz-montpellier.mon-ent-occitanie.fr" target="_blank" rel="noopener noreferrer">Lycée Jean Mermoz</a>',
+          relatedRealisations: [{
+        label: 'Refonte du site de l\'Unité de production culinaire (UPC) du Lycée Jean Mermoz',
+        link: 'refonte-site-upc-jean-mermoz',
+      }
+    ],
     subtitle: 'BTS SIO - option SLAM',
     description:
       'Une formation plus technique où j’ai commencé à me spécialiser dans le développement applicatif.',
@@ -83,13 +88,15 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     ...SCHOOL_TONE,
     article: {
       context:
-        'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Métiers (SLAM). Cette étape a marqué mon entrée concrète dans le développement logiciel et la logique de projet.',
+        'Au Lycée Jean Mermoz, j’ai suivi un BTS Services Informatiques aux Organisations (SIO), avec l’option Solutions Logicielles et Applications Métiers (SLAM).',
       workDone:
-        'J’y ai travaillé sur les bases du développement, de la conception applicative, des bases de données et des projets plus structurés. J’ai aussi commencé à manipuler des outils et méthodes proches du terrain.',
+        `J’y ai appris à comprendre et à utiliser des diagrammes de classes, à réaliser des modèles relationnels (Merise, UML), à concevoir un site web en partant de zéro (HTML, CSS, utilisation de VS Code ou NetBeans pour développer, utilisation d’AJAX pour des sites dynamiques), puis à utiliser un framework avec Symfony.
+
+J’ai également appris les bases des réseaux (LAN, BUS, etc.), la gestion de projet, l’algorithmie ainsi que le droit.`,
       discoveries:
         'J’y ai découvert que j’aimais particulièrement la partie développement, la résolution de problèmes et le fait de transformer un besoin en solution fonctionnelle.',
       takeaway:
-        'Cette formation a confirmé mon orientation. Elle m’a donné un socle technique et m’a surtout montré que je voulais continuer à progresser dans le développement web et logiciel.',
+        'Cette formation a confirmé mon orientation. Elle m’a donné un socle technique et m’a surtout montré que je voulais continuer à progresser dans le développement.',
     },
   },
   {
@@ -101,19 +108,19 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
       '<a class="parcours-link parcours-link--company" href="https://www.computacenter.com/fr-fr" target="_blank" rel="noopener noreferrer">Computacenter</a>',
     subtitle: 'Expérience professionnelle',
     description:
-      'Une première immersion en entreprise pour confronter la théorie à la réalité du terrain.',
+      'Une première immersion en entreprise.',
     category: 'company',
     categoryLabel: 'Entreprise',
     ...COMPANY_TONE,
     article: {
       context:
-        'Computacenter représente une étape importante de mise en situation professionnelle. J’ai pu y observer un environnement structuré, des contraintes réelles et une organisation d’équipe.',
+        `Computacenter est une ESN (Entreprise de Services du Numérique) où j'ai été employé en tant que support helpdesk niveau 1.`,
       workDone:
-        'J’y ai participé à des missions qui m’ont permis de mieux comprendre le fonctionnement d’une entreprise, les attentes de qualité et la place de l’informatique dans des usages concrets.',
+        'Le but de mon travail a été de recevoir les appels des clients afin de traiter leurs différents problèmes informatiques. Je recevais environ 30 appels dans la journée avec des moments de rush le matin.',
       discoveries:
-        'J’y ai découvert l’importance de la communication, de la fiabilité et du rythme de production. Le travail ne repose pas seulement sur la technique, mais aussi sur la coordination et la clarté.',
+        `Avec une surveillance pointée sur la qualité de l'appel et la résolution des problèmes, je me suis servi de cette expérience pour apprendre à communiquer avec les clients, à gérer le stress des moments de rush et à écrire des tickets de compte rendu ou de suivi.`,
       takeaway:
-        'Cette expérience m’a aidé à relier apprentissage et réalité professionnelle. Elle a renforcé ma capacité à m’adapter et à comprendre les enjeux d’un cadre de travail plus exigeant.',
+        'Cette expérience m’a initié au monde du travail. Elle a renforcé ma capacité à m’adapter et à comprendre les enjeux d’un cadre de travail exigeant.',
     },
   },
   {
@@ -123,21 +130,28 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     title: 'YNOV / A+ Énergies',
     detailTitleHtml:
       '<a class="parcours-link parcours-link--school" href="https://www.ynov.com" target="_blank" rel="noopener noreferrer">YNOV</a><span class="parcours-title-separator"> / </span><a class="parcours-link parcours-link--company" href="https://www.aplusenergies.fr" target="_blank" rel="noopener noreferrer">A+ Énergies</a>',
+              relatedRealisations:[ {
+          label: 'Plateforme de consultation métier',
+          link: 'plateforme-consultation-metier',
+        }],
     subtitle: 'Licence informatique',
     description:
-      'Une phase de montée en compétences entre poursuite d’études et responsabilités en alternance.',
+      'Reprise des études et responsabilités en alternance.',
     category: 'mixed',
     categoryLabel: 'École & entreprise',
     ...MIXED_TONE,
     article: {
       context:
-        'Cette étape rassemble mon parcours à YNOV et mon expérience chez A+ Énergies. Elle correspond à une période de progression plus mature, avec davantage d’autonomie et de responsabilités.',
+        `J'ai suivi le parcours de développeur chez Ynov offrant 2 titres: Technicien Informatique en spécialité développement délivré par Ynov Campus à Montpellier et le titre de niveau 6 d'administrateur de système d'information délivré par IPSSI(Grande école d'informatique). Le cursus s'est fait en alternance avec pour entreprise A+ Énergies une entreprise scélialisée dans la transition énergétique.`,
       workDone:
-        'J’y ai travaillé sur des sujets plus concrets en alternance, avec des besoins réels, des choix techniques et des livrables attendus. J’ai aussi dû apprendre rapidement sur des sujets nouveaux.',
+        `Au campus nous avons travaillé sur des projets allant du développement mobile avec React à la gestion de gouvernance d'une entreprise en passant par l'apprentissage de plusieurs framework comme Angular ou Laravel, Kotlin, React native, Flutter, C#, PHP, mais aussi par l'apprentissage de plusieurs gestion de bases de données avec Firebase ou MongoDB. Nous avons aussi été amené à mener des projets avec des architectes, des commerciaux ou des graphistes.
+        
+        En Entreprise j'ai mené des missions soit au travers d'Asana avec des missions distribuées par notre N+1 ou bien en totale autonomie comme la mise en place d'un parc informatique de tablettes iPad pour les commerciaux présents dans toute la France. J'ai dû aussi gérer des notions de sécurité et de rôle liées aux données sensibles du CRM que nous avons repris pour permettre un bon suivi des chefs de secteurs.`,
       discoveries:
-        'J’y ai découvert que j’étais capable de monter en compétence sur des domaines que je ne maîtrisais pas au départ, et de tenir un sujet jusqu’à sa mise en place effective.',
+        `J’y ai découvert que j’étais capable de monter en compétence sur des domaines que je ne maîtrisais pas au départ, et de tenir un sujet jusqu’à sa mise en place. J'ai aussi pu proposer de la gestion de la relation client et de la gestion de projet`,
       takeaway:
         'Cette période m’a beaucoup fait grandir. Elle m’a permis de confirmer mon autonomie, ma persévérance et ma capacité à apprendre en conditions réelles.',
+
     },
   },
   {
@@ -152,22 +166,32 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
         label: 'Applications RH et paie chez Weekera',
         link: 'applications-rh-paie-weekera',
       },
+      {
+        label: 'Intégration, industrialisation et déploiement de logiciel',
+        link: 'ci-cd-deploy',
+      }
     ],
     subtitle: 'Master Expert en architectures logicielles',
     description:
-      'Mon étape actuelle, entre montée en expertise logicielle, alternance et compréhension métier.',
+      'Une étape entre montée en expertise logicielle, alternance et compréhension métier.',
     category: 'mixed',
     categoryLabel: 'École & entreprise',
     ...MIXED_TONE,
     article: {
       context:
-        'Actuellement en alternance chez Weekera, j’interviens en tant que développeur fullstack sur des applications liées à la gestion RH et à la paie, notamment autour de la Déclaration Sociale Nominative (DSN).\n\nDans ce cadre, j’occupe un premier rôle orienté développement applicatif, où je participe à la correction de bugs, à l’évolution de fonctionnalités existantes et à l’amélioration de la qualité du code. J’interviens à la fois sur le frontend et le backend, ce qui me permet d’avoir une vision globale des applications et de leurs interactions.\n\nEn parallèle, j’évolue également dans un second rôle plus transverse, lié à la qualité et à la compréhension fonctionnelle des besoins. Je suis amené à collaborer avec différentes équipes, notamment lors de rituels comme les “3 Amigos”, afin de clarifier les spécifications, anticiper les risques et garantir la cohérence entre les attentes métier, les contraintes techniques et les phases de test.\n\nCe double positionnement me permet de développer à la fois des compétences techniques et une compréhension approfondie des enjeux métier, tout en renforçant ma capacité à travailler dans un environnement collaboratif et exigeant.',
+        `
+        Durant ma formation à ISCOD de Master Expert Architecte logiciel qui est une école en distanciel, j'ai appris la gestion de projet, le développement full-stack (Angular, Java/Spring, TypeScript), les tests, le DevOps (Docker, CI/CD, Kubernetes), l’architecture logicielle, la sécurité, ainsi que les méthodes agiles et la communication en environnement professionnel.
+        Durant mon alternance chez Weekera, je suis intervenu en tant que développeur full-stack sur des applications liées à la gestion RH et à la paie, notamment autour de la Déclaration Sociale Nominative (DSN).`,
       workDone:
-        'Pour l’instant, cette étape se construit autour de missions de maintenance évolutive, de correction de bugs et de compréhension du fonctionnement global de l’application. J’interviens sur des sujets concrets qui demandent à la fois de produire du code fiable, de respecter un existant métier dense et de rester attentif aux impacts fonctionnels.\n\nJe participe aussi à l’amélioration continue du produit à travers des échanges réguliers avec les autres acteurs du projet. Cela me pousse à mieux documenter, mieux questionner les besoins et mieux prendre en compte la dimension qualité dans les développements du quotidien.',
+        ` Au sein de mon entreprise, mon premier rôle a été orienté développement applicatif, où j’ai participé à la correction de bugs et à l’évolution de fonctionnalités existantes. Je suis intervenu à la fois sur le front-end et le back-end, ce qui m'a permis d’avoir une vision globale des applications et de leurs interactions.
+
+Puis j'ai changé d'équipe et je suis passé côté test, où j'ai d'abord optimisé les tests unitaires côté front puis je suis passé sur le repo des tests Playwright(tests bout à bout ou parcours d’utilisateurs) où mon rôle a été de réaliser les tests CRUD manquants sur les pages de l'application.
+
+      Au niveau de ma formation j'ai regardé des cours tous les lundis durant 2 ans afin de réaliser les exercices et les QCM demandés sur la plateforme d'apprentissage. Aujourd'hui j'ai totalement fini ma formation et il me reste quelques épreuves à passer afin de valider mon année.`,
       discoveries:
-        'Cette expérience me fait progresser sur plusieurs plans en même temps. Sur le plan technique, elle m’apprend à intervenir dans un contexte applicatif plus structuré, avec des contraintes réelles, des enjeux de fiabilité et un besoin de cohérence entre les différentes couches de l’application.\n\nSur le plan fonctionnel, je découvre à quel point la compréhension métier est indispensable pour développer correctement. Le code ne répond pas seulement à une logique technique : il doit aussi traduire fidèlement des besoins liés à la paie, à la DSN et aux processus RH. Cela m’aide à prendre du recul et à mieux relier développement, qualité et usage concret.',
+        `Cette expérience en entreprise, m’a appris à travailler dans une grande équipe de développeurs et d'experts. Elle m'a aussi appris les rituels pour mener à bien un travail de groupe comme les réunions autour des sprints ou les rituels du matin (DSM).`,
       takeaway:
-        'Pour l’instant, cette étape confirme la direction que je veux donner à mon profil : devenir un développeur capable de produire du code utile, maintenable et cohérent avec des enjeux métier forts. Elle renforce aussi mon intérêt pour les environnements où la qualité, la collaboration et la compréhension fonctionnelle ont une vraie importance.\n\nC’est une phase encore en cours, mais elle me permet déjà de consolider ma posture professionnelle, ma capacité d’adaptation et ma vision d’un développement plus complet, à la fois technique et métier.',
+        `Cette étape a confirmé la direction que je voulais donner à mon profil : devenir un développeur capable de produire du code utile, maintenable et cohérent. Elle a aussi renforcé mon intérêt pour les environnements où la qualité, la collaboration et la compréhension fonctionnelle ont une vraie importance.`,
     },
   },
 ];

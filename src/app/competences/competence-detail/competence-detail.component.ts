@@ -109,4 +109,16 @@ export class CompetenceDetailComponent implements OnInit {
       '--skill-accent-glow': tone.glow,
     }
   }
+
+  getSkillLevelLabel(skill: Skill): string {
+    if (skill.level >= 85) {
+      return 'Avancé'
+    }
+
+    if (skill.level >= 60) {
+      return 'Intermédiaire'
+    }
+
+    return 'Débutant'
+  }
 }

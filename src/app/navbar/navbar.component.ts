@@ -43,6 +43,7 @@ export class NavbarComponent {
     'refonte-site-upc-jean-mermoz': 'green',
     'plateforme-consultation-metier': 'blue',
     'applications-rh-paie-weekera': 'orange',
+    'ci-cd-deploy': 'rose'
   };
 
   readonly sectionTones = {
@@ -50,6 +51,7 @@ export class NavbarComponent {
     parcours: 'text-cyan-300 hover:text-cyan-200',
     competences: 'text-rose-300 hover:text-rose-200',
     realisations: 'text-indigo-300 hover:text-indigo-200',
+    contact: 'text-blue-300 hover:text-blue-200',
   };
 
   toggleMenu(): void {

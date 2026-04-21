@@ -8,6 +8,7 @@ import { CompetenceDetailComponent } from './competences/competence-detail/compe
 import { RealisationDetailComponent } from './realisations/realisation-detail/realisation-detail.component'
 import { ParcoursComponent } from './parcours/parcours.component'
 import { ParcoursDetailComponent } from './parcours/parcours-detail/parcours-detail.component'
+import { ContactComponent } from './contact/contact.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'parcours/:slug', component: ParcoursDetailComponent },
   { path: 'real', component: RealisationsComponent },
   { path: 'formation', component: FormationComponent },
+  { path: 'contact', component: ContactComponent },
 
   { path: 'comp', component: CompetencesComponent },
   { path: 'comp/:slug', component: CompetenceDetailComponent },

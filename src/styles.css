@@ -14,16 +14,6 @@
     -webkit-tap-highlight-color: rgba(96, 165, 250, 0.16);
   }
 
-  a,
-  button,
-  [role='button'],
-  summary,
-  label[for],
-  input[type='checkbox'],
-  input[type='radio'] {
-    cursor: inherit;
-  }
-
   a {
     color: inherit;
     text-decoration-thickness: 0.08em;
@@ -76,19 +66,5 @@
   ::selection {
     background: rgba(96, 165, 250, 0.28);
     color: #f8fafc;
-  }
-}
-
-@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  html,
-  body,
-  a,
-  button,
-  [role='button'],
-  summary,
-  label[for],
-  input[type='checkbox'],
-  input[type='radio'] {
-    cursor: none !important;
   }
 }

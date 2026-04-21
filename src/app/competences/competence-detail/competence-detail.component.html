@@ -14,13 +14,7 @@
 
       <section class="level-panel">
         <p class="level-label">Niveau estimé</p>
-        <div class="level-meter">
-          <div
-            class="level-meter-fill"
-            [style.width.%]="currentSkill.level"
-          ></div>
-        </div>
-        <p class="level-value">{{ currentSkill.level }} %</p>
+        <p class="level-value">{{ getSkillLevelLabel(currentSkill) }}</p>
       </section>
     </header>
 

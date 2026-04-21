@@ -16,7 +16,10 @@
 
     <section class="detail-section">
       <h2>Présentation du projet</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.presentation"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.presentation"
+      ></div>
 
       <article
         *ngIf="currentRealisation.externalLink"
@@ -27,13 +30,13 @@
         <h3>
           {{
             currentRealisation.externalLink.spotlightTitle ||
-              'Consulter le site officiel du projet'
+              "Consulter le site officiel du projet"
           }}
         </h3>
         <p>
           {{
             currentRealisation.externalLink.spotlightDescription ||
-              'Pour plus de détails sur ce projet, vous pouvez consulter le site associé.'
+              "Pour plus de détails sur ce projet, vous pouvez consulter le site associé."
           }}
         </p>
         <a
@@ -48,33 +51,51 @@
     </section>
 
     <section class="detail-section">
-      <h2>Objectifs, contexte et enjeux</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.objectives"></div>
+      <h2>Objectifs, contexte, enjeux et risques</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.objectives"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Les étapes du projet</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.steps"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.steps"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Acteurs et interactions</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.actors"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.actors"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Résultats</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.results"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.results"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Les lendemains du projet</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.future"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.future"
+      ></div>
     </section>
 
     <section class="detail-section">
       <h2>Mon regard critique</h2>
-      <div class="detail-copy" [innerHTML]="currentRealisation.article.criticalView"></div>
+      <div
+        class="detail-copy"
+        [innerHTML]="currentRealisation.article.criticalView"
+      ></div>
     </section>
 
     <section class="detail-section related-section">

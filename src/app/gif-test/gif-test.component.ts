@@ -25,7 +25,7 @@ ngAfterViewInit() {
 
   imgElement.addEventListener('load', () => {
     const gifFrames = this.calculateGifFrames(imgElement);
-    console.log('Nombre d\'images dans le GIF :', gifFrames);
+    console.log(`Nombre d'images dans le GIF :`, gifFrames);
   });
 }
 

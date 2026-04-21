@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 import { SKILLS } from './data/skills.data'
 import { Skill } from './models/skill.model'
@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router'
   templateUrl: './competences.component.html',
   styleUrls: ['./competences.component.css'],
 })
-export class CompetencesComponent implements AfterViewInit {
+export class CompetencesComponent {
   technicalSkills: Skill[] = []
   softSkills: Skill[] = []
   readonly technicalSectionTone = {
@@ -86,13 +86,6 @@ export class CompetencesComponent implements AfterViewInit {
     this.softSkills = SKILLS.filter(s => s.type === 'soft')
   }
 
-  ngAfterViewInit() {
-    requestAnimationFrame(() => {
-      this.technicalSkills.forEach(s => (s.displayLevel = s.level))
-      this.softSkills.forEach(s => (s.displayLevel = s.level))
-    })
-  }
-
   getToneStyle(skill: Skill): Record<string, string> {
     const tone = this.skillTones[skill.slug] ?? this.technicalSectionTone
 
@@ -101,5 +94,17 @@ export class CompetencesComponent implements AfterViewInit {
       '--skill-accent-soft': tone.soft,
       '--skill-accent-glow': tone.glow,
     }
+  }
+
+  getSkillLevelLabel(skill: Skill): string {
+    if (skill.level >= 85) {
+      return 'Avancé'
+    }
+
+    if (skill.level >= 60) {
+      return 'Intermédiaire'
+    }
+
+    return 'Débutant'
   }
 }

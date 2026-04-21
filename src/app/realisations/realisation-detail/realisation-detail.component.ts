@@ -29,6 +29,11 @@ export class RealisationDetailComponent implements OnInit {
       soft: 'rgba(245, 158, 11, 0.18)',
       glow: 'rgba(245, 158, 11, 0.16)',
     },
+    'ci-cd-deploy': {
+      accent: '#fb7185',
+      soft: 'rgba(251, 113, 133, 0.18)',
+      glow: 'rgba(251, 113, 133, 0.14)',
+    }
   }
 
   constructor(

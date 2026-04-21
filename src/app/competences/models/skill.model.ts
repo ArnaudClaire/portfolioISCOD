@@ -8,7 +8,6 @@ export interface Skill {
   icon: string
   summary: string
   level: number
-  displayLevel?: number
   type: SkillType
   article: SkillArticle
 }

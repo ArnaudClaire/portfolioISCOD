@@ -71,25 +71,18 @@
   color: #cbd5e1;
 }
 
-.level-meter {
-  width: 100%;
-  height: 0.8rem;
-  overflow: hidden;
-  border-radius: 999px;
-  background: rgba(51, 65, 85, 0.85);
-}
-
-.level-meter-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--skill-accent), rgba(255, 255, 255, 0.92));
-  box-shadow: 0 0 18px var(--skill-accent-glow);
-}
-
 .level-value {
-  margin: 0.7rem 0 0;
-  font-size: 0.92rem;
-  color: #cbd5e1;
+  display: inline-flex;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--skill-accent) 38%, transparent);
+  border-radius: 999px;
+  background: var(--skill-accent-soft);
+  color: color-mix(in srgb, var(--skill-accent) 78%, white 22%);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.06rem;
+  padding: 0.65rem 1rem;
+  text-transform: uppercase;
 }
 
 .detail-section {
