@@ -34,6 +34,11 @@ export class RealisationsComponent {
       accent: '#fb7185',
       soft: 'rgba(251, 113, 133, 0.18)',
       glow: 'rgba(251, 113, 133, 0.14)',
+    },
+    'pilotage-projet-ofit': {
+      accent: '#a78bfa',
+      soft: 'rgba(167, 139, 250, 0.18)',
+      glow: 'rgba(167, 139, 250, 0.14)',
     }
   }
 

@@ -169,7 +169,11 @@ J’ai également appris les bases des réseaux (LAN, BUS, etc.), la gestion de 
       {
         label: 'Intégration, industrialisation et déploiement de logiciel',
         link: 'ci-cd-deploy',
-      }
+      },
+      {
+        label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+        link: 'pilotage-projet-ofit',
+      },
     ],
     subtitle: 'Master Expert en architectures logicielles',
     description:

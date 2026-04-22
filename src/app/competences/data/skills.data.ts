@@ -279,6 +279,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           label: 'Applications RH et paie chez Weekera',
           link: '/real/applications-rh-paie-weekera',
         },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
+        },
       ],
     },
   },
@@ -348,6 +352,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           label: 'Applications RH et paie chez Weekera',
           link: '/real/applications-rh-paie-weekera',
         },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
+        },
       ],
     },
   },
@@ -403,6 +411,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
         {
           label: 'Plateforme de consultation métier',
           link: '/real/plateforme-consultation-metier',
+        },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
         },
       ],
     },
@@ -472,6 +484,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
         {
           label: 'Applications RH et paie chez Weekera',
           link: '/real/applications-rh-paie-weekera',
+        },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
         },
       ],
     },
@@ -555,6 +571,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           label: 'Applications RH et paie chez Weekera',
           link: '/real/applications-rh-paie-weekera',
         },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
+        },
       ],
     },
   },
@@ -636,6 +656,10 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
         {
           label: 'Applications RH et paie chez Weekera',
           link: '/real/applications-rh-paie-weekera',
+        },
+        {
+          label: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+          link: '/real/pilotage-projet-ofit',
         },
       ],
     },

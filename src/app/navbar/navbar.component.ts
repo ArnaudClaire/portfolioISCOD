@@ -16,6 +16,7 @@ import { Realisation } from '../realisations/models/realisation.model';
 })
 export class NavbarComponent {
   isOpen = false
+  readonly profilePhotoUrl = 'assets/Arnaud%20CLAIRE.jpg'
 
   skills: Skill[] = SKILLS
   parcoursSteps = [...PARCOURS_STEPS].sort((a, b) => b.order - a.order)
@@ -26,6 +27,7 @@ export class NavbarComponent {
     orange: { accent: '#f59e0b', soft: 'rgba(245, 158, 11, 0.18)' },
     teal: { accent: '#2dd4bf', soft: 'rgba(45, 212, 191, 0.18)' },
     rose: { accent: '#fb7185', soft: 'rgba(251, 113, 133, 0.18)' },
+    purple: { accent: '#a78bfa', soft: 'rgba(167, 139, 250, 0.18)' },
   };
   private readonly skillToneBySlug: Record<string, keyof NavbarComponent['sharedTones']> = {
     'angular-front': 'blue',
@@ -43,7 +45,8 @@ export class NavbarComponent {
     'refonte-site-upc-jean-mermoz': 'green',
     'plateforme-consultation-metier': 'blue',
     'applications-rh-paie-weekera': 'orange',
-    'ci-cd-deploy': 'rose'
+    'ci-cd-deploy': 'rose',
+    'pilotage-projet-ofit': 'purple',
   };
 
   readonly sectionTones = {

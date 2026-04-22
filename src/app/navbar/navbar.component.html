@@ -4,12 +4,20 @@
   <div
     class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
   >
-    <a routerLink="/" class="min-w-0 flex-1 text-white">
-      <span class="block truncate text-lg font-bold tracking-wide sm:text-xl">
-        Arnaud Claire
-      </span>
-      <span class="hidden text-sm text-blue-300 md:block">
-        Expert en Ingénierie du Logiciel
+    <a routerLink="/" class="flex min-w-0 flex-1 items-center gap-3 text-white">
+      <img
+        [src]="profilePhotoUrl"
+        alt="Photo d'Arnaud Claire"
+        class="h-11 w-11 shrink-0 rounded-full border-2 border-white/25 object-cover shadow-md shadow-black/20 sm:h-12 sm:w-12"
+      />
+
+      <span class="min-w-0">
+        <span class="block truncate text-lg font-bold tracking-wide sm:text-xl">
+          Arnaud Claire
+        </span>
+        <span class="hidden text-sm text-blue-300 md:block">
+          Expert en Ingénierie du Logiciel
+        </span>
       </span>
     </a>
 

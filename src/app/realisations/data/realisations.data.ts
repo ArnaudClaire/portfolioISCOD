@@ -132,7 +132,7 @@ export const REALISATIONS: Realisation[] = [
       },
     ],
   },
-    {
+  {
     title: 'Intégration, industrialisation et déploiement de logiciel',
     slug: 'ci-cd-deploy',
     shortDescription:
@@ -218,6 +218,82 @@ C’est aussi un projet qui m’a permis de relier plusieurs dimensions de mon p
         label: `Esprit d'analyse & rigueur`,
         link: 'analyse-rigueur',
       }
+    ],
+    relatedParcours: [
+      {
+        label: 'Étape 5 - ISCOD / Weekera',
+        link: 'iscod-weekera',
+      },
+    ],
+  },
+  {
+    title: "Pilotage de projet d'ingénierie du logiciel - O'Fit",
+    slug: 'pilotage-projet-ofit',
+    shortDescription:
+      "Étude de cas ISCOD autour du pilotage d'un projet d'application mobile de santé connectée pour O'Fit.",
+    article: {
+      presentation:
+        `Cette réalisation correspond à une étude de cas réalisée dans le cadre du bloc Pilotage de projet d'ingénierie du logiciel. Le sujet portait sur O'Fit, une start-up spécialisée dans les applications de santé connectée, qui souhaitait lancer une application mobile dédiée au suivi de l'activité physique, de l'alimentation et du sommeil.
+
+Dans cette étude, le rôle attendu n'était pas celui d'un développeur, mais celui d'un chef de projet. Il fallait donc prendre du recul sur la construction du produit, l'organisation de l'équipe, les risques du projet et les moyens de suivre correctement son avancement.`,
+      objectives:
+        `<h3>Objectif principal</h3>L'objectif principal était de cadrer le projet O'Fit afin de proposer une version minimale cohérente de l'application, tout en améliorant l'organisation de l'équipe projet.
+
+<h3>Contexte</h3>Le projet partait d'une idée forte portée par le CEO de la start-up. L'application devait devenir un compagnon quotidien pour les utilisateurs, avec des fonctionnalités autour du suivi sportif, du journal alimentaire, du sommeil, des conseils personnalisés et de la protection des données.
+
+<h3>Enjeux</h3>Les enjeux étaient à la fois produit, organisationnels et humains. Il fallait identifier les fonctionnalités réellement utiles pour une V1, tenir compte de la valeur utilisateur, mesurer la complexité technique, sécuriser les données personnelles et proposer une méthode de travail plus fiable pour une équipe encore jeune.
+
+<h3>Risques</h3>Le projet présentait plusieurs risques : mauvaise communication à distance, incompréhension des besoins fonctionnels, retards liés au manque d'expérience, UX/UI peu claire, non-conformité RGPD ou encore incidents techniques. Le contexte imposait donc de proposer des réponses concrètes plutôt qu'une simple liste d'idées.`,
+      steps:
+        `Le travail a commencé par la reprise des fonctionnalités proposées dans l'énoncé. J'ai établi une liste priorisée en distinguant les fonctionnalités retenues pour le MVP et celles à garder pour une version ultérieure. La priorisation s'est faite à partir de plusieurs critères : valeur ajoutée, complexité technique, impact calendrier et pertinence pour une première version.
+
+Les fonctionnalités retenues pour la V1 concernaient notamment le suivi des activités physiques, le journal alimentaire, la surveillance du sommeil, les conseils personnalisés de bien-être, le tableau de bord de santé, la gestion des objectifs, la protection des données, la conformité RGPD, le feedback utilisateur et les évaluations personnalisées.
+
+J'ai ensuite travaillé sur l'analyse des risques. Chaque risque a été évalué selon son impact, sa probabilité et sa gravité, puis associé à une stratégie de mitigation. Par exemple, les problèmes de communication à distance pouvaient être réduits avec des DSM, des outils collaboratifs et une meilleure formalisation des échanges. Les incompréhensions fonctionnelles pouvaient être limitées avec des réunions de type 3 Amigos et une meilleure rédaction des user stories.
+
+La dernière partie portait sur l'environnement de travail. L'équipe était composée d'un chef de projet, de trois développeurs juniors, d'un designer UX/UI alternant et d'un responsable marketing. J'ai donc proposé un plan d'amélioration autour de la formation, de l'accompagnement des profils juniors, de réunions plus régulières, d'un meilleur suivi des besoins et de l'utilisation d'outils comme Teams, Notion, Trello ou Asana.`,
+      actors:
+        `Les acteurs principaux étaient le CEO de O'Fit, à l'origine du projet, le chef de projet chargé de coordonner l'ensemble, les développeurs juniors, le designer UX/UI alternant, le responsable marketing, ainsi que les futurs utilisateurs de l'application.
+
+Le rôle du chef de projet était central : il devait clarifier les priorités, fluidifier la communication, réduire les zones de flou et donner à l'équipe un cadre de travail plus professionnel.`,
+      results:
+        `Le rendu final a permis de produire trois livrables principaux : un document de spécification et de priorisation des fonctionnalités, une analyse des risques accompagnée d'indicateurs de suivi, puis un audit de l'environnement de travail avec un plan d'action.
+
+Cette étude de cas m'a permis de travailler une autre facette du métier : la capacité à piloter un projet sans être dans le code. Il fallait raisonner en valeur produit, en organisation d'équipe, en risques, en indicateurs et en amélioration continue.`,
+      future:
+        `Avec plus de temps, ce travail pourrait être approfondi avec une roadmap plus détaillée, une matrice RACI, un backlog plus complet et une définition plus précise des jalons de livraison. Il serait aussi intéressant d'aller plus loin sur la validation utilisateur, par exemple avec des bêta-testeurs, des ateliers UX ou des retours terrain avant la V1.
+
+Une autre évolution pertinente serait de compléter l'approche par des outils de suivi plus concrets : tableau de bord projet, suivi de vélocité, taux de participation aux réunions, suivi des bugs critiques et indicateurs de satisfaction utilisateur.`,
+      criticalView:
+        `Cette étude m'a fait comprendre qu'un projet logiciel ne se pilote pas uniquement avec une bonne idée ou une liste de fonctionnalités. Il faut savoir prioriser, faire des choix, accepter de reporter certaines fonctionnalités et créer un cadre de travail compréhensible pour l'équipe.
+
+Avec le recul, j'aurais pu pousser encore davantage la partie indicateurs en reliant mieux certains KPI entre eux. Par exemple, le nombre de bugs, la satisfaction utilisateur et le respect des délais peuvent raconter ensemble une partie de la santé réelle du projet. Cette réalisation m'a néanmoins permis de mieux relier pilotage, communication, gestion des risques et qualité du produit.`,
+    },
+    relatedSkills: [
+      {
+        label: 'Tests',
+        link: 'tests',
+      },
+      {
+        label: 'Communication en mode projet',
+        link: 'communication-projet',
+      },
+      {
+        label: 'Gestion de la relation client',
+        link: 'relation-client',
+      },
+      {
+        label: 'Travail en équipe & collaboration',
+        link: 'travail-equipe',
+      },
+      {
+        label: 'Adaptabilité & autonomie',
+        link: 'adaptabilite-autonomie',
+      },
+      {
+        label: "Esprit d'analyse & rigueur",
+        link: 'analyse-rigueur',
+      },
     ],
     relatedParcours: [
       {
