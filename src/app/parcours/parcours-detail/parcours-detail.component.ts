@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { getParcoursStepBySlug, ParcoursStep } from '../parcours.data';
+import { highlightPortfolioText } from '../../shared/skill-links.util';
 
 @Component({
   selector: 'app-parcours-detail',
@@ -12,6 +13,7 @@ import { getParcoursStepBySlug, ParcoursStep } from '../parcours.data';
 })
 export class ParcoursDetailComponent implements OnInit {
   step?: ParcoursStep;
+  readonly highlightPortfolioText = highlightPortfolioText;
 
   constructor(
     private route: ActivatedRoute,

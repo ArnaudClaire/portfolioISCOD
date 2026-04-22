@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Realisation } from '../models/realisation.model';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { REALISATIONS } from '../data/realisations.data';
+import { highlightPortfolioText } from '../../shared/skill-links.util';
 
 @Component({
   selector: 'app-realisation-detail',
@@ -13,6 +14,7 @@ import { REALISATIONS } from '../data/realisations.data';
 })
 export class RealisationDetailComponent implements OnInit {
   realisation?: Realisation
+  readonly highlightPortfolioText = highlightPortfolioText
   private readonly realisationTones: Record<string, { accent: string; soft: string; glow: string }> = {
     'refonte-site-upc-jean-mermoz': {
       accent: '#34d399',

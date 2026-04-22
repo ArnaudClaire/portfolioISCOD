@@ -15,29 +15,29 @@
         <p class="eyebrow">Étape {{ currentStep.order }}</p>
         <h1 [innerHTML]="currentStep.detailTitleHtml || currentStep.title"></h1>
         <span class="step-category-badge">{{ currentStep.categoryLabel }}</span>
-        <p class="subtitle">{{ currentStep.subtitle }}</p>
-        <p class="summary">{{ currentStep.description }}</p>
+        <p class="subtitle" [innerHTML]="highlightPortfolioText(currentStep.subtitle)"></p>
+        <p class="summary" [innerHTML]="highlightPortfolioText(currentStep.description)"></p>
       </div>
     </header>
 
     <section class="detail-section">
       <h2>Contexte</h2>
-      <p>{{ currentStep.article.context }}</p>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.context)"></p>
     </section>
 
     <section class="detail-section">
       <h2>Ce que j'y ai fait</h2>
-      <p>{{ currentStep.article.workDone }}</p>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.workDone)"></p>
     </section>
 
     <section class="detail-section">
       <h2>Ce que j'y ai découvert</h2>
-      <p>{{ currentStep.article.discoveries }}</p>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.discoveries)"></p>
     </section>
 
     <section class="detail-section">
       <h2>Ce que j'en retiens</h2>
-      <p>{{ currentStep.article.takeaway }}</p>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.takeaway)"></p>
     </section>
 
     <section

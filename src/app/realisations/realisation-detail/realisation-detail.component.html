@@ -18,7 +18,7 @@
       <h2>Présentation du projet</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.presentation"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.presentation)"
       ></div>
 
       <article
@@ -54,7 +54,7 @@
       <h2>Objectifs, contexte, enjeux et risques</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.objectives"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.objectives)"
       ></div>
     </section>
 
@@ -62,7 +62,7 @@
       <h2>Les étapes du projet</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.steps"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.steps)"
       ></div>
     </section>
 
@@ -70,7 +70,7 @@
       <h2>Acteurs et interactions</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.actors"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.actors)"
       ></div>
     </section>
 
@@ -78,7 +78,7 @@
       <h2>Résultats</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.results"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.results)"
       ></div>
     </section>
 
@@ -86,7 +86,7 @@
       <h2>Les lendemains du projet</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.future"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.future)"
       ></div>
     </section>
 
@@ -94,7 +94,7 @@
       <h2>Mon regard critique</h2>
       <div
         class="detail-copy"
-        [innerHTML]="currentRealisation.article.criticalView"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.criticalView)"
       ></div>
     </section>
 

@@ -22,7 +22,7 @@
       <h2>Ma définition</h2>
       <div
         class="detail-copy whitespace-pre-line"
-        [innerHTML]="currentSkill.article.definition"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.definition, [currentSkill.slug])"
       ></div>
     </section>
 
@@ -34,12 +34,12 @@
 
         <div
           class="detail-copy whitespace-pre-line"
-          [innerHTML]="proof.description"
+          [innerHTML]="highlightPortfolioText(proof.description, [currentSkill.slug])"
         ></div>
 
         <div
           class="detail-copy detail-copy--strong whitespace-pre-line"
-          [innerHTML]="proof.result"
+          [innerHTML]="highlightPortfolioText(proof.result, [currentSkill.slug])"
         ></div>
 
         <a
@@ -63,7 +63,7 @@
       <h2>Mon autocritique</h2>
       <div
         class="detail-copy whitespace-pre-line"
-        [innerHTML]="currentSkill.article.selfCritique"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.selfCritique, [currentSkill.slug])"
       ></div>
     </section>
 
@@ -71,7 +71,7 @@
       <h2>Mon évolution dans cette compétence</h2>
       <div
         class="detail-copy whitespace-pre-line"
-        [innerHTML]="currentSkill.article.evolution"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.evolution, [currentSkill.slug])"
       ></div>
     </section>
 

@@ -286,7 +286,7 @@
           <h3 class="mb-3 text-2xl font-semibold">{{ project.title }}</h3>
           <p
             class="mb-6 leading-7 text-gray-300"
-            [innerHTML]="linkSkillMentions(project.shortDescription)"
+            [innerHTML]="highlightPortfolioText(project.shortDescription)"
           ></p>
 
           <div class="flex flex-wrap gap-3">

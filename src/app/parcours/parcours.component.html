@@ -42,9 +42,15 @@
         <a class="step-card step-card-link" [routerLink]="['/parcours', step.slug]">
           <span class="step-category">{{ step.categoryLabel }}</span>
           <p class="step-period">Étape {{ step.order }} : {{ step.period }}</p>
-          <p class="step-subtitle">{{ step.subtitle }}</p>
+          <p
+            class="step-subtitle"
+            [innerHTML]="emphasizePortfolioText(step.subtitle)"
+          ></p>
           <h2>{{ step.title }}</h2>
-          <p class="step-description">{{ step.description }}</p>
+          <p
+            class="step-description"
+            [innerHTML]="emphasizePortfolioText(step.description)"
+          ></p>
           <span class="step-cta">Voir cette étape</span>
         </a>
       </article>

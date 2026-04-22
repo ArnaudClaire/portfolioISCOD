@@ -15,9 +15,10 @@
         <p class="real-eyebrow">Projet</p>
         <h2>{{ real.title }}</h2>
 
-        <p class="real-description">
-          {{ real.shortDescription }}
-        </p>
+        <p
+          class="real-description"
+          [innerHTML]="emphasizePortfolioText(real.shortDescription)"
+        ></p>
 
         <span class="real-cta">Voir la réalisation</span>
       </a>

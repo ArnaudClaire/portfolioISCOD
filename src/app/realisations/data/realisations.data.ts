@@ -47,6 +47,10 @@ export const REALISATIONS: Realisation[] = [
         link: 'travail-equipe',
       },
       {
+        label: 'Adaptabilité & autonomie',
+        link: 'adaptabilite-autonomie',
+      },
+      {
         label: "Esprit d'analyse & rigueur",
         link: 'analyse-rigueur',
       },
@@ -98,10 +102,6 @@ export const REALISATIONS: Realisation[] = [
         link: 'angular-front',
       },
       {
-        label: 'Docker & DevOps',
-        link: 'docker-devops',
-      },
-      {
         label: 'Tests',
         link: 'tests',
       },{
@@ -121,7 +121,7 @@ export const REALISATIONS: Realisation[] = [
         link: 'analyse-rigueur',
       },
       {
-        label: 'Adaptabilité & autonomie ',
+        label: 'Adaptabilité & autonomie',
         link: 'adaptabilite-autonomie',
       }
     ],
@@ -161,7 +161,7 @@ Il fallait aussi intégrer les tests, la dockerisation front et back, mettre en 
  -Automatiser la construction de la solution logicielle en configurant les chaînes de build et l’exécution des tests unitaires, fonctionnels et d’intégration afin de préparer le déploiement continu du logiciel.
 
  -Industrialiser le développement du logiciel à l’aide d’outils d’automatisation et le documenter en décrivant le processus de déploiement de manière à faire évoluer les logiciels développés et minimiser les erreurs de manipulation par les tiers.
- <h3>Risques</h3>Une mauvaise couverture pouvait entraîner des régressions ou des anomalies non détectées lors des évolutions du projet et une mauvaise configuration de la pipeline CI/CD ou des images Docker pouvait bloquer la mise en production ou générer des erreurs difficiles à diagnostiquer.
+ <h3>Risques</h3>Une mauvaise couverture pouvait entraîner des régressions ou des anomalies non détectées lors des évolutions du projet et une mauvaise configuration du pipeline CI/CD ou des images Docker pouvait bloquer la mise en production ou générer des erreurs difficiles à diagnostiquer.
  `,
       steps:
         `Le projet a commencé par une phase de conception, durant laquelle j’ai identifié les entités principales du système. J’ai travaillé sur les objets clés du domaine, comme les utilisateurs, les projets, les membres, les invitations, les tâches, les historiques de modification et les notifications. Cette étape m’a amené à structurer à la fois un diagramme de classes et un schéma relationnel, en prenant en compte les règles métier, la nullabilité et les contraintes d’unicité.
@@ -176,7 +176,7 @@ Côté frontend, j’ai mis en place des tests unitaires ainsi que des tests end
 
 Côté backend, des tests Java ont été prévus avec JUnit, Spring Boot Test et H2, avec génération d’un rapport de couverture JaCoCo.
 
-Le projet est organisé de manière claire, avec une séparation entre le backend, le frontend, la base de données, la documentation et les workflows GitHub Actions. Le frontend et le backend ont chacun leur Dockerfile, le projet dispose d’un docker-compose.yml, et une pipeline GitHub Actions permet de lancer les tests, de construire les images Docker et de les pousser sur Docker Hub lors d’un push sur la branche principale. Un README détaillé documente également l’installation, le lancement, les variables d’environnement, les tests et le déploiement.`,
+Le projet est organisé de manière claire, avec une séparation entre le backend, le frontend, la base de données, la documentation et les workflows GitHub Actions. Le frontend et le backend ont chacun leur Dockerfile, le projet dispose d’un docker-compose.yml, et un pipeline GitHub Actions permet de lancer les tests, de construire les images Docker et de les pousser sur Docker Hub lors d’un push sur la branche principale. Un README détaillé documente également l’installation, le lancement, les variables d’environnement, les tests et le déploiement.`,
       actors:
         `Les acteurs du projet sont Nicolas, le Product Owner qui a défini les fonctionnalités attendues à travers les user stories, Mariana, la tech lead qui a fixé les règles techniques à respecter et moi-même le développeur full stack.`,
       results:
@@ -211,7 +211,7 @@ C’est aussi un projet qui m’a permis de relier plusieurs dimensions de mon p
       }
       ,
       {
-        label: 'Adaptabilité & autonomie ',
+        label: 'Adaptabilité & autonomie',
         link: 'adaptabilite-autonomie',
       },
       {
@@ -370,7 +370,7 @@ C’est aussi un projet qui m’a permis de relier plusieurs dimensions de mon p
         link: 'analyse-rigueur',
       },
       {
-        label: 'Adaptabilité & autonomie ',
+        label: 'Adaptabilité & autonomie',
         link: 'adaptabilite-autonomie',
       }
     ],

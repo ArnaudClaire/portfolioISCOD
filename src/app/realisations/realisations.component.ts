@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { REALISATIONS } from './data/realisations.data';
+import { emphasizePortfolioText } from '../shared/skill-links.util';
 
 @Component({
   selector: 'app-realisations',
@@ -12,6 +13,7 @@ import { REALISATIONS } from './data/realisations.data';
 })
 export class RealisationsComponent {
   realisations = REALISATIONS
+  readonly emphasizePortfolioText = emphasizePortfolioText
   private readonly realisationTones: Record<string, { accent: string; soft: string; glow: string }> = {
     'refonte-site-upc-jean-mermoz': {
       accent: '#34d399',
