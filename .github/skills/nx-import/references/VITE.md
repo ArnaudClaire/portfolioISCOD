@@ -1,6 +1,6 @@
 ## Vite
 
-Vite-specific guidance for `nx import`. For generic import issues (pnpm globs, root deps, project references, name collisions, ESLint, frontend tsconfig base settings, `@nx/react` typings, Jest preset, non-Nx source handling), see `SKILL.md`.
+Vite-specific guidance for `nx import`. For generic import issues (pnpm globs, root deps, project references, name collisions, ESLint, front-end tsconfig base settings, `@nx/react` typings, Jest preset, non-Nx source handling), see `SKILL.md`.
 
 ---
 
@@ -300,7 +300,7 @@ Do **not** remove React Router 7 scripts. They use the framework CLI (`react-rou
 
 ### Nx Source
 
-1. Generic fixes from SKILL.md (pnpm globs, root deps, executor paths, frontend tsconfig base settings, `@nx/react` typings)
+1. Generic fixes from SKILL.md (pnpm globs, root deps, executor paths, front-end tsconfig base settings, `@nx/react` typings)
 2. Configure `@nx/vite/plugin` typecheck target
 3. **React**: `jsx: "react-jsx"` (root or per-project)
 4. **Vue**: `jsx: "preserve"` + `jsxImportSource: "vue"`; verify `vue-shims.d.ts`; install ESLint deps before `@nx/eslint`

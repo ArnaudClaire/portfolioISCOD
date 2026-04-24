@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -18,7 +18,8 @@ import { ContactComponent } from './contact/contact.component';
 export class AppComponent {
   constructor(private titleService: Title) {
     this.titleService.setTitle(
-      'Arnaud CLAIRE - Expert en IngÃ©nierie du Logiciel - Portfolio'
+      'Arnaud CLAIRE - Expert en ingénierie du logiciel - Portfolio'
     );
   }
 }
+

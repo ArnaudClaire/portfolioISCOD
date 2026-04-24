@@ -1,4 +1,4 @@
-import { Realisation } from '../models/realisation.model'
+﻿import { Realisation } from '../models/realisation.model'
 
 export const REALISATIONS: Realisation[] = [
   {
@@ -20,7 +20,7 @@ export const REALISATIONS: Realisation[] = [
         `<h3>Objectif principal</h3>L’objectif était de proposer une nouvelle version du site de l’UPC, plus claire et plus adaptée aux besoins réels du client. 
         <h3>Contexte </h3>Le point de départ était particulier, car le cahier des charges initial était erroné et suivait la progression d’une ancienne équipe composée de deux stagiaires. 
         <h3>Enjeux</h3>Nous avons donc utilisé l’arborescence du site comme base de travail pour reconstruire un cadre de projet cohérent.
-        <h3>Risques</h3>Nous n'avions que 2 mois pour réaliser le site et les principaux risques était de repartir sur un mauvais besoin, ce qui pouvait entraîner des incompréhensions avec le client, des erreurs dans les fonctionnalités développées ou une perte de temps liée à la réinterprétation du besoin.
+        <h3>Risques</h3>Nous n'avions que 2 mois pour réaliser le site et les principaux risques étaient de repartir sur un mauvais besoin, ce qui pouvait entraîner des incompréhensions avec le client, des erreurs dans les fonctionnalités développées ou une perte de temps liée à la réinterprétation du besoin.
         `,
       steps:
         "Pour répondre aux attentes, nous avons organisé avec Monsieur Didier Garnier des réunions tous les jeudis afin de montrer l’avancée du projet, ajuster ce qui avait été produit et faire émerger de nouvelles idées. J’ai consigné les conclusions de chaque réunion dans un cahier de notes pour garder une trace claire des décisions. Au fil du stage, nous avons aussi eu l’opportunité de visiter le bâtiment de l’UPC pour mieux comprendre le travail des employés et le contexte métier. Le site a été codé en PHP, avec Wamp pour le développement en local, MySQL pour la base de données et OVH pour l’hébergement. L’arborescence couvrait notamment les documents de commande, les menus d’affichage avec logos, les menus de commande des repas, les bons de commande, les fiches techniques des recettes et ingrédients par catégories, les pages d’affichage nutrition, produits locaux et circuit court, environnement, les commissions de menus, les archives, les photos et le courrier.",
@@ -72,7 +72,7 @@ export const REALISATIONS: Realisation[] = [
         `Le projet consistait à développer des applications web internes permettant de faciliter l’accès aux données du CRM et d’améliorer leur lisibilité pour les différents services de l’entreprise. L’objectif était de proposer des outils simples, accessibles et utiles au quotidien pour les différents pôles de l'entreprise, souvent confrontés à des données complexes ou difficiles à exploiter.`,
       objectives:
         `<h3>Objectif principal</h3>L’objectif principal était de permettre aux utilisateurs de consulter des données complexes de manière plus claire et plus autonome.
-        <h3>Contexte </h3>L'entreprise avait des problèmes de visibilité des données car les rôles étaient mal faits : On avait un problème d'accès à certaines données pour les responsables des différents pôle. Il fallait donc refaire les rôles utilisateur du CRM, améliorer la compréhension des données, réduire les erreurs et faire gagner du temps aux équipes. 
+        <h3>Contexte </h3>L'entreprise avait des problèmes de visibilité des données car les rôles étaient mal faits : on avait un problème d'accès à certaines données pour les responsables des différents pôles. Il fallait donc refaire les rôles utilisateurs du CRM, améliorer la compréhension des données, réduire les erreurs et faire gagner du temps aux équipes. 
         <h3>Enjeux</h3>Les données étant sensibles, notamment car elles concernent des informations internes liées aux ressources humaines ou aux dossiers des clients, la sécurité était donc un enjeu important.
         <h3>Risques</h3>L'un des principaux risques pour les projets était de donner trop d'accès à certains commerciaux qui pouvaient par exemple essayer de prendre des clients à d'autres ou bien de laisser fuiter certaines données hors de l'entreprise comme des données personnelles d'employés ou de clients.
         `,
@@ -82,9 +82,9 @@ export const REALISATIONS: Realisation[] = [
         La conception des interfaces a ensuite été pensée pour rester simple et lisible en utilisant notamment Tailwind ou Bootstrap pour rendre l’outil plus agréable, en gardant toujours en tête l’utilisateur final. Le développement s’est fait principalement avec Angular pour le front-end, et avec du C# côté back-end pour interagir avec le <strong> CRM Dynamics 365 </strong>.
 
         On a mis en place une authentification via JWT(JSON Web Token). Des tests ont ensuite été réalisés pour garantir le bon fonctionnement des outils, avant leur mise en production et leur utilisation en interne.
-        Les tests nous ont aussi permis d'assurer un suivi de la réalisation des fonctionnalités et on a mis en place plus tard un système de retour client via dynamics 365 afin de maintenir l'outil.`,
+        Les tests nous ont aussi permis d'assurer un suivi de la réalisation des fonctionnalités et on a mis en place plus tard un système de retour client via Dynamics 365 afin de maintenir l'outil.`,
       actors:
-        `Tout au long du projet, j’ai travaillé en collaboration avec les différents pôles de l'entreprise du commercial au RH.`,
+        `Tout au long du projet, j’ai travaillé en collaboration avec les différents pôles de l'entreprise du commercial aux ressources humaines.`,
       results:
         `Les outils développés ont permis d’améliorer la lisibilité des données issues du CRM et de rendre certains processus plus fluides. Les différents utilisateurs ont gagné en autonomie et ont moins sollicité le support pour accéder à certaines informations.
 
@@ -92,7 +92,7 @@ export const REALISATIONS: Realisation[] = [
       future:
         `Avec du recul, ces outils pourraient être améliorés en prenant davantage en compte les usages réels et en renforçant la communication avec les équipes métier en amont. Il serait aussi intéressant de faire évoluer ces solutions vers d’autres services et d’analyser plus précisément leur utilisation pour mieux orienter les futures évolutions.`,
       criticalView:
-        `Ce projet m’a permis de mieux comprendre l’importance de concevoir des outils réellement adaptés aux besoins des utilisateurs. J’ai aussi compris que développer une solution ne suffit pas, il faut aussi fidéliser l'utilisateur selon le projet.
+        `Ce projet m’a permis de mieux comprendre l’importance de concevoir des outils réellement adaptés aux besoins des utilisateurs. J’ai aussi compris que développer une solution ne suffit pas : il faut également accompagner l’adoption de l’outil par les utilisateurs.
 
         Cela m’a également appris à prendre du recul sur mes réalisations, afin de m'adapter aux utilisateurs et à leurs besoins réels.`,
     },
@@ -133,7 +133,7 @@ export const REALISATIONS: Realisation[] = [
     ],
   },
   {
-    title: 'Intégration, industrialisation et déploiement de logiciel',
+    title: 'Intégration, industrialisation et déploiement de logiciel - PMT',
     slug: 'ci-cd-deploy',
     shortDescription:
       'Étude de cas ISCOD visant à créer une plateforme de gestion de projet collaboratif destinée aux équipes de développement logiciel.',
@@ -166,17 +166,17 @@ Il fallait aussi intégrer les tests, la dockerisation front et back, mettre en 
       steps:
         `Le projet a commencé par une phase de conception, durant laquelle j’ai identifié les entités principales du système. J’ai travaillé sur les objets clés du domaine, comme les utilisateurs, les projets, les membres, les invitations, les tâches, les historiques de modification et les notifications. Cette étape m’a amené à structurer à la fois un diagramme de classes et un schéma relationnel, en prenant en compte les règles métier, la nullabilité et les contraintes d’unicité.
 
-Une fois la structure définie, j’ai travaillé sur le backend en Java avec Spring Boot qui expose une API REST permettant de gérer les utilisateurs, les projets, les membres de projet, les invitations, les tâches, l’historique et les notifications. Le backend repose sur Spring Web, Spring Data JPA, PostgreSQL, ainsi que sur une base H2 pour les tests.
+Une fois la structure définie, j’ai travaillé sur le back-end en Java avec Spring Boot qui expose une API REST permettant de gérer les utilisateurs, les projets, les membres de projet, les invitations, les tâches, l’historique et les notifications. Le back-end repose sur Spring Web, Spring Data JPA, PostgreSQL, ainsi que sur une base H2 pour les tests.
 
-En parallèle, j’ai développé le frontend avec Angular 19, dans un environnement Nx (outil de gestion de workspace en monorepo), avec TypeScript et Tailwind CSS. L’interface permet aujourd’hui de gérer l’inscription, la connexion simple par email, la persistance de session en localStorage, l’affichage d’un dashboard, la création de projets et la création de tâches.
+En parallèle, j’ai développé le front-end avec Angular 19, dans un environnement Nx (outil de gestion de workspace en monorepo), avec TypeScript et Tailwind CSS. L’interface permet aujourd’hui de gérer l’inscription, la connexion simple par email, la persistance de session en localStorage, l’affichage d’un dashboard, la création de projets et la création de tâches.
 
 J'ai mis en place des tests côté front et back :
 
-Côté frontend, j’ai mis en place des tests unitaires ainsi que des tests end-to-end avec Playwright, capables de couvrir les parcours les plus importants, comme l’inscription, la connexion, la création d’un projet, l’invitation d’un membre, l’attribution d’un rôle, la création et l’assignation d’une tâche, ou encore la consultation de l’historique. 
+Côté front-end, j’ai mis en place des tests unitaires ainsi que des tests end-to-end avec Playwright, capables de couvrir les parcours les plus importants, comme l’inscription, la connexion, la création d’un projet, l’invitation d’un membre, l’attribution d’un rôle, la création et l’assignation d’une tâche, ou encore la consultation de l’historique. 
 
-Côté backend, des tests Java ont été prévus avec JUnit, Spring Boot Test et H2, avec génération d’un rapport de couverture JaCoCo.
+Côté back-end, des tests Java ont été prévus avec JUnit, Spring Boot Test et H2, avec génération d’un rapport de couverture JaCoCo.
 
-Le projet est organisé de manière claire, avec une séparation entre le backend, le frontend, la base de données, la documentation et les workflows GitHub Actions. Le frontend et le backend ont chacun leur Dockerfile, le projet dispose d’un docker-compose.yml, et un pipeline GitHub Actions permet de lancer les tests, de construire les images Docker et de les pousser sur Docker Hub lors d’un push sur la branche principale. Un README détaillé documente également l’installation, le lancement, les variables d’environnement, les tests et le déploiement.`,
+Le projet est organisé de manière claire, avec une séparation entre le back-end, le front-end, la base de données, la documentation et les workflows GitHub Actions. Le front-end et le back-end ont chacun leur Dockerfile, le projet dispose d’un docker-compose.yml, et un pipeline GitHub Actions permet de lancer les tests, de construire les images Docker et de les pousser sur Docker Hub lors d’un push sur la branche principale. Un README détaillé documente également l’installation, le lancement, les variables d’environnement, les tests et le déploiement.`,
       actors:
         `Les acteurs du projet sont Nicolas, le Product Owner qui a défini les fonctionnalités attendues à travers les user stories, Mariana, la tech lead qui a fixé les règles techniques à respecter et moi-même le développeur full stack.`,
       results:
@@ -184,7 +184,7 @@ Le projet est organisé de manière claire, avec une séparation entre le backen
         
         Ce projet me permet de mettre en avant mes compétences en Angular, Java/Spring Boot, Docker & DevOps, Tests et de la CI/CD, mais aussi au niveau des soft skills de mettre en avant mon autonomie et mon esprit d'analyse et de rigueur.`,
       future:
-        `Ce projet pourrait encore évoluer. Il serait possible d’aller plus loin dans la gestion des droits, dans la sécurité du backend, dans la supervision du déploiement en intégrant des outils de monitoring, de logs et d’alertes.
+        `Ce projet pourrait encore évoluer. Il serait possible d’aller plus loin dans la gestion des droits, dans la sécurité du back-end, dans la supervision du déploiement en intégrant des outils de monitoring, de logs et d’alertes.
 
 Avec des fonds, de la patience et une bonne équipe, il serait possible de faire un outil aussi poussé que Jira en intégrant aussi une IA comme Rovo à partir de ce projet.`,
       criticalView:
@@ -458,3 +458,6 @@ Avec le recul, j'aurais pu pousser encore davantage la partie indicateurs en rel
     ],
   },
 ]
+
+
+

@@ -1,4 +1,4 @@
-import { Skill } from '../models/skill.model'
+﻿import { Skill } from '../models/skill.model'
 
 const EMPTY_ARTICLE = {
   definition: 'Contenu à venir.',
@@ -64,7 +64,7 @@ export const SKILLS: Skill[] = [
           link: '/real/plateforme-consultation-metier',
         },
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
       ],
@@ -156,7 +156,7 @@ Je ne pense pas être expert mais je suis à l’aise avec la mise en place de f
       `,
       relatedProjects: [
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
       ],
@@ -199,7 +199,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
       `,
       relatedProjects: [
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
         {
@@ -272,7 +272,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           link: '/real/plateforme-consultation-metier',
         },
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
         {
@@ -564,7 +564,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           link: '/real/plateforme-consultation-metier',
         },
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
         {
@@ -650,7 +650,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
           link: '/real/plateforme-consultation-metier',
         },
         {
-          label: 'Intégration, industrialisation et déploiement de logiciel',
+          label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
           link: '/real/ci-cd-deploy',
         },
         {
@@ -665,3 +665,4 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
     },
   },
 ]
+

@@ -1,6 +1,6 @@
 ## Next.js
 
-Next.js-specific guidance for `nx import`. For generic import issues (pnpm globs, root deps, project references, name collisions, ESLint, frontend tsconfig base settings, `@nx/react` typings, Jest preset, target name prefixing, non-Nx source handling), see `SKILL.md`.
+Next.js-specific guidance for `nx import`. For generic import issues (pnpm globs, root deps, project references, name collisions, ESLint, front-end tsconfig base settings, `@nx/react` typings, Jest preset, target name prefixing, non-Nx source handling), see `SKILL.md`.
 
 ---
 
@@ -142,7 +142,7 @@ No naming conflicts between frameworks.
 ## Fix Order — Nx Source (Subdirectory Import)
 
 1. Import Next.js apps into `apps/<name>` (see SKILL.md: "Application vs Library Detection")
-2. Generic fixes from SKILL.md (pnpm globs, root deps, `.gitkeep` removal, frontend tsconfig base settings, `@nx/react` typings)
+2. Generic fixes from SKILL.md (pnpm globs, root deps, `.gitkeep` removal, front-end tsconfig base settings, `@nx/react` typings)
 3. Install Next.js-specific deps: `pnpm add -wD @next/eslint-plugin-next`
 4. ESLint setup (see SKILL.md: "Root ESLint Config Missing")
 5. Jest setup (see SKILL.md: "Jest Preset Missing")

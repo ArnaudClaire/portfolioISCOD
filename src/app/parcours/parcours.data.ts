@@ -1,4 +1,4 @@
-export interface ParcoursArticle {
+﻿export interface ParcoursArticle {
   context: string;
   workDone: string;
   discoveries: string;
@@ -63,7 +63,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
       workDone:
         `J’y ai construit mes bases scolaires, ma méthode de travail et ma capacité à réfléchir à des problèmes donnés. C’est aussi une période où j’ai commencé à mieux cerner les domaines qui m’attiraient. Le projet de fin d'année et son résultat m'ont donné envie de poursuivre dans ce milieu.`,
       discoveries:
-        `J'ai découvert une passion qui ne se tarie pas, une curiosité sur le développement web et une mise en place de gestion de projet imparfaite`,
+        `J'ai découvert une passion qui ne se tarit pas, une curiosité pour le développement web et une mise en place de gestion de projet imparfaite`,
       takeaway:
         `Avec le recul, cette étape me sert surtout de fondation. Le projet ISN m'a permis de découvrir que j'étais bon en informatique.`,
     },
@@ -142,11 +142,11 @@ J’ai également appris les bases des réseaux (LAN, BUS, etc.), la gestion de 
     ...MIXED_TONE,
     article: {
       context:
-        `J'ai suivi le parcours de développeur chez Ynov offrant 2 titres: Technicien Informatique en spécialité développement délivré par Ynov Campus à Montpellier et le titre de niveau 6 d'administrateur de système d'information délivré par IPSSI(Grande école d'informatique). Le cursus s'est fait en alternance avec pour entreprise A+ Énergies une entreprise scélialisée dans la transition énergétique.`,
+        `J'ai suivi le parcours de développeur chez Ynov offrant 2 titres : Technicien Informatique en spécialité développement délivré par Ynov Campus à Montpellier et le titre de niveau 6 d'administrateur de systèmes d'information délivré par IPSSI (Grande école d'informatique). Le cursus s'est fait en alternance avec pour entreprise A+ Énergies, une entreprise spécialisée dans la transition énergétique.`,
       workDone:
-        `Au campus nous avons travaillé sur des projets allant du développement mobile avec React à la gestion de gouvernance d'une entreprise en passant par l'apprentissage de plusieurs framework comme Angular ou Laravel, Kotlin, React native, Flutter, C#, PHP, mais aussi par l'apprentissage de plusieurs gestion de bases de données avec Firebase ou MongoDB. Nous avons aussi été amené à mener des projets avec des architectes, des commerciaux ou des graphistes.
+        `Au campus, nous avons travaillé sur des projets allant du développement mobile avec React à la gestion de gouvernance d'une entreprise, en passant par l'apprentissage de plusieurs frameworks comme Angular, Laravel, Kotlin, React Native, Flutter, C# et PHP, mais aussi par l'apprentissage de plusieurs systèmes de gestion de bases de données avec Firebase ou MongoDB. Nous avons aussi été amenés à mener des projets avec des architectes, des commerciaux ou des graphistes.
         
-        En Entreprise j'ai mené des missions soit au travers d'Asana avec des missions distribuées par notre N+1 ou bien en totale autonomie comme la mise en place d'un parc informatique de tablettes iPad pour les commerciaux présents dans toute la France. J'ai dû aussi gérer des notions de sécurité et de rôle liées aux données sensibles du CRM que nous avons repris pour permettre un bon suivi des chefs de secteurs.`,
+        En entreprise j'ai mené des missions soit au travers d'Asana avec des missions distribuées par notre N+1 ou bien en totale autonomie comme la mise en place d'un parc informatique de tablettes iPad pour les commerciaux présents dans toute la France. J'ai dû aussi gérer des notions de sécurité et de rôle liées aux données sensibles du CRM que nous avons repris pour permettre un bon suivi des chefs de secteur.`,
       discoveries:
         `J’y ai découvert que j’étais capable de monter en compétence sur des domaines que je ne maîtrisais pas au départ, et de tenir un sujet jusqu’à sa mise en place. J'ai aussi pu proposer de la gestion de la relation client et de la gestion de projet`,
       takeaway:
@@ -167,7 +167,7 @@ J’ai également appris les bases des réseaux (LAN, BUS, etc.), la gestion de 
         link: 'applications-rh-paie-weekera',
       },
       {
-        label: 'Intégration, industrialisation et déploiement de logiciel',
+        label: 'Intégration, industrialisation et déploiement de logiciel - PMT',
         link: 'ci-cd-deploy',
       },
       {
@@ -189,11 +189,11 @@ J’ai également appris les bases des réseaux (LAN, BUS, etc.), la gestion de 
       workDone:
         ` Au sein de mon entreprise, mon premier rôle a été orienté développement applicatif, où j’ai participé à la correction de bugs et à l’évolution de fonctionnalités existantes. Je suis intervenu à la fois sur le front-end et le back-end, ce qui m'a permis d’avoir une vision globale des applications et de leurs interactions.
 
-Puis j'ai changé d'équipe et je suis passé côté test, où j'ai d'abord optimisé les tests unitaires côté front puis je suis passé sur le repo des tests Playwright(tests bout à bout ou parcours d’utilisateurs) où mon rôle a été de réaliser les tests CRUD manquants sur les pages de l'application.
+Puis j'ai changé d'équipe et je suis passé côté test, où j'ai d'abord optimisé les tests unitaires côté front puis je suis passé sur le repo des tests Playwright (tests bout à bout ou parcours d’utilisateurs) où mon rôle a été de réaliser les tests CRUD manquants sur les pages de l'application.
 
-      Au niveau de ma formation j'ai regardé des cours tous les lundis durant 2 ans afin de réaliser les exercices et les QCM demandés sur la plateforme d'apprentissage. Aujourd'hui j'ai totalement fini ma formation et il me reste quelques épreuves à passer afin de valider mon année.`,
+      Au niveau de ma formation j'ai suivi des cours tous les lundis durant 2 ans afin de réaliser les exercices et les QCM demandés sur la plateforme d'apprentissage. Aujourd'hui j'ai totalement fini ma formation et il me reste quelques épreuves à passer afin de valider mon année.`,
       discoveries:
-        `Cette expérience en entreprise, m’a appris à travailler dans une grande équipe de développeurs et d'experts. Elle m'a aussi appris les rituels pour mener à bien un travail de groupe comme les réunions autour des sprints ou les rituels du matin (DSM).`,
+        `Cette expérience en entreprise m’a appris à travailler dans une grande équipe de développeurs et d'experts. Elle m'a aussi appris les rituels pour mener à bien un travail de groupe comme les réunions autour des sprints ou les rituels du matin (DSM).`,
       takeaway:
         `Cette étape a confirmé la direction que je voulais donner à mon profil : devenir un développeur capable de produire du code utile, maintenable et cohérent. Elle a aussi renforcé mon intérêt pour les environnements où la qualité, la collaboration et la compréhension fonctionnelle ont une vraie importance.`,
     },
@@ -203,3 +203,5 @@ Puis j'ai changé d'équipe et je suis passé côté test, où j'ai d'abord opti
 export function getParcoursStepBySlug(slug: string | null): ParcoursStep | undefined {
   return PARCOURS_STEPS.find((step) => step.slug === slug);
 }
+
+

@@ -42,7 +42,7 @@ Read the nx docs if you have the tools for it.
 Before importing, identify whether the source is an **application** or a **library**:
 
 - **Applications**: Deployable end products. Common indicators:
-  - _Frontend_: `next.config.*`, `vite.config.*` with a build entry point, framework-specific app scaffolding (CRA, Angular CLI app, etc.)
+  - _front-end_: `next.config.*`, `vite.config.*` with a build entry point, framework-specific app scaffolding (CRA, Angular CLI app, etc.)
   - _Backend (Node.js)_: Express/Fastify/NestJS server entrypoint, no `"exports"` field in `package.json`
   - _JVM_: Maven `pom.xml` with `<packaging>jar</packaging>` or `<packaging>war</packaging>` and a `main` class; Gradle `application` plugin or `mainClass` setting
   - _.NET_: `.csproj`/`.fsproj` with `<OutputType>Exe</OutputType>` or `<OutputType>WinExe</OutputType>`
@@ -144,13 +144,13 @@ Same `name` in `package.json` across source and dest causes `MultipleProjectsWit
 
 The TS preset creates `packages/.gitkeep`. Remove it and commit before importing.
 
-### Frontend tsconfig Base Settings (Critical)
+### front-end tsconfig Base Settings (Critical)
 
-The TS preset defaults (`module: "nodenext"`, `moduleResolution: "nodenext"`, `lib: ["es2022"]`) are incompatible with frontend frameworks (React, Next.js, Vue, Vite). After importing frontend projects, verify the dest root `tsconfig.base.json`:
+The TS preset defaults (`module: "nodenext"`, `moduleResolution: "nodenext"`, `lib: ["es2022"]`) are incompatible with front-end frameworks (React, Next.js, Vue, Vite). After importing front-end projects, verify the dest root `tsconfig.base.json`:
 
 - **`moduleResolution`**: Must be `"bundler"` (not `"nodenext"`)
 - **`module`**: Must be `"esnext"` (not `"nodenext"`)
-- **`lib`**: Must include `"dom"` and `"dom.iterable"` (frontend projects need these)
+- **`lib`**: Must include `"dom"` and `"dom.iterable"` (front-end projects need these)
 - **`jsx`**: `"react-jsx"` for React-only workspaces, per-project for mixed frameworks
 
 For **subdirectory imports**, the dest root tsconfig is authoritative — update it. For **whole-repo imports**, imported projects may extend their own nested `tsconfig.base.json`, making this less critical.
