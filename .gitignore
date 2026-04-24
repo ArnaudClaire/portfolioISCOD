@@ -44,3 +44,7 @@ Thumbs.db
 
 .nx/cache
 $PROFILE.txt
+
+.nx/polygraph
+.claude/worktrees
+.claude/settings.local.json
