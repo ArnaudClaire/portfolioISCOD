@@ -5,7 +5,7 @@
       <p class="eyebrow">Parcours</p>
       <h1>Ma fresque chronologique</h1>
       <p class="intro">
-        <strong>Cliquez sur une Ã©tape pour en savoir plus</strong>.
+        <strong>Cliquez sur une étape pour en savoir plus</strong>.
       </p>
 
       <div class="timeline-legend" aria-label="Filtres du parcours">
@@ -42,7 +42,7 @@
           [routerLink]="['/parcours', step.slug]"
         >
           <span class="step-category">{{ step.categoryLabel }}</span>
-          <p class="step-period">Ã‰tape {{ step.order }} : {{ step.period }}</p>
+          <p class="step-period">Étape {{ step.order }} : {{ step.period }}</p>
           <p
             class="step-subtitle"
             [innerHTML]="emphasizePortfolioText(step.subtitle)"
@@ -52,14 +52,13 @@
             class="step-description"
             [innerHTML]="emphasizePortfolioText(step.description)"
           ></p>
-          <span class="step-cta">Voir cette Ã©tape</span>
+          <span class="step-cta">Voir cette étape</span>
         </a>
       </article>
     </div>
 
     <p *ngIf="filteredTimelineSteps.length === 0" class="timeline-empty">
-      Aucun Ã©lÃ©ment ne correspond Ã  ce filtre.
+      Aucun élément ne correspond à ce filtre.
     </p>
   </div>
 </section>
-
