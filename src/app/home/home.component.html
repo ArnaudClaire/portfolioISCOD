@@ -17,7 +17,7 @@
       >
         <img
           [src]="profilePhotoUrl"
-          alt="Photo de profil d'Arnaud Claire"
+          alt="Photo de profil d’Arnaud Claire"
           width="1378"
           height="1496"
           class="block h-auto w-full rounded-[1.5rem] bg-slate-950/70 object-cover object-center"
@@ -69,30 +69,30 @@
       class="mb-8 flex w-full max-w-3xl flex-wrap justify-center gap-3 sm:gap-4"
     >
       <a
-        routerLink="/parcours"
-        class="w-full rounded-xl bg-cyan-500 px-6 py-3 text-center font-semibold text-slate-950 shadow transition hover:bg-cyan-400 sm:w-auto"
-      >
-        Voir mon parcours
-      </a>
-      <a
         routerLink="/about"
         class="w-full rounded-xl bg-blue-500 px-6 py-3 text-center text-white shadow transition hover:bg-blue-600 sm:w-auto"
       >
         Ma présentation
       </a>
+      <a
+        routerLink="/parcours"
+        class="w-full rounded-xl bg-cyan-500 px-6 py-3 text-center font-semibold text-slate-950 shadow transition hover:bg-cyan-400 sm:w-auto"
+      >
+        Mon parcours
+      </a>
 
       <a
         routerLink="/comp"
-        class="w-full rounded-xl bg-blue-500 px-6 py-3 text-center text-white shadow transition hover:bg-blue-600 sm:w-auto"
+        class="w-full rounded-xl bg-rose-500 px-6 py-3 text-center text-white shadow transition hover:bg-rose-600 sm:w-auto"
       >
         Mes compétences
       </a>
 
       <a
         routerLink="/real"
-        class="w-full rounded-xl bg-blue-600 px-6 py-3 text-center text-white shadow transition hover:bg-blue-700 sm:w-auto"
+        class="w-full rounded-xl bg-indigo-500 px-6 py-3 text-center text-white shadow transition hover:bg-indigo-600 sm:w-auto"
       >
-        Voir mes réalisations
+        Mes réalisations
       </a>
 
       <button
@@ -101,17 +101,6 @@
       >
         Ouvrir le contact
       </button>
-    </div>
-
-    <div class="flex max-w-4xl flex-wrap justify-center gap-3">
-      <a
-        *ngFor="let skill of featuredSkills"
-        [routerLink]="skill.route"
-        class="rounded-full border px-4 py-2 text-sm font-medium transition hover:-translate-y-0.5"
-        [ngClass]="skill.tone"
-      >
-        {{ skill.label }}
-      </a>
     </div>
   </section>
 
@@ -127,9 +116,9 @@
           <h2 class="mb-4 text-3xl font-bold">Qui je suis</h2>
           <p class="mb-6 leading-8 text-gray-300">
             Je suis actuellement en
-            <strong>master expert en architectures logicielles</strong> à
-            l'ISCOD. Passionné par le développement d’applications, je maîtrise
-            les fondamentaux du <strong>back-end</strong>, du
+            <strong>master expert en Ingénierie du Logiciel</strong> à l’ISCOD.
+            Passionné par le développement d’applications, je maîtrise les
+            fondamentaux du <strong>back-end</strong>, du
             <strong>front-end</strong> et de <strong>gestion de projet</strong>,
             avec une appétence particulière pour
             <a
@@ -177,7 +166,7 @@
               <p class="font-semibold text-cyan-200">Parcours</p>
               <p class="mt-2 text-sm text-gray-300">
                 Découvrir mes <strong>5 grandes étapes</strong> de formation et
-                d'expérience.
+                d’expérience.
               </p>
             </a>
             <a
@@ -279,35 +268,88 @@
         </a>
       </div>
 
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <article
-          *ngFor="let project of featuredProjects"
-          class="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur"
-        >
-          <h3 class="mb-3 text-2xl font-semibold">{{ project.title }}</h3>
-          <p
-            class="mb-6 leading-7 text-gray-300"
-            [innerHTML]="highlightPortfolioText(project.shortDescription)"
-          ></p>
-
-          <div class="flex flex-wrap gap-3">
-            <a
-              [routerLink]="['/real', project.slug]"
-              class="rounded-full bg-indigo-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-400"
+      <div class="relative">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <p class="text-sm text-gray-400">
+            Projet {{ currentProjectIndex + 1 }} / {{ featuredProjects.length }}
+          </p>
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              (click)="showPreviousProject()"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-300/20 bg-slate-900/80 text-xl text-indigo-100 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-indigo-300/40 hover:bg-indigo-500/10"
+              aria-label="Projet précédent"
             >
-              Ouvrir la fiche
-            </a>
-            <a
-              *ngIf="project.externalLink"
-              [href]="project.externalLink.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="rounded-full border border-indigo-300/30 px-4 py-2 text-sm font-semibold text-indigo-200 transition hover:bg-indigo-500/10"
+              &#8592;
+            </button>
+            <button
+              type="button"
+              (click)="showNextProject()"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-300/20 bg-slate-900/80 text-xl text-indigo-100 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-indigo-300/40 hover:bg-indigo-500/10"
+              aria-label="Projet suivant"
             >
-              {{ project.externalLink.label }}
-            </a>
+              &#8594;
+            </button>
           </div>
-        </article>
+        </div>
+
+        <div class="overflow-hidden rounded-[2rem]">
+          <div
+            class="flex transition-transform duration-500 ease-out will-change-transform"
+            [style.transform]="projectTrackTransform"
+          >
+            <article
+              *ngFor="let project of featuredProjects"
+              class="w-full shrink-0 rounded-[2rem] border border-indigo-300/20 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur sm:p-8"
+            >
+              <p
+                class="mb-3 text-xs uppercase tracking-[0.22em] text-indigo-300"
+              >
+                Projet mis en avant
+              </p>
+              <h3 class="mb-4 text-2xl font-semibold text-white sm:text-3xl">
+                {{ project.title }}
+              </h3>
+              <p
+                class="mb-8 max-w-3xl leading-8 text-gray-300"
+                [innerHTML]="highlightPortfolioText(project.shortDescription)"
+              ></p>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  [routerLink]="['/real', project.slug]"
+                  class="rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400"
+                >
+                  Ouvrir la fiche
+                </a>
+                <a
+                  *ngIf="project.externalLink"
+                  [href]="project.externalLink.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full border border-indigo-300/30 px-5 py-2.5 text-sm font-semibold text-indigo-200 transition hover:bg-indigo-500/10"
+                >
+                  {{ project.externalLink.label }}
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-5 flex justify-center gap-2">
+          <button
+            *ngFor="let project of featuredProjects; let i = index"
+            type="button"
+            (click)="goToProject(i)"
+            class="h-2.5 rounded-full transition-all duration-300"
+            [ngClass]="
+              currentProjectIndex === i
+                ? 'w-10 bg-indigo-300'
+                : 'w-2.5 bg-white/25 hover:bg-white/40'
+            "
+            [attr.aria-label]="'Aller au projet ' + (i + 1)"
+          ></button>
+        </div>
       </div>
     </div>
   </section>
@@ -326,3 +368,4 @@
     </button>
   </section>
 </div>
+

@@ -1,4 +1,4 @@
-<div
+﻿<div
   *ngIf="isModal && (modalService.isOpen$ | async)"
   class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 sm:p-6"
 >
@@ -24,7 +24,7 @@
       >
         <img
           [src]="profilePhotoUrl"
-          alt="Photo d'Arnaud Claire"
+          alt="Photo d’Arnaud Claire"
           width="1378"
           height="1496"
           class="block aspect-[4/5] w-full rounded-[1.25rem] bg-slate-950/70 object-cover object-center"
@@ -35,6 +35,12 @@
     <section
       class="flex flex-col justify-center rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl shadow-black/30 sm:p-8 lg:p-10"
     >
+      <a
+        href="/"
+        class="mb-5 inline-flex items-center text-cyan-300 no-underline transition hover:text-cyan-200"
+      >
+        Retour à l’accueil
+      </a>
       <p class="mb-4 text-sm uppercase tracking-[0.28em] text-blue-300">
         Contact
       </p>
@@ -42,15 +48,15 @@
         Me contacter
       </h1>
       <p class="mb-8 max-w-2xl text-lg leading-8 text-gray-300">
-        Vous pouvez m'écrire directement par email, consulter mon profil
+        Vous pouvez m’écrire directement par email, consulter mon profil
         LinkedIn ou retrouver mon code sur GitHub.
       </p>
 
       <div class="mb-8">
         <h2 class="mb-2 text-2xl font-bold text-white">Arnaud Claire</h2>
         <p class="max-w-2xl leading-7 text-gray-400">
-          Expert en ingénierie du logiciel, disponible pour échanger autour d'un
-          projet, d'une alternance ou d'une opportunité professionnelle.
+          Expert en ingénierie du logiciel, disponible pour échanger autour d’un
+          projet, d’une alternance ou d’une opportunité professionnelle.
         </p>
       </div>
 
@@ -121,7 +127,7 @@
     >
       <img
         [src]="profilePhotoUrl"
-        alt="Photo d'Arnaud Claire"
+        alt="Photo d’Arnaud Claire"
         width="1378"
         height="1496"
         class="block aspect-[4/5] w-full rounded-[1.25rem] bg-slate-950/70 object-cover object-center"
@@ -131,7 +137,7 @@
     <div class="text-center md:text-left">
       <h2 class="mb-2 text-2xl font-bold text-white">Me contacter</h2>
       <p class="text-gray-400">
-        Vous pouvez m'écrire directement par email ou me retrouver sur LinkedIn.
+        Vous pouvez m’écrire directement par email ou me retrouver sur LinkedIn.
       </p>
     </div>
   </div>
@@ -176,3 +182,5 @@
     </a>
   </div>
 </ng-template>
+
+

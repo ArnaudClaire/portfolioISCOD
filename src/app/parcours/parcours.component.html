@@ -1,13 +1,11 @@
-<section class="timeline-page">
+﻿<section class="timeline-page">
   <div class="timeline-shell">
     <header class="timeline-header">
-      <a routerLink="/" class="back-link">Retour à l'accueil</a>
+      <a routerLink="/" class="back-link">Retour à l’accueil</a>
       <p class="eyebrow">Parcours</p>
       <h1>Ma fresque chronologique</h1>
       <p class="intro">
-        Une <strong>vue verticale de mon évolution</strong>, de mes premières études jusqu'à mon
-        parcours actuel. Clique sur une <strong>carte</strong> pour ouvrir la <strong>page détail</strong>
-        de l'étape correspondante.
+        <strong>Cliquez sur une Ã©tape pour en savoir plus</strong>.
       </p>
 
       <div class="timeline-legend" aria-label="Filtres du parcours">
@@ -17,7 +15,7 @@
           class="legend-chip"
           [ngClass]="[
             filter.chipClass,
-            activeFilter === filter.key ? 'is-active' : 'is-inactive'
+            activeFilter === filter.key ? 'is-active' : 'is-inactive',
           ]"
           [attr.aria-pressed]="activeFilter === filter.key"
           (click)="setFilter(filter.key)"
@@ -34,14 +32,17 @@
         [ngStyle]="{
           '--step-accent': step.accent,
           '--step-accent-soft': step.accentSoft,
-          '--step-accent-glow': step.accentGlow
+          '--step-accent-glow': step.accentGlow,
         }"
       >
-        <div class="step-index">{{ step.order | number: '2.0' }}</div>
+        <div class="step-index">{{ step.order | number: "2.0" }}</div>
 
-        <a class="step-card step-card-link" [routerLink]="['/parcours', step.slug]">
+        <a
+          class="step-card step-card-link"
+          [routerLink]="['/parcours', step.slug]"
+        >
           <span class="step-category">{{ step.categoryLabel }}</span>
-          <p class="step-period">Étape {{ step.order }} : {{ step.period }}</p>
+          <p class="step-period">Ã‰tape {{ step.order }} : {{ step.period }}</p>
           <p
             class="step-subtitle"
             [innerHTML]="emphasizePortfolioText(step.subtitle)"
@@ -51,13 +52,14 @@
             class="step-description"
             [innerHTML]="emphasizePortfolioText(step.description)"
           ></p>
-          <span class="step-cta">Voir cette étape</span>
+          <span class="step-cta">Voir cette Ã©tape</span>
         </a>
       </article>
     </div>
 
     <p *ngIf="filteredTimelineSteps.length === 0" class="timeline-empty">
-      Aucun élément ne correspond à ce filtre.
+      Aucun Ã©lÃ©ment ne correspond Ã  ce filtre.
     </p>
   </div>
 </section>
+

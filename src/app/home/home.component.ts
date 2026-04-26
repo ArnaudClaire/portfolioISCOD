@@ -16,6 +16,13 @@ import { highlightPortfolioText } from '../shared/skill-links.util';
 export class HomeComponent {
   readonly profilePhotoUrl = 'assets/Arnaud%20CLAIRE.jpg';
   readonly highlightPortfolioText = highlightPortfolioText;
+  private readonly featuredProjectOrder = [
+    'applications-rh-paie-weekera',
+    'pilotage-projet-ofit',
+    'ci-cd-deploy',
+    'plateforme-consultation-metier',
+    'refonte-site-upc-jean-mermoz',
+  ];
 
   readonly featuredSkills = [
     {
@@ -41,7 +48,32 @@ export class HomeComponent {
   ];
 
   readonly featuredSteps = [...PARCOURS_STEPS].sort((a, b) => b.order - a.order);
-  readonly featuredProjects = REALISATIONS.slice(0, 2);
+  readonly featuredProjects = this.featuredProjectOrder
+    .map((slug) => REALISATIONS.find((project) => project.slug === slug))
+    .filter((project): project is NonNullable<typeof project> => Boolean(project));
+  currentProjectIndex = 0;
 
   constructor(public contactModal: ContactService) {}
+
+  showPreviousProject(): void {
+    this.currentProjectIndex =
+      this.currentProjectIndex === 0
+        ? this.featuredProjects.length - 1
+        : this.currentProjectIndex - 1;
+  }
+
+  showNextProject(): void {
+    this.currentProjectIndex =
+      this.currentProjectIndex === this.featuredProjects.length - 1
+        ? 0
+        : this.currentProjectIndex + 1;
+  }
+
+  goToProject(index: number): void {
+    this.currentProjectIndex = index;
+  }
+
+  get projectTrackTransform(): string {
+    return `translateX(-${this.currentProjectIndex * 100}%)`;
+  }
 }

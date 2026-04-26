@@ -2,6 +2,9 @@
   <p>
     <strong>{{ title }}</strong>
   </p>
+  <p *ngIf="meta" class="text-sm text-gray-300">
+    {{ meta }}
+  </p>
   <p>
     <a
       [href]="href"

@@ -9,6 +9,7 @@ export class SourceReferenceComponent {
   @Input() href = '';
   @Input() title = 'Source :';
   @Input() displayText?: string;
+  @Input() meta?: string;
 
   get linkText(): string {
     return this.displayText || this.href;

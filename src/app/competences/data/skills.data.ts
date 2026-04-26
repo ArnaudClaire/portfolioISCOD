@@ -96,7 +96,7 @@ export const SKILLS: Skill[] = [
           description:
             "J'ai contribué, de février 2024 à mars 2026, à la réalisation d'<strong>applications liées à la gestion RH et à la paie</strong> chez <strong>Weekera</strong>, avec des interventions à la fois sur le <strong>front-end</strong> et le <strong>back-end</strong>.",
           result:
-            "Résultat : cette expérience m'a permis d'apprendre ou d'approfondir mes connaissances sur plusieurs stacks comme <strong>Svelte</strong>, le <strong>WQL</strong> ou encore les <strong>tests</strong>.",
+            "Résultat : cette expérience m'a permis d'apprendre et d'approfondir mes connaissances sur plusieurs technologies comme <strong>Svelte</strong>, le <strong>WQL</strong> ou encore sur les <strong>tests</strong>.",
           link: '/real/applications-rh-paie-weekera',
         },
       ],
@@ -171,7 +171,7 @@ Je ne pense pas être expert mais je suis à l’aise avec la mise en place de f
     level: 75,
     type: 'technical',
     article: {
-      definition: `Docker est un outil de conteneurisation qui permet d’exécuter des stacks de manière isolée.
+      definition: `Docker est un outil de conteneurisation qui permet d’exécuter des applications de manière isolée.
      On peut aussi partager des images Docker et les déployer facilement sur différents environnements grâce à Docker Hub.
 
 Le DevOps est un ensemble de pratiques visant à améliorer la collaboration entre les développeurs et les opérateurs (personnes qui s’occupent de faire fonctionner l’application en production), pour automatiser les processus de build, de test et de déploiement.
@@ -195,7 +195,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
       ],
       selfCritique: `Je suis à l’aise sur la mise en place de conteneurs, la création de Dockerfiles et l’utilisation de docker-compose pour orchestrer une application simple.
       `,
-      evolution: `Pour l'instant, l'utilisation de Docker est un plus dans mon éventail de stacks maîtrisées, mais je ne l'utiliserai pas dans des projets personnels simples, car je n'en vois l'utilité que dans des équipes de développement ou pour des projets concrets où l'on a besoin de standardiser les environnements et de faciliter le déploiement.
+      evolution: `Pour l'instant, l'utilisation de Docker est un plus dans mon éventail de technologies maîtrisées, mais je ne l'utiliserai pas dans des projets personnels simples, car je n'en vois l'utilité que dans des équipes de développement ou pour des projets concrets où l'on a besoin de standardiser les environnements et de faciliter le déploiement.
       `,
       relatedProjects: [
         {
@@ -504,7 +504,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
       definition: `
       L'<strong>adaptabilité</strong> et l'<strong>autonomie</strong>, pour moi, vont ensemble. C'est être capable d'arriver dans un contexte nouveau, de comprendre progressivement comment il fonctionne, puis d'avancer sans attendre qu'on me donne toutes les réponses.
 
-      Ce n'est pas travailler seul dans son coin. C'est plutôt savoir chercher, tester, demander au bon moment et ajuster sa manière de faire selon le projet. J'ai souvent eu à apprendre de nouvelles stacks, de nouveaux métiers ou de nouvelles façons de travailler, et c'est une partie de mon profil que je considère comme importante.
+      Ce n'est pas travailler seul dans son coin. C'est plutôt savoir chercher, tester, demander au bon moment et ajuster sa manière de faire selon le projet. J'ai souvent eu à apprendre de nouvelles technologies, de nouveaux métiers ou de nouvelles façons de travailler, et c'est une partie de mon profil que je considère comme importante.
       `,
       proofs: [
         {

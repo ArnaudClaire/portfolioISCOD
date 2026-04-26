@@ -12,7 +12,17 @@ import { emphasizePortfolioText } from '../shared/skill-links.util';
   styleUrls: ['./realisations.component.css']
 })
 export class RealisationsComponent {
-  realisations = REALISATIONS
+  private readonly realisationOrder = [
+    'applications-rh-paie-weekera',
+    'pilotage-projet-ofit',
+    'ci-cd-deploy',
+    'plateforme-consultation-metier',
+    'refonte-site-upc-jean-mermoz',
+  ]
+
+  realisations = this.realisationOrder
+    .map((slug) => REALISATIONS.find((realisation) => realisation.slug === slug))
+    .filter((realisation): realisation is NonNullable<typeof realisation> => Boolean(realisation))
   readonly emphasizePortfolioText = emphasizePortfolioText
   private readonly realisationTones: Record<string, { accent: string; soft: string; glow: string }> = {
     'refonte-site-upc-jean-mermoz': {
